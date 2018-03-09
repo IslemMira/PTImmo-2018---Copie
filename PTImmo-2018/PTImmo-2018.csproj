@@ -58,6 +58,12 @@
     <Compile Include="liste_des_biens.Designer.cs">
       <DependentUpon>liste_des_biens.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modifier_Bien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modifier_Bien.Designer.cs">
+      <DependentUpon>Modifier_Bien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Nouveau_Bien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="liste_des_biens.resx">
       <DependentUpon>liste_des_biens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modifier_Bien.resx">
+      <DependentUpon>Modifier_Bien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nouveau_Bien.resx">
       <DependentUpon>Nouveau_Bien.cs</DependentUpon>
