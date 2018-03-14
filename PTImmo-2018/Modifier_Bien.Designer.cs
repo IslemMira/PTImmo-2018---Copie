@@ -556,6 +556,7 @@
             this.Controls.Add(this.Information_Bien);
             this.Name = "Modifier_Bien";
             this.Text = "Modifier_Bien";
+            this.Load += new System.EventHandler(this.Modifier_Bien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.ResumeLayout(false);

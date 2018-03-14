@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace PTImmo_2018
 {
-    public partial class Modifier_Bien : Form
+    public partial class FicheVendeur : Form
     {
-        public Modifier_Bien()
+        public FicheVendeur()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Modifier_Bien_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
