@@ -281,6 +281,7 @@
             // 
             // textBox5
             // 
+            this.textBox5.Enabled = false;
             this.textBox5.Location = new System.Drawing.Point(92, 423);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(228, 20);
@@ -297,6 +298,7 @@
             // 
             // textBox6
             // 
+            this.textBox6.Enabled = false;
             this.textBox6.Location = new System.Drawing.Point(92, 521);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(228, 20);
@@ -304,6 +306,7 @@
             // 
             // textBox7
             // 
+            this.textBox7.Enabled = false;
             this.textBox7.Location = new System.Drawing.Point(92, 485);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(228, 20);
@@ -329,6 +332,7 @@
             // 
             // textBox8
             // 
+            this.textBox8.Enabled = false;
             this.textBox8.Location = new System.Drawing.Point(92, 456);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(228, 20);
