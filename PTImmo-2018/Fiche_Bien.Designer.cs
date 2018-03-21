@@ -1,6 +1,6 @@
 ﻿namespace PTImmo_2018
 {
-    partial class Form2
+    partial class Fiche_Bien
     {
         /// <summary>
         /// Required designer variable.

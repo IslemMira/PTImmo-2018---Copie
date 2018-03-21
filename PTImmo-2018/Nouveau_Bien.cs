@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PTImmo_2018
 {
-    public partial class Nouveau_Bien : Form
+    public partial class Nouveau_bien : Form
     {
-        public Nouveau_Bien()
+        public Nouveau_bien()
         {
             InitializeComponent();
         }
