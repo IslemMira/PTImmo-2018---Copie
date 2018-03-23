@@ -96,6 +96,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recherche_Commerciaux.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recherche_Commerciaux.Designer.cs">
+      <DependentUpon>Recherche_Commerciaux.cs</DependentUpon>
+    </Compile>
     <Compile Include="visualiser_acheteur.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Recherche_Commerciaux.resx">
+      <DependentUpon>Recherche_Commerciaux.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="visualiser_acheteur.resx">
       <DependentUpon>visualiser_acheteur.cs</DependentUpon>
     </EmbeddedResource>
