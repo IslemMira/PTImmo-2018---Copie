@@ -70,6 +70,12 @@
     <Compile Include="Creation_acheteur.Designer.cs">
       <DependentUpon>Creation_acheteur.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ajouter_commercial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ajouter_commercial.Designer.cs">
+      <DependentUpon>Ajouter_commercial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Nouveau_bien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreerVisite.resx">
       <DependentUpon>CreerVisite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ajouter_commercial.resx">
+      <DependentUpon>Ajouter_commercial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nouveau_bien.resx">
       <DependentUpon>Nouveau_bien.cs</DependentUpon>
