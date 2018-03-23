@@ -58,6 +58,12 @@
     <Compile Include="FicheSouhaitCreation.Designer.cs">
       <DependentUpon>FicheSouhaitCreation.cs</DependentUpon>
     </Compile>
+    <Compile Include="FicheSouhaitsViz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FicheSouhaitsViz.Designer.cs">
+      <DependentUpon>FicheSouhaitsViz.cs</DependentUpon>
+    </Compile>
     <Compile Include="FicheVendeur.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FicheSouhaitCreation.resx">
       <DependentUpon>FicheSouhaitCreation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FicheSouhaitsViz.resx">
+      <DependentUpon>FicheSouhaitsViz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FicheVendeur.resx">
       <DependentUpon>FicheVendeur.cs</DependentUpon>
