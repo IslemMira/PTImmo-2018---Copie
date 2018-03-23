@@ -43,6 +43,8 @@
             this.textBox1_MobilePro = new System.Windows.Forms.TextBox();
             this.textBox1_Tel_Prive = new System.Windows.Forms.TextBox();
             this.textBox1_Email = new System.Windows.Forms.TextBox();
+            this.button1_ajouter = new System.Windows.Forms.Button();
+            this.button1_annuler = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -168,11 +170,31 @@
             this.textBox1_Email.Size = new System.Drawing.Size(146, 20);
             this.textBox1_Email.TabIndex = 15;
             // 
+            // button1_ajouter
+            // 
+            this.button1_ajouter.Location = new System.Drawing.Point(531, 343);
+            this.button1_ajouter.Name = "button1_ajouter";
+            this.button1_ajouter.Size = new System.Drawing.Size(75, 23);
+            this.button1_ajouter.TabIndex = 16;
+            this.button1_ajouter.Text = "Ajouter";
+            this.button1_ajouter.UseVisualStyleBackColor = true;
+            // 
+            // button1_annuler
+            // 
+            this.button1_annuler.Location = new System.Drawing.Point(412, 343);
+            this.button1_annuler.Name = "button1_annuler";
+            this.button1_annuler.Size = new System.Drawing.Size(75, 23);
+            this.button1_annuler.TabIndex = 17;
+            this.button1_annuler.Text = "Annuler";
+            this.button1_annuler.UseVisualStyleBackColor = true;
+            // 
             // Ajouter_commercial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 461);
+            this.Controls.Add(this.button1_annuler);
+            this.Controls.Add(this.button1_ajouter);
             this.Controls.Add(this.textBox1_Email);
             this.Controls.Add(this.textBox1_Tel_Prive);
             this.Controls.Add(this.textBox1_MobilePro);
@@ -212,5 +234,7 @@
         private System.Windows.Forms.TextBox textBox1_MobilePro;
         private System.Windows.Forms.TextBox textBox1_Tel_Prive;
         private System.Windows.Forms.TextBox textBox1_Email;
+        private System.Windows.Forms.Button button1_ajouter;
+        private System.Windows.Forms.Button button1_annuler;
     }
 }
