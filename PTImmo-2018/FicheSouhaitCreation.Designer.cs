@@ -45,6 +45,15 @@
 			this.label17 = new System.Windows.Forms.Label();
 			this.label26 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
+			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+			this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+			this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+			this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+			this.textBox2 = new System.Windows.Forms.TextBox();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// button3
@@ -215,11 +224,51 @@
 			this.label1.TabIndex = 138;
 			this.label1.Text = "Fiche de souhaits :";
 			// 
+			// numericUpDown1
+			// 
+			this.numericUpDown1.Location = new System.Drawing.Point(172, 267);
+			this.numericUpDown1.Name = "numericUpDown1";
+			this.numericUpDown1.Size = new System.Drawing.Size(66, 20);
+			this.numericUpDown1.TabIndex = 155;
+			// 
+			// numericUpDown2
+			// 
+			this.numericUpDown2.Location = new System.Drawing.Point(172, 305);
+			this.numericUpDown2.Name = "numericUpDown2";
+			this.numericUpDown2.Size = new System.Drawing.Size(66, 20);
+			this.numericUpDown2.TabIndex = 156;
+			// 
+			// numericUpDown3
+			// 
+			this.numericUpDown3.Location = new System.Drawing.Point(179, 344);
+			this.numericUpDown3.Name = "numericUpDown3";
+			this.numericUpDown3.Size = new System.Drawing.Size(66, 20);
+			this.numericUpDown3.TabIndex = 157;
+			// 
+			// numericUpDown4
+			// 
+			this.numericUpDown4.Location = new System.Drawing.Point(222, 383);
+			this.numericUpDown4.Name = "numericUpDown4";
+			this.numericUpDown4.Size = new System.Drawing.Size(66, 20);
+			this.numericUpDown4.TabIndex = 158;
+			// 
+			// textBox2
+			// 
+			this.textBox2.Location = new System.Drawing.Point(93, 426);
+			this.textBox2.Name = "textBox2";
+			this.textBox2.Size = new System.Drawing.Size(195, 20);
+			this.textBox2.TabIndex = 159;
+			// 
 			// FicheSouhaitCreation
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(576, 726);
+			this.Controls.Add(this.textBox2);
+			this.Controls.Add(this.numericUpDown4);
+			this.Controls.Add(this.numericUpDown3);
+			this.Controls.Add(this.numericUpDown2);
+			this.Controls.Add(this.numericUpDown1);
 			this.Controls.Add(this.button3);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.comboBox_StatutSouhait);
@@ -239,6 +288,10 @@
 			this.Controls.Add(this.label1);
 			this.Name = "FicheSouhaitCreation";
 			this.Text = "FicheSouhaitCreation";
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -263,5 +316,10 @@
 		private System.Windows.Forms.Label label17;
 		private System.Windows.Forms.Label label26;
 		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.NumericUpDown numericUpDown1;
+		private System.Windows.Forms.NumericUpDown numericUpDown2;
+		private System.Windows.Forms.NumericUpDown numericUpDown3;
+		private System.Windows.Forms.NumericUpDown numericUpDown4;
+		private System.Windows.Forms.TextBox textBox2;
 	}
 }
