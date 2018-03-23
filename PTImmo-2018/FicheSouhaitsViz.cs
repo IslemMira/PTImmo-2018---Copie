@@ -10,12 +10,16 @@ using System.Windows.Forms;
 
 namespace PTImmo_2018
 {
-    public partial class Acceuil : Form
-    {
-         public  Acceuil()
-        {
-            InitializeComponent();
-            
-        }
-    }
+	public partial class FicheSouhaitsViz : Form
+	{
+		public FicheSouhaitsViz()
+		{
+			InitializeComponent();
+		}
+
+		private void FicheSouhaitsViz_Load(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

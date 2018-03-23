@@ -16,7 +16,7 @@ namespace PTImmo_2018
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FicheVendeur());
+            Application.Run(new liste_des_biens());
             
         }
     }
