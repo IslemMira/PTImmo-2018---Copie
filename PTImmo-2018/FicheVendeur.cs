@@ -54,6 +54,9 @@ namespace PTImmo_2018
             reader.Close();
         }
 
-        
+        private void fermer_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
