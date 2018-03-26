@@ -32,10 +32,8 @@
             this.button_ModifierBien = new System.Windows.Forms.Button();
             this.VisNbSDBien = new System.Windows.Forms.NumericUpDown();
             this.VisNbPiecesBien = new System.Windows.Forms.NumericUpDown();
-            this.checkBox_VisCaveNonBien = new System.Windows.Forms.CheckBox();
-            this.checkBox_VisGarageNonBien = new System.Windows.Forms.CheckBox();
-            this.checkBox_VisCaveOuiBien = new System.Windows.Forms.CheckBox();
-            this.checkBox_VisGarageOuiBien = new System.Windows.Forms.CheckBox();
+            this.checkBox_Cave = new System.Windows.Forms.CheckBox();
+            this.checkBox_Garage = new System.Windows.Forms.CheckBox();
             this.textBox_VisCommentaireBien = new System.Windows.Forms.TextBox();
             this.textBox_AjPrixVendeurBien = new System.Windows.Forms.TextBox();
             this.textBox_VisSurfaceParcelleBien = new System.Windows.Forms.TextBox();
@@ -49,11 +47,9 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox_VisPaysBien = new System.Windows.Forms.TextBox();
             this.textBox_VisCPBien = new System.Windows.Forms.TextBox();
             this.textBox_VisVilleBien = new System.Windows.Forms.TextBox();
             this.textBox_VisRueBien = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -78,6 +74,8 @@
             this.listBox_ListeVisitesConsultationBien = new System.Windows.Forms.ListBox();
             this.button1_ImprimerDescriptionBien = new System.Windows.Forms.Button();
             this.button_FicheVendeurConsultationBien = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Date = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.VisNbSDBien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VisNbPiecesBien)).BeginInit();
             this.SuspendLayout();
@@ -116,45 +114,25 @@
             this.VisNbPiecesBien.Size = new System.Drawing.Size(78, 20);
             this.VisNbPiecesBien.TabIndex = 98;
             // 
-            // checkBox_VisCaveNonBien
+            // checkBox_Cave
             // 
-            this.checkBox_VisCaveNonBien.AutoSize = true;
-            this.checkBox_VisCaveNonBien.Location = new System.Drawing.Point(214, 240);
-            this.checkBox_VisCaveNonBien.Name = "checkBox_VisCaveNonBien";
-            this.checkBox_VisCaveNonBien.Size = new System.Drawing.Size(46, 17);
-            this.checkBox_VisCaveNonBien.TabIndex = 97;
-            this.checkBox_VisCaveNonBien.Text = "Non";
-            this.checkBox_VisCaveNonBien.UseVisualStyleBackColor = true;
+            this.checkBox_Cave.AutoSize = true;
+            this.checkBox_Cave.Location = new System.Drawing.Point(141, 239);
+            this.checkBox_Cave.Name = "checkBox_Cave";
+            this.checkBox_Cave.Size = new System.Drawing.Size(42, 17);
+            this.checkBox_Cave.TabIndex = 95;
+            this.checkBox_Cave.Text = "Oui";
+            this.checkBox_Cave.UseVisualStyleBackColor = true;
             // 
-            // checkBox_VisGarageNonBien
+            // checkBox_Garage
             // 
-            this.checkBox_VisGarageNonBien.AutoSize = true;
-            this.checkBox_VisGarageNonBien.Location = new System.Drawing.Point(214, 208);
-            this.checkBox_VisGarageNonBien.Name = "checkBox_VisGarageNonBien";
-            this.checkBox_VisGarageNonBien.Size = new System.Drawing.Size(46, 17);
-            this.checkBox_VisGarageNonBien.TabIndex = 96;
-            this.checkBox_VisGarageNonBien.Text = "Non";
-            this.checkBox_VisGarageNonBien.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_VisCaveOuiBien
-            // 
-            this.checkBox_VisCaveOuiBien.AutoSize = true;
-            this.checkBox_VisCaveOuiBien.Location = new System.Drawing.Point(141, 239);
-            this.checkBox_VisCaveOuiBien.Name = "checkBox_VisCaveOuiBien";
-            this.checkBox_VisCaveOuiBien.Size = new System.Drawing.Size(42, 17);
-            this.checkBox_VisCaveOuiBien.TabIndex = 95;
-            this.checkBox_VisCaveOuiBien.Text = "Oui";
-            this.checkBox_VisCaveOuiBien.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_VisGarageOuiBien
-            // 
-            this.checkBox_VisGarageOuiBien.AutoSize = true;
-            this.checkBox_VisGarageOuiBien.Location = new System.Drawing.Point(141, 207);
-            this.checkBox_VisGarageOuiBien.Name = "checkBox_VisGarageOuiBien";
-            this.checkBox_VisGarageOuiBien.Size = new System.Drawing.Size(42, 17);
-            this.checkBox_VisGarageOuiBien.TabIndex = 94;
-            this.checkBox_VisGarageOuiBien.Text = "Oui";
-            this.checkBox_VisGarageOuiBien.UseVisualStyleBackColor = true;
+            this.checkBox_Garage.AutoSize = true;
+            this.checkBox_Garage.Location = new System.Drawing.Point(141, 207);
+            this.checkBox_Garage.Name = "checkBox_Garage";
+            this.checkBox_Garage.Size = new System.Drawing.Size(42, 17);
+            this.checkBox_Garage.TabIndex = 94;
+            this.checkBox_Garage.Text = "Oui";
+            this.checkBox_Garage.UseVisualStyleBackColor = true;
             // 
             // textBox_VisCommentaireBien
             // 
@@ -275,13 +253,6 @@
             this.label17.TabIndex = 80;
             this.label17.Text = "Surface habitable :";
             // 
-            // textBox_VisPaysBien
-            // 
-            this.textBox_VisPaysBien.Location = new System.Drawing.Point(617, 269);
-            this.textBox_VisPaysBien.Name = "textBox_VisPaysBien";
-            this.textBox_VisPaysBien.Size = new System.Drawing.Size(185, 20);
-            this.textBox_VisPaysBien.TabIndex = 79;
-            // 
             // textBox_VisCPBien
             // 
             this.textBox_VisCPBien.Location = new System.Drawing.Point(617, 240);
@@ -302,16 +273,6 @@
             this.textBox_VisRueBien.Name = "textBox_VisRueBien";
             this.textBox_VisRueBien.Size = new System.Drawing.Size(185, 20);
             this.textBox_VisRueBien.TabIndex = 76;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(561, 269);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(48, 16);
-            this.label12.TabIndex = 75;
-            this.label12.Text = "Pays : ";
             // 
             // label13
             // 
@@ -540,11 +501,28 @@
             this.button_FicheVendeurConsultationBien.Text = "Fiche Vendeur";
             this.button_FicheVendeurConsultationBien.UseVisualStyleBackColor = true;
             // 
-            // Form2
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(182, 42);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(78, 20);
+            this.textBox1.TabIndex = 112;
+            
+            // 
+            // Date
+            // 
+            this.Date.Location = new System.Drawing.Point(184, 325);
+            this.Date.Name = "Date";
+            this.Date.Size = new System.Drawing.Size(171, 20);
+            this.Date.TabIndex = 113;
+            // 
+            // Fiche_Bien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 995);
+            this.ClientSize = new System.Drawing.Size(914, 865);
+            this.Controls.Add(this.Date);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button_FicheVendeurConsultationBien);
             this.Controls.Add(this.button1_ImprimerDescriptionBien);
             this.Controls.Add(this.listBox_ListeVisitesConsultationBien);
@@ -559,10 +537,8 @@
             this.Controls.Add(this.button_ModifierBien);
             this.Controls.Add(this.VisNbSDBien);
             this.Controls.Add(this.VisNbPiecesBien);
-            this.Controls.Add(this.checkBox_VisCaveNonBien);
-            this.Controls.Add(this.checkBox_VisGarageNonBien);
-            this.Controls.Add(this.checkBox_VisCaveOuiBien);
-            this.Controls.Add(this.checkBox_VisGarageOuiBien);
+            this.Controls.Add(this.checkBox_Cave);
+            this.Controls.Add(this.checkBox_Garage);
             this.Controls.Add(this.textBox_VisCommentaireBien);
             this.Controls.Add(this.textBox_AjPrixVendeurBien);
             this.Controls.Add(this.textBox_VisSurfaceParcelleBien);
@@ -576,11 +552,9 @@
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.textBox_VisPaysBien);
             this.Controls.Add(this.textBox_VisCPBien);
             this.Controls.Add(this.textBox_VisVilleBien);
             this.Controls.Add(this.textBox_VisRueBien);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
@@ -595,7 +569,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form2";
+            this.Name = "Fiche_Bien";
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.VisNbSDBien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VisNbPiecesBien)).EndInit();
@@ -610,10 +584,8 @@
         private System.Windows.Forms.Button button_ModifierBien;
         private System.Windows.Forms.NumericUpDown VisNbSDBien;
         private System.Windows.Forms.NumericUpDown VisNbPiecesBien;
-        private System.Windows.Forms.CheckBox checkBox_VisCaveNonBien;
-        private System.Windows.Forms.CheckBox checkBox_VisGarageNonBien;
-        private System.Windows.Forms.CheckBox checkBox_VisCaveOuiBien;
-        private System.Windows.Forms.CheckBox checkBox_VisGarageOuiBien;
+        private System.Windows.Forms.CheckBox checkBox_Cave;
+        private System.Windows.Forms.CheckBox checkBox_Garage;
         private System.Windows.Forms.TextBox textBox_VisCommentaireBien;
         private System.Windows.Forms.TextBox textBox_AjPrixVendeurBien;
         private System.Windows.Forms.TextBox textBox_VisSurfaceParcelleBien;
@@ -627,11 +599,9 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox_VisPaysBien;
         private System.Windows.Forms.TextBox textBox_VisCPBien;
         private System.Windows.Forms.TextBox textBox_VisVilleBien;
         private System.Windows.Forms.TextBox textBox_VisRueBien;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
@@ -656,5 +626,7 @@
         private System.Windows.Forms.ListBox listBox_ListeVisitesConsultationBien;
         private System.Windows.Forms.Button button1_ImprimerDescriptionBien;
         private System.Windows.Forms.Button button_FicheVendeurConsultationBien;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Date;
     }
 }

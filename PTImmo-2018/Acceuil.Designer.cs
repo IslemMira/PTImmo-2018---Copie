@@ -1,6 +1,6 @@
 ﻿namespace PTImmo_2018
 {
-    partial class Acceuil
+    partial class FormAcceuil
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -52,6 +52,7 @@
             this.GB.TabIndex = 1;
             this.GB.Text = "Gestion des Biens";
             this.GB.UseVisualStyleBackColor = true;
+            this.GB.Click += new System.EventHandler(this.GB_Click);
             // 
             // GA
             // 
@@ -71,7 +72,7 @@
             this.GC.Text = "Gestion des Commerciaux";
             this.GC.UseVisualStyleBackColor = true;
             // 
-            // Acceuil
+            // FormAcceuil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -80,8 +81,8 @@
             this.Controls.Add(this.GA);
             this.Controls.Add(this.GB);
             this.Controls.Add(this.Bienvenue);
-            this.Name = "Acceuil";
-            this.Text = "Form1";
+            this.Name = "FormAcceuil";
+            this.Text = "Acceuil";
             this.ResumeLayout(false);
             this.PerformLayout();
 
