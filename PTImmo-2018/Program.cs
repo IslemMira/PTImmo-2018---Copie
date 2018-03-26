@@ -16,9 +16,8 @@ namespace PTImmo_2018
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            FormAcceuil acceuil = new FormAcceuil();
-            Application.Run(acceuil);
-           
+            Application.Run(new liste_des_biens());
+       
         }
     }
 }

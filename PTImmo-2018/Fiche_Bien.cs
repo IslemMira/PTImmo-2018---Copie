@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,43 @@ namespace PTImmo_2018
         public Fiche_Bien()
         {
             InitializeComponent();
+        }
+        private void Fiche_Bien_Load(object sender, EventArgs e)
+        {
+
+            string nomBase = "IMMOBILLY_JACKYTEAM";
+            string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
+            OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
+            dbConnection.Open();
+
+
+
+            string sql = "select b.code_bien, b.surface_habitable, b.surface_parcelle, b.nb_piéces, b.nb_chambres, b.nb_Salle_de_bain, b.garage, b.cave, b.prix_vendeur, b.date_Mise_en_Vente, b.commentaire, b.statut, b.adresse, vi.nom_ville, vi.code_postal, ve.nom_client, ve.prénom_client, ve.téléphone, ve.e_mail from bien b left join ville vi on vi.code_ville = b.code_ville left  join vendeur ve on ve.num_client = b.num_client where b.code_bien =5  ";
+            OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
+            OleDbDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                textBox1.Text = reader.GetString(1);
+                textBox_VisSourfaceHabitableBien.Text = reader.GetInt32(2).ToString(); 
+                textBox_VisSurfaceParcelleBien.Text = reader.GetInt32(3).ToString();
+                VisNbPiecesBien.Text = reader.GetInt32(4).ToString();
+                VisNbSDBien.Text = reader.GetInt32(5).ToString();
+                if (reader.GetBoolean(6) == true) checkBox_Garage.Checked=true;
+                if (reader.GetBoolean(7) == true) checkBox_Cave.Checked = true;
+                textBox_AjPrixVendeurBien.Text = reader.GetInt32(8).ToString();
+                Date.Text = reader.GetInt32(7).ToString();
+                textBox_VisCommentaireBien.Text = reader.GetString(8);
+                if (reader.GetChar(9) == 'd'  )
+                textBox_VisRueBien.Text = reader.GetString(10);
+                textBox_VisVilleBien.Text = reader.GetString(11);
+                textBox_VisCPBien.Text = reader.GetString(12);
+                textBox_VisNomVendeur.Text = reader.GetString(13);
+                textBox_VisPrenomVendeur.Text = reader.GetString(14);
+                textBox_VisTelephoneVendeur.Text = reader.GetInt32(15).ToString();
+                textBox_VisEmailVendeur.Text = reader.GetString(16);
+            }
+            reader.Close();
+
         }
     }
 }

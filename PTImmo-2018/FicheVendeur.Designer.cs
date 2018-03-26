@@ -193,6 +193,7 @@
             this.Coordonnées,
             this.Statut,
             this.Nombre_de_visite});
+            this.listView1.FullRowSelect = true;
             this.listView1.Location = new System.Drawing.Point(35, 341);
             this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.Name = "listView1";
@@ -250,6 +251,7 @@
             this.fermer.TabIndex = 50;
             this.fermer.Text = "Fermer";
             this.fermer.UseVisualStyleBackColor = true;
+            this.fermer.Click += new System.EventHandler(this.fermer_Click);
             // 
             // liste_des_biens
             // 
