@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace PTImmo_2018
 {
-    public partial class Acceuil : Form
-    {
-         public  Acceuil()
-        {
-            InitializeComponent();
-            
-        }
-    }
+	public partial class Liste_des_propositions : Form
+	{
+		public Liste_des_propositions()
+		{
+			InitializeComponent();
+		}
+	}
 }

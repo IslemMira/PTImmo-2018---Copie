@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace PTImmo_2018
 {
-    public partial class Acceuil : Form
+    public partial class Recherche_Commerciaux : Form
     {
-         public  Acceuil()
+        public Recherche_Commerciaux()
         {
             InitializeComponent();
-            
         }
     }
 }

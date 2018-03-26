@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
             this.Disponible = new System.Windows.Forms.CheckBox();
             this.SousS = new System.Windows.Forms.CheckBox();
             this.Vendu = new System.Windows.Forms.CheckBox();
@@ -50,22 +49,26 @@
             // Disponible
             // 
             this.Disponible.AutoSize = true;
+            this.Disponible.Checked = true;
+            this.Disponible.CheckState = System.Windows.Forms.CheckState.Checked;
             this.Disponible.Location = new System.Drawing.Point(21, 22);
             this.Disponible.Name = "Disponible";
             this.Disponible.Size = new System.Drawing.Size(75, 17);
             this.Disponible.TabIndex = 0;
             this.Disponible.Text = "Disponible";
             this.Disponible.UseVisualStyleBackColor = true;
+            this.Disponible.CheckedChanged += new System.EventHandler(this.Disponible_CheckedChanged);
             // 
             // SousS
             // 
             this.SousS.AutoSize = true;
             this.SousS.Location = new System.Drawing.Point(21, 45);
             this.SousS.Name = "SousS";
-            this.SousS.Size = new System.Drawing.Size(79, 17);
+            this.SousS.Size = new System.Drawing.Size(80, 17);
             this.SousS.TabIndex = 1;
-            this.SousS.Text = "Sous Seins";
+            this.SousS.Text = "Sous Seing";
             this.SousS.UseVisualStyleBackColor = true;
+            this.SousS.CheckedChanged += new System.EventHandler(this.SousS_CheckedChanged);
             // 
             // Vendu
             // 
@@ -76,6 +79,7 @@
             this.Vendu.TabIndex = 2;
             this.Vendu.Text = "Vendu";
             this.Vendu.UseVisualStyleBackColor = true;
+            this.Vendu.CheckedChanged += new System.EventHandler(this.Vendu_CheckedChanged);
             // 
             // Retire
             // 
@@ -86,6 +90,7 @@
             this.Retire.TabIndex = 3;
             this.Retire.Text = "Retire";
             this.Retire.UseVisualStyleBackColor = true;
+            this.Retire.CheckedChanged += new System.EventHandler(this.Retire_CheckedChanged);
             // 
             // IBien
             // 
@@ -128,6 +133,7 @@
             this.Rechercher.TabIndex = 8;
             this.Rechercher.Text = "Rechercher";
             this.Rechercher.UseVisualStyleBackColor = true;
+            this.Rechercher.Click += new System.EventHandler(this.Rechercher_Click);
             // 
             // Ajouter
             // 
@@ -154,10 +160,6 @@
             this.Coordonnées,
             this.Statut,
             this.Nombre_de_visite});
-            listViewGroup1.Header = "ListViewGroup";
-            listViewGroup1.Name = "coucou";
-            this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1});
             this.listView1.Location = new System.Drawing.Point(21, 221);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(629, 218);
