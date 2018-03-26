@@ -155,17 +155,21 @@
             // 
             // listView1
             // 
+            this.listView1.Activation = System.Windows.Forms.ItemActivation.OneClick;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.code_Bien,
             this.Coordonnées,
             this.Statut,
             this.Nombre_de_visite});
+            this.listView1.FullRowSelect = true;
+            this.listView1.HoverSelection = true;
             this.listView1.Location = new System.Drawing.Point(21, 221);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(629, 218);
             this.listView1.TabIndex = 11;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.Click += new System.EventHandler(this.listView1_Click);
             // 
             // code_Bien
             // 

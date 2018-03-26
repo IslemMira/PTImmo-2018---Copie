@@ -10,12 +10,22 @@ using System.Windows.Forms;
 
 namespace PTImmo_2018
 {
-    public partial class Acceuil : Form
+    public partial class FormAcceuil : Form
     {
-         public  Acceuil()
+         public  FormAcceuil()
         {
             InitializeComponent();
             
+        }
+
+        private void GB_Click(object sender, EventArgs e)
+        {
+            liste_des_biens ldb = new liste_des_biens();            
+                ldb.Show(this);
+                this.Hide();
+
+            
+
         }
     }
 }

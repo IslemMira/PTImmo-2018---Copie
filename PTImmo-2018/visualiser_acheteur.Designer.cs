@@ -67,6 +67,7 @@
             // textBox12
             // 
             this.textBox12.Location = new System.Drawing.Point(95, 133);
+            this.textBox12.Multiline = true;
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(228, 20);
             this.textBox12.TabIndex = 59;
@@ -122,9 +123,9 @@
             this.E_email.AutoSize = true;
             this.E_email.Location = new System.Drawing.Point(21, 265);
             this.E_email.Name = "E_email";
-            this.E_email.Size = new System.Drawing.Size(44, 13);
+            this.E_email.Size = new System.Drawing.Size(38, 13);
             this.E_email.TabIndex = 50;
-            this.E_email.Text = "E-email:";
+            this.E_email.Text = "E-mail:";
             // 
             // Telephone
             // 
@@ -209,7 +210,7 @@
             // 
             // Ajouter_un_souhait
             // 
-            this.Ajouter_un_souhait.Location = new System.Drawing.Point(18, 400);
+            this.Ajouter_un_souhait.Location = new System.Drawing.Point(676, 400);
             this.Ajouter_un_souhait.Name = "Ajouter_un_souhait";
             this.Ajouter_un_souhait.Size = new System.Drawing.Size(111, 23);
             this.Ajouter_un_souhait.TabIndex = 68;
@@ -219,7 +220,7 @@
             // en_cours
             // 
             this.en_cours.AutoSize = true;
-            this.en_cours.Location = new System.Drawing.Point(237, 406);
+            this.en_cours.Location = new System.Drawing.Point(19, 403);
             this.en_cours.Name = "en_cours";
             this.en_cours.Size = new System.Drawing.Size(67, 17);
             this.en_cours.TabIndex = 69;
@@ -231,7 +232,7 @@
             // Afficher_tout
             // 
             this.Afficher_tout.AutoSize = true;
-            this.Afficher_tout.Location = new System.Drawing.Point(437, 406);
+            this.Afficher_tout.Location = new System.Drawing.Point(219, 403);
             this.Afficher_tout.Name = "Afficher_tout";
             this.Afficher_tout.Size = new System.Drawing.Size(82, 17);
             this.Afficher_tout.TabIndex = 70;

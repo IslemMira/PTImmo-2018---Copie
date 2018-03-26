@@ -13,7 +13,10 @@ namespace PTImmo_2018
 {
     public partial class liste_des_biens : Form
     {
+        static string id_bien_a_modifier;
         string statut = "d";
+
+
         public liste_des_biens()
         {
             InitializeComponent();
@@ -23,6 +26,7 @@ namespace PTImmo_2018
         
         private void Rechercher_Click(object sender, EventArgs e)
         {
+            
             listView1.Items.Clear();
             string nomBase = "IMMOBILLY_JACKYTEAM";
             string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
@@ -46,6 +50,7 @@ namespace PTImmo_2018
 
             }
             reader.Close();
+            
         }
 
         private void Disponible_CheckedChanged(object sender, EventArgs e)
@@ -105,6 +110,12 @@ namespace PTImmo_2018
             {
                 Retire.Checked = true;
             }
+        }
+
+        private void listView1_Click(object sender, EventArgs e)
+        {
+            id_bien_a_modifier = listView1.SelectedItems[0].SubItems[0].Text;
+            Console.WriteLine(listView1.SelectedItems[0].SubItems[0].Text);
         }
     }
 }
