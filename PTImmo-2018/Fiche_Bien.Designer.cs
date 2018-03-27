@@ -71,11 +71,12 @@
             this.checkBox_VisDispoBien = new System.Windows.Forms.CheckBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.listBox_ListeVisitesConsultationBien = new System.Windows.Forms.ListBox();
             this.button1_ImprimerDescriptionBien = new System.Windows.Forms.Button();
             this.button_FicheVendeurConsultationBien = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Date = new System.Windows.Forms.TextBox();
+            this.listView_VisitesBien = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.VisNbSDBien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VisNbPiecesBien)).BeginInit();
             this.SuspendLayout();
@@ -104,6 +105,7 @@
             // 
             this.VisNbSDBien.Location = new System.Drawing.Point(140, 171);
             this.VisNbSDBien.Name = "VisNbSDBien";
+            this.VisNbSDBien.ReadOnly = true;
             this.VisNbSDBien.Size = new System.Drawing.Size(79, 20);
             this.VisNbSDBien.TabIndex = 99;
             // 
@@ -111,6 +113,7 @@
             // 
             this.VisNbPiecesBien.Location = new System.Drawing.Point(141, 137);
             this.VisNbPiecesBien.Name = "VisNbPiecesBien";
+            this.VisNbPiecesBien.ReadOnly = true;
             this.VisNbPiecesBien.Size = new System.Drawing.Size(78, 20);
             this.VisNbPiecesBien.TabIndex = 98;
             // 
@@ -139,6 +142,7 @@
             this.textBox_VisCommentaireBien.Location = new System.Drawing.Point(460, 360);
             this.textBox_VisCommentaireBien.Multiline = true;
             this.textBox_VisCommentaireBien.Name = "textBox_VisCommentaireBien";
+            this.textBox_VisCommentaireBien.ReadOnly = true;
             this.textBox_VisCommentaireBien.Size = new System.Drawing.Size(421, 217);
             this.textBox_VisCommentaireBien.TabIndex = 92;
             // 
@@ -146,6 +150,7 @@
             // 
             this.textBox_AjPrixVendeurBien.Location = new System.Drawing.Point(184, 282);
             this.textBox_AjPrixVendeurBien.Name = "textBox_AjPrixVendeurBien";
+            this.textBox_AjPrixVendeurBien.ReadOnly = true;
             this.textBox_AjPrixVendeurBien.Size = new System.Drawing.Size(171, 20);
             this.textBox_AjPrixVendeurBien.TabIndex = 91;
             // 
@@ -153,6 +158,7 @@
             // 
             this.textBox_VisSurfaceParcelleBien.Location = new System.Drawing.Point(141, 108);
             this.textBox_VisSurfaceParcelleBien.Name = "textBox_VisSurfaceParcelleBien";
+            this.textBox_VisSurfaceParcelleBien.ReadOnly = true;
             this.textBox_VisSurfaceParcelleBien.Size = new System.Drawing.Size(78, 20);
             this.textBox_VisSurfaceParcelleBien.TabIndex = 90;
             // 
@@ -160,6 +166,7 @@
             // 
             this.textBox_VisSourfaceHabitableBien.Location = new System.Drawing.Point(141, 74);
             this.textBox_VisSourfaceHabitableBien.Name = "textBox_VisSourfaceHabitableBien";
+            this.textBox_VisSourfaceHabitableBien.ReadOnly = true;
             this.textBox_VisSourfaceHabitableBien.Size = new System.Drawing.Size(78, 20);
             this.textBox_VisSourfaceHabitableBien.TabIndex = 89;
             // 
@@ -257,6 +264,7 @@
             // 
             this.textBox_VisCPBien.Location = new System.Drawing.Point(617, 240);
             this.textBox_VisCPBien.Name = "textBox_VisCPBien";
+            this.textBox_VisCPBien.ReadOnly = true;
             this.textBox_VisCPBien.Size = new System.Drawing.Size(185, 20);
             this.textBox_VisCPBien.TabIndex = 78;
             // 
@@ -264,6 +272,7 @@
             // 
             this.textBox_VisVilleBien.Location = new System.Drawing.Point(617, 210);
             this.textBox_VisVilleBien.Name = "textBox_VisVilleBien";
+            this.textBox_VisVilleBien.ReadOnly = true;
             this.textBox_VisVilleBien.Size = new System.Drawing.Size(185, 20);
             this.textBox_VisVilleBien.TabIndex = 77;
             // 
@@ -271,6 +280,7 @@
             // 
             this.textBox_VisRueBien.Location = new System.Drawing.Point(617, 180);
             this.textBox_VisRueBien.Name = "textBox_VisRueBien";
+            this.textBox_VisRueBien.ReadOnly = true;
             this.textBox_VisRueBien.Size = new System.Drawing.Size(185, 20);
             this.textBox_VisRueBien.TabIndex = 76;
             // 
@@ -328,6 +338,7 @@
             // 
             this.textBox_VisEmailVendeur.Location = new System.Drawing.Point(102, 557);
             this.textBox_VisEmailVendeur.Name = "textBox_VisEmailVendeur";
+            this.textBox_VisEmailVendeur.ReadOnly = true;
             this.textBox_VisEmailVendeur.Size = new System.Drawing.Size(253, 20);
             this.textBox_VisEmailVendeur.TabIndex = 65;
             // 
@@ -335,6 +346,7 @@
             // 
             this.textBox_VisNomVendeur.Location = new System.Drawing.Point(102, 466);
             this.textBox_VisNomVendeur.Name = "textBox_VisNomVendeur";
+            this.textBox_VisNomVendeur.ReadOnly = true;
             this.textBox_VisNomVendeur.Size = new System.Drawing.Size(154, 20);
             this.textBox_VisNomVendeur.TabIndex = 64;
             // 
@@ -342,6 +354,7 @@
             // 
             this.textBox_VisTelephoneVendeur.Location = new System.Drawing.Point(102, 528);
             this.textBox_VisTelephoneVendeur.Name = "textBox_VisTelephoneVendeur";
+            this.textBox_VisTelephoneVendeur.ReadOnly = true;
             this.textBox_VisTelephoneVendeur.Size = new System.Drawing.Size(154, 20);
             this.textBox_VisTelephoneVendeur.TabIndex = 63;
             // 
@@ -349,6 +362,7 @@
             // 
             this.textBox_VisPrenomVendeur.Location = new System.Drawing.Point(102, 498);
             this.textBox_VisPrenomVendeur.Name = "textBox_VisPrenomVendeur";
+            this.textBox_VisPrenomVendeur.ReadOnly = true;
             this.textBox_VisPrenomVendeur.Size = new System.Drawing.Size(154, 20);
             this.textBox_VisPrenomVendeur.TabIndex = 62;
             // 
@@ -472,15 +486,6 @@
             this.label6.TabIndex = 108;
             this.label6.Text = "Liste visites :";
             // 
-            // listBox_ListeVisitesConsultationBien
-            // 
-            this.listBox_ListeVisitesConsultationBien.FormattingEnabled = true;
-            this.listBox_ListeVisitesConsultationBien.Location = new System.Drawing.Point(19, 658);
-            this.listBox_ListeVisitesConsultationBien.MultiColumn = true;
-            this.listBox_ListeVisitesConsultationBien.Name = "listBox_ListeVisitesConsultationBien";
-            this.listBox_ListeVisitesConsultationBien.Size = new System.Drawing.Size(862, 95);
-            this.listBox_ListeVisitesConsultationBien.TabIndex = 109;
-            // 
             // button1_ImprimerDescriptionBien
             // 
             this.button1_ImprimerDescriptionBien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -503,29 +508,43 @@
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(182, 42);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(78, 20);
             this.textBox1.TabIndex = 112;
-            
             // 
             // Date
             // 
             this.Date.Location = new System.Drawing.Point(184, 325);
             this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
             this.Date.Size = new System.Drawing.Size(171, 20);
             this.Date.TabIndex = 113;
+            // 
+            // listView_VisitesBien
+            // 
+            this.listView_VisitesBien.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1});
+            this.listView_VisitesBien.Location = new System.Drawing.Point(41, 639);
+            this.listView_VisitesBien.Name = "listView_VisitesBien";
+            this.listView_VisitesBien.Size = new System.Drawing.Size(840, 161);
+            this.listView_VisitesBien.TabIndex = 114;
+            this.listView_VisitesBien.UseCompatibleStateImageBehavior = false;
+            this.listView_VisitesBien.View = System.Windows.Forms.View.Tile;
+            
             // 
             // Fiche_Bien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 865);
+            this.Controls.Add(this.listView_VisitesBien);
             this.Controls.Add(this.Date);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button_FicheVendeurConsultationBien);
             this.Controls.Add(this.button1_ImprimerDescriptionBien);
-            this.Controls.Add(this.listBox_ListeVisitesConsultationBien);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.checkBox_VisRetireBien);
@@ -570,7 +589,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Fiche_Bien";
-            this.Text = "Form2";
+            this.Text = "Visualisation Bien";
             ((System.ComponentModel.ISupportInitialize)(this.VisNbSDBien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VisNbPiecesBien)).EndInit();
             this.ResumeLayout(false);
@@ -623,10 +642,11 @@
         private System.Windows.Forms.CheckBox checkBox_VisDispoBien;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ListBox listBox_ListeVisitesConsultationBien;
         private System.Windows.Forms.Button button1_ImprimerDescriptionBien;
         private System.Windows.Forms.Button button_FicheVendeurConsultationBien;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox Date;
+        private System.Windows.Forms.ListView listView_VisitesBien;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
     }
 }
