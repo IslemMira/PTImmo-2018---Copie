@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
             this.checkBox_actif = new System.Windows.Forms.CheckBox();
             this.textBox_id = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listView1_Commerciaux = new System.Windows.Forms.ListView();
             this.code_commercial = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Nom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Nb_acheteur = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -52,6 +51,7 @@
             this.checkBox_actif.TabIndex = 0;
             this.checkBox_actif.Text = "Actif";
             this.checkBox_actif.UseVisualStyleBackColor = true;
+            this.checkBox_actif.CheckedChanged += new System.EventHandler(this.checkBox_actif_CheckedChanged);
             // 
             // textBox_id
             // 
@@ -71,24 +71,21 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Id commercial";
             // 
-            // listView1
+            // listView1_Commerciaux
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listView1_Commerciaux.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.code_commercial,
             this.Nom,
             this.Nb_acheteur,
             this.Statut});
-            listViewGroup1.Header = "ListViewGroup";
-            listViewGroup1.Name = "coucou";
-            this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1});
-            this.listView1.Location = new System.Drawing.Point(37, 213);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(837, 267);
-            this.listView1.TabIndex = 12;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1_Commerciaux.FullRowSelect = true;
+            this.listView1_Commerciaux.Location = new System.Drawing.Point(37, 213);
+            this.listView1_Commerciaux.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView1_Commerciaux.Name = "listView1_Commerciaux";
+            this.listView1_Commerciaux.Size = new System.Drawing.Size(837, 267);
+            this.listView1_Commerciaux.TabIndex = 12;
+            this.listView1_Commerciaux.UseCompatibleStateImageBehavior = false;
+            this.listView1_Commerciaux.View = System.Windows.Forms.View.Details;
             // 
             // code_commercial
             // 
@@ -148,7 +145,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button1_Ajouter);
             this.Controls.Add(this.button1_rechercher);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listView1_Commerciaux);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox_id);
             this.Controls.Add(this.checkBox_actif);
@@ -165,7 +162,7 @@
         private System.Windows.Forms.CheckBox checkBox_actif;
         private System.Windows.Forms.TextBox textBox_id;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listView1_Commerciaux;
         private System.Windows.Forms.ColumnHeader code_commercial;
         private System.Windows.Forms.ColumnHeader Nom;
         private System.Windows.Forms.ColumnHeader Nb_acheteur;

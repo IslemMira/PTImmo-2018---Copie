@@ -36,14 +36,17 @@
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
-			this.listBox1 = new System.Windows.Forms.ListBox();
-			this.listBox2 = new System.Windows.Forms.ListBox();
 			this.label6 = new System.Windows.Forms.Label();
 			this.button1 = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
-			this.button3 = new System.Windows.Forms.Button();
-			this.button4 = new System.Windows.Forms.Button();
-			this.button5 = new System.Windows.Forms.Button();
+			this.GenererBonVisite = new System.Windows.Forms.Button();
+			this.Modifier = new System.Windows.Forms.Button();
+			this.Supprimer = new System.Windows.Forms.Button();
+			this.FicheAcheteur = new System.Windows.Forms.Button();
+			this.listView1 = new System.Windows.Forms.ListView();
+			this.listView2 = new System.Windows.Forms.ListView();
+			this.CodeSouhait = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.DateProposition = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.DateVisite = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.SuspendLayout();
 			// 
 			// textBox4
@@ -116,22 +119,6 @@
 			this.label5.TabIndex = 185;
 			this.label5.Text = "Liste des propositions :";
 			// 
-			// listBox1
-			// 
-			this.listBox1.FormattingEnabled = true;
-			this.listBox1.Location = new System.Drawing.Point(35, 119);
-			this.listBox1.Name = "listBox1";
-			this.listBox1.Size = new System.Drawing.Size(204, 238);
-			this.listBox1.TabIndex = 186;
-			// 
-			// listBox2
-			// 
-			this.listBox2.FormattingEnabled = true;
-			this.listBox2.Location = new System.Drawing.Point(35, 439);
-			this.listBox2.Name = "listBox2";
-			this.listBox2.Size = new System.Drawing.Size(204, 238);
-			this.listBox2.TabIndex = 187;
-			// 
 			// label6
 			// 
 			this.label6.AutoSize = true;
@@ -145,66 +132,107 @@
 			// button1
 			// 
 			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button1.Location = new System.Drawing.Point(429, 212);
+			this.button1.Location = new System.Drawing.Point(596, 198);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(146, 53);
 			this.button1.TabIndex = 189;
 			this.button1.Text = "CREER VISITE";
 			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.CreerVisite_Click);
 			// 
-			// button2
+			// GenererBonVisite
 			// 
-			this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button2.Location = new System.Drawing.Point(429, 457);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(146, 53);
-			this.button2.TabIndex = 190;
-			this.button2.Text = "GENERER BON DE VISITE";
-			this.button2.UseVisualStyleBackColor = true;
+			this.GenererBonVisite.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.GenererBonVisite.Location = new System.Drawing.Point(596, 450);
+			this.GenererBonVisite.Name = "GenererBonVisite";
+			this.GenererBonVisite.Size = new System.Drawing.Size(146, 53);
+			this.GenererBonVisite.TabIndex = 190;
+			this.GenererBonVisite.Text = "GENERER BON DE VISITE";
+			this.GenererBonVisite.UseVisualStyleBackColor = true;
+			this.GenererBonVisite.Click += new System.EventHandler(this.GenererBonVisite_Click);
 			// 
-			// button3
+			// Modifier
 			// 
-			this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button3.Location = new System.Drawing.Point(429, 528);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(146, 53);
-			this.button3.TabIndex = 191;
-			this.button3.Text = "MODIFIER";
-			this.button3.UseVisualStyleBackColor = true;
+			this.Modifier.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Modifier.Location = new System.Drawing.Point(596, 521);
+			this.Modifier.Name = "Modifier";
+			this.Modifier.Size = new System.Drawing.Size(146, 53);
+			this.Modifier.TabIndex = 191;
+			this.Modifier.Text = "MODIFIER";
+			this.Modifier.UseVisualStyleBackColor = true;
+			this.Modifier.Click += new System.EventHandler(this.Modifier_Click);
 			// 
-			// button4
+			// Supprimer
 			// 
-			this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button4.Location = new System.Drawing.Point(429, 613);
-			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(146, 53);
-			this.button4.TabIndex = 192;
-			this.button4.Text = "SUPPRIMER";
-			this.button4.UseVisualStyleBackColor = true;
+			this.Supprimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Supprimer.Location = new System.Drawing.Point(596, 606);
+			this.Supprimer.Name = "Supprimer";
+			this.Supprimer.Size = new System.Drawing.Size(146, 53);
+			this.Supprimer.TabIndex = 192;
+			this.Supprimer.Text = "SUPPRIMER";
+			this.Supprimer.UseVisualStyleBackColor = true;
+			this.Supprimer.Click += new System.EventHandler(this.Supprimer_Click);
 			// 
-			// button5
+			// FicheAcheteur
 			// 
-			this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button5.Location = new System.Drawing.Point(576, 720);
-			this.button5.Name = "button5";
-			this.button5.Size = new System.Drawing.Size(146, 53);
-			this.button5.TabIndex = 193;
-			this.button5.Text = "FICHE ACHETEUR";
-			this.button5.UseVisualStyleBackColor = true;
+			this.FicheAcheteur.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.FicheAcheteur.Location = new System.Drawing.Point(497, 725);
+			this.FicheAcheteur.Name = "FicheAcheteur";
+			this.FicheAcheteur.Size = new System.Drawing.Size(146, 53);
+			this.FicheAcheteur.TabIndex = 193;
+			this.FicheAcheteur.Text = "FICHE ACHETEUR";
+			this.FicheAcheteur.UseVisualStyleBackColor = true;
+			this.FicheAcheteur.Click += new System.EventHandler(this.FicheAcheteur_Click);
+			// 
+			// listView1
+			// 
+			this.listView1.Location = new System.Drawing.Point(20, 118);
+			this.listView1.Name = "listView1";
+			this.listView1.Size = new System.Drawing.Size(518, 251);
+			this.listView1.TabIndex = 194;
+			this.listView1.UseCompatibleStateImageBehavior = false;
+			// 
+			// listView2
+			// 
+			this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.CodeSouhait,
+            this.DateProposition,
+            this.DateVisite});
+			this.listView2.Location = new System.Drawing.Point(20, 435);
+			this.listView2.Name = "listView2";
+			this.listView2.Size = new System.Drawing.Size(518, 251);
+			this.listView2.TabIndex = 195;
+			this.listView2.UseCompatibleStateImageBehavior = false;
+			this.listView2.View = System.Windows.Forms.View.Details;
+			// 
+			// CodeSouhait
+			// 
+			this.CodeSouhait.Text = "Code Souhait";
+			this.CodeSouhait.Width = 100;
+			// 
+			// DateProposition
+			// 
+			this.DateProposition.Text = "Date Proposition";
+			this.DateProposition.Width = 200;
+			// 
+			// DateVisite
+			// 
+			this.DateVisite.Text = "DateVisite";
+			this.DateVisite.Width = 200;
 			// 
 			// Liste_des_propositions
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(813, 813);
-			this.Controls.Add(this.button5);
-			this.Controls.Add(this.button4);
-			this.Controls.Add(this.button3);
-			this.Controls.Add(this.button2);
+			this.Controls.Add(this.listView2);
+			this.Controls.Add(this.listView1);
+			this.Controls.Add(this.FicheAcheteur);
+			this.Controls.Add(this.Supprimer);
+			this.Controls.Add(this.Modifier);
+			this.Controls.Add(this.GenererBonVisite);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.label6);
-			this.Controls.Add(this.listBox2);
-			this.Controls.Add(this.listBox1);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.textBox1);
 			this.Controls.Add(this.label4);
@@ -215,6 +243,7 @@
 			this.Controls.Add(this.label1);
 			this.Name = "Liste_des_propositions";
 			this.Text = "Liste_des_propositions";
+			this.Load += new System.EventHandler(this.Liste_des_propositions_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -230,13 +259,16 @@
 		private System.Windows.Forms.TextBox textBox1;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.ListBox listBox1;
-		private System.Windows.Forms.ListBox listBox2;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.Button button3;
-		private System.Windows.Forms.Button button4;
-		private System.Windows.Forms.Button button5;
+		private System.Windows.Forms.Button GenererBonVisite;
+		private System.Windows.Forms.Button Modifier;
+		private System.Windows.Forms.Button Supprimer;
+		private System.Windows.Forms.Button FicheAcheteur;
+		private System.Windows.Forms.ListView listView1;
+		private System.Windows.Forms.ListView listView2;
+		private System.Windows.Forms.ColumnHeader CodeSouhait;
+		private System.Windows.Forms.ColumnHeader DateProposition;
+		private System.Windows.Forms.ColumnHeader DateVisite;
 	}
 }

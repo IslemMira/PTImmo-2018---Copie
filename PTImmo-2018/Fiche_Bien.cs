@@ -27,7 +27,7 @@ namespace PTImmo_2018
             OleDbDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                Console.WriteLine(reader.GetInt16(0));
+              
                 textBox1.Text = reader.GetInt16(0).ToString();
                 textBox_VisSourfaceHabitableBien.Text = reader.GetInt32(1).ToString();
                 textBox_VisSurfaceParcelleBien.Text = reader.GetInt32(2).ToString();
