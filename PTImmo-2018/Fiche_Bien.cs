@@ -9,6 +9,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+ //work in progress : liste historique visites  // Arina
+
+
 namespace PTImmo_2018
 {
     public partial class Fiche_Bien : Form

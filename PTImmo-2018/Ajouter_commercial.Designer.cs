@@ -31,20 +31,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox1_Nom = new System.Windows.Forms.TextBox();
             this.textBox1_Prenom = new System.Windows.Forms.TextBox();
-            this.textBox1_adresse = new System.Windows.Forms.TextBox();
             this.textBox1_FixePro = new System.Windows.Forms.TextBox();
             this.textBox1_MobilePro = new System.Windows.Forms.TextBox();
             this.textBox1_Tel_Prive = new System.Windows.Forms.TextBox();
             this.textBox1_Email = new System.Windows.Forms.TextBox();
             this.button1_ajouter = new System.Windows.Forms.Button();
             this.button1_annuler = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -64,7 +64,6 @@
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nom :";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -75,15 +74,6 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Prénom :";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 118);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Adresse : ";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -92,7 +82,6 @@
             this.label6.Size = new System.Drawing.Size(62, 13);
             this.label6.TabIndex = 5;
             this.label6.Text = "Mobile pro :";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -115,7 +104,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 266);
+            this.label9.Location = new System.Drawing.Point(12, 261);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(38, 13);
             this.label9.TabIndex = 8;
@@ -134,13 +123,6 @@
             this.textBox1_Prenom.Name = "textBox1_Prenom";
             this.textBox1_Prenom.Size = new System.Drawing.Size(160, 20);
             this.textBox1_Prenom.TabIndex = 10;
-            // 
-            // textBox1_adresse
-            // 
-            this.textBox1_adresse.Location = new System.Drawing.Point(108, 118);
-            this.textBox1_adresse.Name = "textBox1_adresse";
-            this.textBox1_adresse.Size = new System.Drawing.Size(199, 20);
-            this.textBox1_adresse.TabIndex = 11;
             // 
             // textBox1_FixePro
             // 
@@ -178,6 +160,7 @@
             this.button1_ajouter.TabIndex = 16;
             this.button1_ajouter.Text = "Ajouter";
             this.button1_ajouter.UseVisualStyleBackColor = true;
+            this.button1_ajouter.Click += new System.EventHandler(this.button1_ajouter_Click);
             // 
             // button1_annuler
             // 
@@ -187,26 +170,54 @@
             this.button1_annuler.TabIndex = 17;
             this.button1_annuler.Text = "Annuler";
             this.button1_annuler.UseVisualStyleBackColor = true;
+            this.button1_annuler.Click += new System.EventHandler(this.button1_annuler_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(433, 37);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 13);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Statut :";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
+            this.comboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Actif",
+            "Ancien employe"});
+            this.comboBox1.Location = new System.Drawing.Point(485, 34);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Sorted = true;
+            this.comboBox1.TabIndex = 19;
             // 
             // Ajouter_commercial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 461);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.button1_annuler);
             this.Controls.Add(this.button1_ajouter);
             this.Controls.Add(this.textBox1_Email);
             this.Controls.Add(this.textBox1_Tel_Prive);
             this.Controls.Add(this.textBox1_MobilePro);
             this.Controls.Add(this.textBox1_FixePro);
-            this.Controls.Add(this.textBox1_adresse);
             this.Controls.Add(this.textBox1_Prenom);
             this.Controls.Add(this.textBox1_Nom);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -222,19 +233,19 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox1_Nom;
         private System.Windows.Forms.TextBox textBox1_Prenom;
-        private System.Windows.Forms.TextBox textBox1_adresse;
         private System.Windows.Forms.TextBox textBox1_FixePro;
         private System.Windows.Forms.TextBox textBox1_MobilePro;
         private System.Windows.Forms.TextBox textBox1_Tel_Prive;
         private System.Windows.Forms.TextBox textBox1_Email;
         private System.Windows.Forms.Button button1_ajouter;
         private System.Windows.Forms.Button button1_annuler;
+        private System.Windows.Forms.Label label4;
+        protected System.Windows.Forms.ComboBox comboBox1;
     }
 }

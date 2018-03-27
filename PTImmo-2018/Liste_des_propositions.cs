@@ -28,43 +28,29 @@ namespace PTImmo_2018
 			OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
 			dbConnection.Open();
 
-			string sql2 = "SELECT num_acheteur,nom_Acheteur, prénom_Acheteur where NUM_ACHETEUR =; ";
-			OleDbCommand cmd2 = new OleDbCommand(sql2, dbConnection);
-			OleDbDataReader reader2 = cmd2.ExecuteReader();
+			string sql2 = "SELECT num_acheteur,nom_Acheteur, prénom_Acheteur FROM Acheteur where NUM_ACHETEUR =2 ";
+			OleDbCommand cmd = new OleDbCommand(sql2, dbConnection);
+            OleDbDataReader reader2 = cmd.ExecuteReader();
 			while (reader2.Read())
 			{
 				textBox1.Text = reader2.GetInt32(0).ToString();
-				textBox3.Text = reader2.GetInt32(1).ToString();
-				textBox4.Text = reader2.GetInt32(2).ToString();
+				textBox3.Text = reader2.GetString(1);
+				textBox4.Text = reader2.GetString(2);
 			}
 			reader2.Close();
 
-			string sql = "select b.code_bien,b.adresse,b.statut, count(v.code_visite) nb_visite from bien b left join proposition p on p.code_bien = b.code_bien left join visite v on v.code_proposition = p.code_proposition left join vendeur ve on ve.num_client = b.num_client where ve.nom_client like '%" + textBox1.Text + "%' and b.statut like '%" + "' group by b.code_bien,b.adresse,b.statut; ";
+			
 
-			OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
-			OleDbDataReader reader = cmd.ExecuteReader();
-			while (reader.Read())
-			{
-				Console.WriteLine(reader.GetInt16(0));
-				Console.WriteLine(reader.GetString(1));
-				Console.WriteLine(reader.GetString(2));
-
-				string[] row = { reader.GetInt16(0).ToString(), reader.GetString(1), reader.GetString(2), reader.GetInt32(3).ToString() };
-				ListViewItem lvi = new ListViewItem(row);
-				listView1.Items.Add(lvi);
-			}
-			reader.Close();
-
-			string sql1 = "select s.CODE_SOUHAIT, p.DATE, v.DATE from VISITE v left join PROPOSITION p on p.CODE_PROPOSITION = v.CODE_PROPOSITION left join SOUHAIT s on s.CODE_SOUHAIT = p.CODE_SOUHAIT where s.NUM_ACHETEUR =; ";
+			string sql1 = "select s.CODE_SOUHAIT, p.DATE, v.DATE from VISITE v left join PROPOSITION p on p.CODE_PROPOSITION = v.CODE_PROPOSITION left join SOUHAIT s on s.CODE_SOUHAIT = p.CODE_SOUHAIT where s.NUM_ACHETEUR =2 ";
 				OleDbCommand cmd1 = new OleDbCommand(sql1, dbConnection);
 				OleDbDataReader reader1 = cmd.ExecuteReader();
 				while (reader1.Read())
 				{
-					Console.WriteLine(reader1.GetInt16(0));
-					Console.WriteLine(reader1.GetDateTime(1));
-					Console.WriteLine(reader1.GetDateTime(2));
+					Console.WriteLine(reader1.GetInt32(0));
+					Console.WriteLine(reader1.GetValue(1));
+					Console.WriteLine(reader1.GetValue(2));
 
-					string[] row = { reader1.GetInt16(0).ToString(), reader1.GetDateTime(1).ToString(), reader1.GetDateTime(2).ToString() };
+					string[] row = { reader1.GetInt32(0).ToString(), reader1.GetValue(1).ToString(), reader1.GetValue(2).ToString() };
 					ListViewItem visites = new ListViewItem(row);
 					listView1.Items.Add(visites);
 				}

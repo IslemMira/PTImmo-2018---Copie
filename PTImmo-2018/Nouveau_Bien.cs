@@ -29,7 +29,7 @@ namespace PTImmo_2018
         {
 
             string sql1 = "INSERT Into Bien (SURFACE_HABITABLE, SURFACE_PARCELLE, NB_PIECES, NB_CHAMBRES, NB_SALLE_DE_BAIN, GARAGE, CAVE, PRIX_VENDEUR, ADRESSE, DATE_MISE_EN_VENTE, COMMENTAIRE, STATUT, CODE_VILLE, NUM_CLIENT)";
-            string sql2 = "VALUES (" + Convert.ToInt32(textBox_AjSurfaceHabitableBien.Text) + "," + Convert.ToInt32(textBox_AjSurfaceParcelleBien.Text) + "," + Convert.ToInt32(nbPiecesBien.Text) + "," + nbChambreBien.Text + "," + Convert.ToInt32(nbSDBien.Text) + "," + Convert.ToInt32(textBox_AjCPVendeur.Text) + "," + textBox_AjRueBien.Text + ", " + Convert.tomonthCalendar_AjDateMiseVenteBien + "," + textBox_AjCommentaireBien.Text + ", 'D'," + Convert.ToInt32(textBox_AjCPBien) + "," + textBox_AjCodeVendeur.Text + ",(SELECT v.code_ville from VILLE v where v.NOM_VILLE LIKE " + textBox_AjVilleBien.Text + ")";
+            string sql2 = "VALUES (" + textBox_AjSurfaceHabitableBien.Text + "," + textBox_AjSurfaceParcelleBien.Text + "," + Convert.ToInt32(nbPiecesBien.Text) + "," + nbChambreBien.Text + "," + Convert.ToInt32(nbSDBien.Text) + "," + Convert.ToInt32(textBox_AjCPVendeur.Text) + "," + textBox_AjRueBien.Text + ", " + Convert.ToDateTime(monthCalendar_AjDateMiseVenteBien) + "," + textBox_AjCommentaireBien.Text + ", 'D'," + Convert.ToInt32(textBox_AjCPBien) + "," + textBox_AjCodeVendeur.Text + ",(SELECT v.code_ville from VILLE v where v.NOM_VILLE LIKE " + textBox_AjVilleBien.Text + ")";
             string sql = sql1 + sql2;
 
             string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
