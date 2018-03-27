@@ -59,7 +59,9 @@ namespace PTImmo_2018
 
 		private void CreerVisite_Click(object sender, EventArgs e)
 		{
-
+			CreerVisite cv = new CreerVisite();
+			cv.Show(this);
+			this.Hide();
 		}
 
 		private void GenererBonVisite_Click(object sender, EventArgs e)
