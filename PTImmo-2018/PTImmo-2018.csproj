@@ -100,6 +100,12 @@
     <Compile Include="Liste_des_propositions.Designer.cs">
       <DependentUpon>Liste_des_propositions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Nouveau Vendeur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nouveau Vendeur.Designer.cs">
+      <DependentUpon>Nouveau Vendeur.cs</DependentUpon>
+    </Compile>
     <Compile Include="Nouveau_bien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Liste_des_propositions.resx">
       <DependentUpon>Liste_des_propositions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nouveau Vendeur.resx">
+      <DependentUpon>Nouveau Vendeur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nouveau_bien.resx">
       <DependentUpon>Nouveau_bien.cs</DependentUpon>
