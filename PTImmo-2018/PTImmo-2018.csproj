@@ -144,6 +144,12 @@
     <Compile Include="RechercheAcheteur.Designer.cs">
       <DependentUpon>RechercheAcheteur.cs</DependentUpon>
     </Compile>
+    <Compile Include="RechercheVendeur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RechercheVendeur.Designer.cs">
+      <DependentUpon>RechercheVendeur.cs</DependentUpon>
+    </Compile>
     <Compile Include="Recherche_Commerciaux.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RechercheAcheteur.resx">
       <DependentUpon>RechercheAcheteur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RechercheVendeur.resx">
+      <DependentUpon>RechercheVendeur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Recherche_Commerciaux.resx">
       <DependentUpon>Recherche_Commerciaux.cs</DependentUpon>
