@@ -56,7 +56,9 @@ namespace PTImmo_2018
 
         private void fermer_Click(object sender, EventArgs e)
         {
-           
+            Fiche_Bien fb = new Fiche_Bien();
+            fb.Show(this);
+            this.Hide();
         }
     }
 }
