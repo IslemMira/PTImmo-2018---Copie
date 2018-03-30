@@ -23,7 +23,7 @@ namespace PTImmo_2018
             dbConnection.Open();
 
             string sqlS1 = "Select c.Num_Commercial, c.Nom, c.Prenom, count(a.num_acheteur) as nombre_acheteur, c.Statut";
-            string sqlF1 = " from Commercial c left join acheteur a on a.num_commercial = c.Num_Commercial";
+            string sqlF1 = "from Commercial c left join acheteur a on a.num_commercial = c.Num_Commercial";
             string sqlG1 = " group by c.Num_Commercial, c.Nom, c.Prenom, c.Statut";
             string sql = sqlS1 + sqlF1 + sqlG1;
 
@@ -65,6 +65,34 @@ namespace PTImmo_2018
                 listView1_Commerciaux.Items.Add(lvi);
             }
             reader.Close();
+        }
+
+        private void Recherche_IdCommercial(object sender, EventArgs e)
+        {
+            string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
+
+            OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
+            dbConnection.Open();
+
+            string sqlS1 = "Select c.Num_Commercial, c.Nom, c.Prenom, count(a.num_acheteur) as nombre_acheteur, c.Statut";
+            string sqlF1 = " from Commercial c left join acheteur a on a.num_commercial = c.Num_Commercial";
+            string sqlW1 = " where c.NUM_COMMERCIAL = %";
+            string sqlG1 = " group by c.Num_Commercial, c.Nom, c.Prenom, c.Statut";
+            string sql = sqlS1 + sqlF1 + sqlW1 + sqlG1;
+
+            OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
+            OleDbDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                textBox_id.Text = reader.GetString(1);
+            }
+            reader.Close();
+        }
+
+        private void Button_AjouterCommercial(object sender, EventArgs e)
+        {
+
         }
     }
 }

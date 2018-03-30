@@ -18,13 +18,6 @@ namespace PTImmo_2018
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-            
-        }
-
-
         private void Button_Valider_Click(object sender, EventArgs e)
         {
 
@@ -39,5 +32,20 @@ namespace PTImmo_2018
 
         
         }
+
+        private void Annuler_NouveauBien(object sender, EventArgs e)
+        {
+            FicheVendeur fv = new FicheVendeur();
+            fv.Show(this);
+            this.Hide();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+
+        }
+
+
     }
 }
