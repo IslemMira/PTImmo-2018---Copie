@@ -100,6 +100,12 @@
     <Compile Include="Liste_des_propositions.Designer.cs">
       <DependentUpon>Liste_des_propositions.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModifierAcheteur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierAcheteur.Designer.cs">
+      <DependentUpon>ModifierAcheteur.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModifierSouhait.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Liste_des_propositions.resx">
       <DependentUpon>Liste_des_propositions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierAcheteur.resx">
+      <DependentUpon>ModifierAcheteur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModifierSouhait.resx">
       <DependentUpon>ModifierSouhait.cs</DependentUpon>

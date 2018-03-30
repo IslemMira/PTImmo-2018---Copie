@@ -27,7 +27,7 @@ namespace PTImmo_2018
 
 
 
-                string sql = "select s.CODE_SOUHAIT,s.STATUT, s.SURFACE_HABITABLE_MIN, s.SURFACE_PARCELLE_MIN, s.NB_PIECES_MIN,  s.PRIX_MAX, v.NOM_VILLE, v.Code_Postal from SOUHAIT s left join VILLE v on v.CODE_VILLE = s.CODE_VILLE where s.CODE_SOUHAIT = '" +Visualiser_Acheteur.id_souhait+ "' ";
+                string sql = "select s.CODE_SOUHAIT,s.STATUT, s.SURFACE_HABITABLE_MIN, s.SURFACE_PARCELLE_MIN, s.NB_PIECES_MIN,  s.PRIX_MAX, v.NOM_VILLE, v.Code_Postal from SOUHAIT s left join VILLE v on v.CODE_VILLE = s.CODE_VILLE where s.CODE_SOUHAIT = '" +visualiser_acheteur.id_souhait+ "' ";
                 OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
                 OleDbDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -56,7 +56,7 @@ namespace PTImmo_2018
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Visualiser_Acheteur va = new Visualiser_Acheteur();
+            visualiser_acheteur va = new visualiser_acheteur();
             va.Show(this);
             this.Hide();
         }

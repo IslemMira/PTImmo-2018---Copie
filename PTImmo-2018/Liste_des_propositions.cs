@@ -32,20 +32,21 @@ namespace PTImmo_2018
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
 
-            string sql2 = "SELECT num_acheteur,nom_Acheteur, prénom_Acheteur FROM Acheteur where NUM_ACHETEUR =2 ";
+            string sql2 = "SELECT nom_Acheteur, prénom_Acheteur FROM Acheteur where Num_Acheteur = '" + visualiser_acheteur.id_acheteur +"' ";
             OleDbCommand cmd = new OleDbCommand(sql2, dbConnection);
             OleDbDataReader reader2 = cmd.ExecuteReader();
             while (reader2.Read())
             {
-                textBox1.Text = reader2.GetInt32(0).ToString();
-                textBox2.Text = reader2.GetString(1);
-                textBox4.Text = reader2.GetString(2);
+                Console.WriteLine(textBox1.Text);
+                textBox1.Text = visualiser_acheteur.id_acheteur;
+                textBox2.Text = reader2.GetString(0);
+                textBox4.Text = reader2.GetString(1);
             }
             reader2.Close();
 
 
 
-            string sql1 = "select p.CODE_SOUHAIT, p.code_bien, p.DATE, p.Code_Proposition from PROPOSITION p  left join SOUHAIT s on p.CODE_SOUHAIT = s.CODE_SOUHAIT left join ACHETEUR a on s.NUM_ACHETEUR = a.NUM_ACHETEUR where a.NUM_ACHETEUR = " + textBox1.Text + ";";
+            string sql1 = "select p.CODE_SOUHAIT, p.code_bien, p.DATE, p.Code_Proposition from PROPOSITION p  left join SOUHAIT s on p.CODE_SOUHAIT = s.CODE_SOUHAIT left join ACHETEUR a on s.NUM_ACHETEUR = a.NUM_ACHETEUR where a.NUM_ACHETEUR = '" + textBox1.Text + "' ";
             OleDbCommand cmd1 = new OleDbCommand(sql1, dbConnection);
             OleDbDataReader reader1 = cmd1.ExecuteReader();
             while (reader1.Read())
@@ -56,7 +57,7 @@ namespace PTImmo_2018
             }
             reader1.Close();
 
-            string sql3 = "select p.CODE_SOUHAIT, p.DATE, v.date from PROPOSITION p inner join visite v on p.CODE_PROPOSITION = v.CODE_PROPOSITION  left join SOUHAIT s on p.CODE_SOUHAIT = s.CODE_SOUHAIT left join ACHETEUR a on s.NUM_ACHETEUR = a.NUM_ACHETEUR where a.NUM_ACHETEUR = " + textBox1.Text + ";";
+            string sql3 = "select p.CODE_SOUHAIT, p.DATE, v.date from PROPOSITION p inner join visite v on p.CODE_PROPOSITION = v.CODE_PROPOSITION  left join SOUHAIT s on p.CODE_SOUHAIT = s.CODE_SOUHAIT left join ACHETEUR a on s.NUM_ACHETEUR = a.NUM_ACHETEUR where a.NUM_ACHETEUR = '" + textBox1.Text + "'";
             OleDbCommand cmd3 = new OleDbCommand(sql3, dbConnection);
             OleDbDataReader reader3 = cmd3.ExecuteReader();
             while (reader3.Read())
@@ -92,7 +93,7 @@ namespace PTImmo_2018
 
 		private void FicheAcheteur_Click(object sender, EventArgs e)
 		{
-			Visualiser_Acheteur va = new Visualiser_Acheteur();
+			visualiser_acheteur va = new visualiser_acheteur();
 			va.Show(this);
 			this.Hide();
 		}

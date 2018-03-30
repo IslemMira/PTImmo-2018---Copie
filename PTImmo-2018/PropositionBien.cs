@@ -26,7 +26,7 @@ namespace PTImmo_2018
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
 
-            string sql = "select a.NOM_ACHETEUR, a.PRÉNOM_ACHETEUR,s.CODE_SOUHAIT, v.NOM_VILLE, s.SURFACE_HABITABLE_MIN, s.SURFACE_PARCELLE_MIN, s.NB_PIECES_MIN, s.PRIX_MAX, s.STATUT from SOUHAIT s left join ACHETEUR a on a.NUM_ACHETEUR = s.NUM_ACHETEUR left join VILLE v on v.CODE_VILLE = s.CODE_VILLE where s.Code_Souhait =  '" + Visualiser_Acheteur.id_souhait + "' ";
+            string sql = "select a.NOM_ACHETEUR, a.PRÉNOM_ACHETEUR,s.CODE_SOUHAIT, v.NOM_VILLE, s.SURFACE_HABITABLE_MIN, s.SURFACE_PARCELLE_MIN, s.NB_PIECES_MIN, s.PRIX_MAX, s.STATUT from SOUHAIT s left join ACHETEUR a on a.NUM_ACHETEUR = s.NUM_ACHETEUR left join VILLE v on v.CODE_VILLE = s.CODE_VILLE where s.Code_Souhait =  '" + visualiser_acheteur.id_souhait + "' ";
 
 
             OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
@@ -90,7 +90,7 @@ namespace PTImmo_2018
 
         private void Retour_Click(object sender, EventArgs e)
         {
-            Visualiser_Acheteur va = new Visualiser_Acheteur();
+            visualiser_acheteur va = new visualiser_acheteur();
             va.Show(this);
             this.Hide();
         }

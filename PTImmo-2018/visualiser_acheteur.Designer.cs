@@ -1,6 +1,6 @@
 ﻿namespace PTImmo_2018
 {
-    partial class Visualiser_Acheteur
+    partial class visualiser_acheteur
     {
         /// <summary>
         /// Required designer variable.
@@ -56,12 +56,12 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.listView2 = new System.Windows.Forms.ListView();
             this.IdSouhait = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SurfaceMin = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.NbPieces = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Prix = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Statut = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView2 = new System.Windows.Forms.ListView();
             this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.propo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.bien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -210,6 +210,7 @@
             this.fermer.TabIndex = 66;
             this.fermer.Text = "Fermer";
             this.fermer.UseVisualStyleBackColor = true;
+            this.fermer.Click += new System.EventHandler(this.fermer_Click);
             // 
             // liste_des_souhaits
             // 
@@ -339,24 +340,6 @@
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseClick);
             // 
-            // listView2
-            // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.id,
-            this.propo,
-            this.bien,
-            this.Date,
-            this.Comm});
-            this.listView2.FullRowSelect = true;
-            this.listView2.GridLines = true;
-            this.listView2.Location = new System.Drawing.Point(19, 658);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(463, 153);
-            this.listView2.TabIndex = 81;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
-            this.listView2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView2_MouseClick);
-            // 
             // IdSouhait
             // 
             this.IdSouhait.Text = "Id Souhait";
@@ -382,6 +365,24 @@
             this.Statut.Text = "Statut";
             this.Statut.Width = 102;
             // 
+            // listView2
+            // 
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.id,
+            this.propo,
+            this.bien,
+            this.Date,
+            this.Comm});
+            this.listView2.FullRowSelect = true;
+            this.listView2.GridLines = true;
+            this.listView2.Location = new System.Drawing.Point(19, 658);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(463, 153);
+            this.listView2.TabIndex = 81;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            this.listView2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView2_MouseClick);
+            // 
             // id
             // 
             this.id.Text = "Id Souhait";
@@ -402,7 +403,7 @@
             // 
             this.Comm.Text = "Commercial";
             // 
-            // Visualiser_Acheteur
+            // visualiser_acheteur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -436,7 +437,7 @@
             this.Controls.Add(this.Telephone);
             this.Controls.Add(this.Prenom);
             this.Controls.Add(this.Nom);
-            this.Name = "Visualiser_Acheteur";
+            this.Name = "visualiser_acheteur";
             this.Text = "Visualiser Acheteur";
             this.Load += new System.EventHandler(this.Visualiser_Acheteur_Load);
             this.ResumeLayout(false);

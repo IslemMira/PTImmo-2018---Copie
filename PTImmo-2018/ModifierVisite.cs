@@ -42,7 +42,7 @@ namespace PTImmo_2018
             comboBox_Commercial.DisplayMember = "Nom";
             comboBox_Commercial.DataSource = dt;
 
-            string sql1 = "Select nom_acheteur, PRÉNOM_ACHETEUR, b.CODE_BIEN, b.SURFACE_HABITABLE, b.SURFACE_PARCELLE, b.NB_PIÉCES, b.NB_CHAMBRES, b.NB_SALLE_DE_BAIN,b.GARAGE, b.CAVE,b.PRIX_VENDEUR,p.date from ACHETEUR inner join souhait s on s.NUM_ACHETEUR = ACHETEUR.NUM_ACHETEUR inner join PROPOSITION p on s.CODE_SOUHAIT = p.CODE_SOUHAIT inner join bien b on p.CODE_BIEN = b.CODE_BIEN inner join VISITE v on v.CODE_PROPOSITION = p.CODE_PROPOSITION where v.CODE_VISITE =  " + Visualiser_Acheteur.id_visite + ";";
+            string sql1 = "Select nom_acheteur, PRÉNOM_ACHETEUR, b.CODE_BIEN, b.SURFACE_HABITABLE, b.SURFACE_PARCELLE, b.NB_PIÉCES, b.NB_CHAMBRES, b.NB_SALLE_DE_BAIN,b.GARAGE, b.CAVE,b.PRIX_VENDEUR,p.date from ACHETEUR inner join souhait s on s.NUM_ACHETEUR = ACHETEUR.NUM_ACHETEUR inner join PROPOSITION p on s.CODE_SOUHAIT = p.CODE_SOUHAIT inner join bien b on p.CODE_BIEN = b.CODE_BIEN inner join VISITE v on v.CODE_PROPOSITION = p.CODE_PROPOSITION where v.CODE_VISITE =  " + visualiser_acheteur.id_visite + ";";
             OleDbCommand cmd1 = new OleDbCommand(sql1, dbConnection);
             OleDbDataReader reader1 = cmd1.ExecuteReader();
 
@@ -76,14 +76,14 @@ namespace PTImmo_2018
             cmd.ExecuteNonQuery();
             MessageBox.Show("Saved");
 
-            Visualiser_Acheteur va = new Visualiser_Acheteur();
+            visualiser_acheteur va = new visualiser_acheteur();
             va.Show(this);
             this.Hide();
         }
 
         private void button_Annuler_Click(object sender, EventArgs e)
         {
-            Visualiser_Acheteur va = new Visualiser_Acheteur();
+            visualiser_acheteur va = new visualiser_acheteur();
             va.Show(this);
             this.Hide();
         }

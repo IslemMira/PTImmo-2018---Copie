@@ -62,6 +62,7 @@
             this.GA.TabIndex = 2;
             this.GA.Text = "Gestion des acheteurs";
             this.GA.UseVisualStyleBackColor = true;
+            this.GA.Click += new System.EventHandler(this.GA_Click);
             // 
             // GC
             // 
@@ -71,6 +72,7 @@
             this.GC.TabIndex = 3;
             this.GC.Text = "Gestion des Commerciaux";
             this.GC.UseVisualStyleBackColor = true;
+            this.GC.Click += new System.EventHandler(this.GC_Click);
             // 
             // FormAcceuil
             // 

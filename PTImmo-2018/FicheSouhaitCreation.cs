@@ -35,7 +35,7 @@ namespace PTImmo_2018
 
         private void Annuler_CreationSouhait(object sender, EventArgs e)
         {
-            Visualiser_Acheteur va = new Visualiser_Acheteur();
+            visualiser_acheteur va = new visualiser_acheteur();
             va.Show(this);
             this.Hide();
         }

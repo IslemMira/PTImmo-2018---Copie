@@ -23,9 +23,20 @@ namespace PTImmo_2018
             liste_des_biens ldb = new liste_des_biens();            
                 ldb.Show(this);
                 this.Hide();
+        }
 
-            
+        private void GA_Click(object sender, EventArgs e)
+        {
+            RechercheAcheteur ra = new RechercheAcheteur();
+            ra.Show(this);
+            this.Hide();
+        }
 
+        private void GC_Click(object sender, EventArgs e)
+        {
+            Recherche_Commerciaux rc = new Recherche_Commerciaux();
+            rc.Show(this);
+            this.Hide();
         }
     }
 }

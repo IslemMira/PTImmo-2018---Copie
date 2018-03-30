@@ -11,18 +11,22 @@ using System.Windows.Forms;
 
 namespace PTImmo_2018
 {
-    public partial class Visualiser_Acheteur : Form
+    public partial class visualiser_acheteur : Form
     {
+        public static string id_acheteur;
         public static string id_souhait;
         public static string id_visite;
-        public Visualiser_Acheteur()
+        public visualiser_acheteur()
         {
             InitializeComponent();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            id_acheteur = textBox6.Text;
+            Liste_des_propositions ldp = new Liste_des_propositions();
+            ldp.Show(this);
+            this.Hide();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -49,7 +53,7 @@ namespace PTImmo_2018
         
         
 
-        private void Visualiser_Acheteur_Load(object sender, EventArgs e)
+        public void Visualiser_Acheteur_Load(object sender, EventArgs e)
         {
             string nomBase = "IMMOBILLY_JACKYTEAM";
             string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
@@ -153,7 +157,8 @@ namespace PTImmo_2018
 
         private void modif_Click(object sender, EventArgs e)
         {
-            ModifierVisite mf = new ModifierVisite();
+            //id_acheteur = textBox6.Text;
+             ModifierVisite mf = new ModifierVisite();
             mf.Show(this);
             this.Hide();
         }
@@ -165,7 +170,17 @@ namespace PTImmo_2018
 
         private void modifier_Click(object sender, EventArgs e)
         {
+            id_acheteur = textBox6.Text;
+            ModifierAcheteur ma = new ModifierAcheteur();
+            ma.Show(this);
+            this.Hide();
+        }
 
+        private void fermer_Click(object sender, EventArgs e)
+        {
+            RechercheAcheteur ra = new RechercheAcheteur();
+            ra.Show(this);
+            this.Hide();
         }
     }
 }
