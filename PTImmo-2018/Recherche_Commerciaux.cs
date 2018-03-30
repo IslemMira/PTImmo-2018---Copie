@@ -92,7 +92,16 @@ namespace PTImmo_2018
 
         private void Button_AjouterCommercial(object sender, EventArgs e)
         {
+           Ajouter_commercial ac = new Ajouter_commercial();
+            ac.Show(this);
+            this.Hide();
+        }
 
+        private void Fermer_RechercheCommercial(object sender, EventArgs e)
+        {
+            FormAcceuil Accueil = new FormAcceuil();
+            Accueil.Show(this);
+            this.Hide();
         }
     }
 }
