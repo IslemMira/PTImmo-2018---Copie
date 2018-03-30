@@ -31,5 +31,12 @@ namespace PTImmo_2018
             dbConnection.Open();
             OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
         }
+
+        private void Annuler_CreationVendeur(object sender, EventArgs e)
+        {
+            FormAcceuil Accueil = new FormAcceuil();
+            Accueil.Show(this);
+            this.Hide();
+        }
     }
 }

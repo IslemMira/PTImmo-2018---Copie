@@ -133,7 +133,7 @@
             // textBox_Nom
             // 
             this.textBox_Nom.Location = new System.Drawing.Point(120, 151);
-            this.textBox_Nom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_Nom.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_Nom.Name = "textBox_Nom";
             this.textBox_Nom.Size = new System.Drawing.Size(132, 22);
             this.textBox_Nom.TabIndex = 9;
@@ -141,7 +141,7 @@
             // textBox_Prénom
             // 
             this.textBox_Prénom.Location = new System.Drawing.Point(120, 183);
-            this.textBox_Prénom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_Prénom.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_Prénom.Name = "textBox_Prénom";
             this.textBox_Prénom.Size = new System.Drawing.Size(132, 22);
             this.textBox_Prénom.TabIndex = 10;
@@ -149,7 +149,7 @@
             // textBox_Adresse
             // 
             this.textBox_Adresse.Location = new System.Drawing.Point(120, 215);
-            this.textBox_Adresse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_Adresse.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_Adresse.Name = "textBox_Adresse";
             this.textBox_Adresse.Size = new System.Drawing.Size(132, 22);
             this.textBox_Adresse.TabIndex = 11;
@@ -157,7 +157,7 @@
             // textBox_CP
             // 
             this.textBox_CP.Location = new System.Drawing.Point(120, 247);
-            this.textBox_CP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_CP.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_CP.Name = "textBox_CP";
             this.textBox_CP.Size = new System.Drawing.Size(132, 22);
             this.textBox_CP.TabIndex = 12;
@@ -165,7 +165,7 @@
             // textBox_tel
             // 
             this.textBox_tel.Location = new System.Drawing.Point(120, 297);
-            this.textBox_tel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_tel.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_tel.Name = "textBox_tel";
             this.textBox_tel.Size = new System.Drawing.Size(132, 22);
             this.textBox_tel.TabIndex = 13;
@@ -173,7 +173,7 @@
             // textBox_email
             // 
             this.textBox_email.Location = new System.Drawing.Point(120, 329);
-            this.textBox_email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_email.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_email.Name = "textBox_email";
             this.textBox_email.Size = new System.Drawing.Size(132, 22);
             this.textBox_email.TabIndex = 14;
@@ -182,7 +182,7 @@
             // 
             this.comboBox_commercial.FormattingEnabled = true;
             this.comboBox_commercial.Location = new System.Drawing.Point(515, 155);
-            this.comboBox_commercial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox_commercial.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_commercial.Name = "comboBox_commercial";
             this.comboBox_commercial.Size = new System.Drawing.Size(289, 24);
             this.comboBox_commercial.TabIndex = 15;
@@ -201,17 +201,18 @@
             // button_annuler
             // 
             this.button_annuler.Location = new System.Drawing.Point(623, 524);
-            this.button_annuler.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_annuler.Margin = new System.Windows.Forms.Padding(4);
             this.button_annuler.Name = "button_annuler";
             this.button_annuler.Size = new System.Drawing.Size(100, 28);
             this.button_annuler.TabIndex = 17;
             this.button_annuler.Text = "ANNULER";
             this.button_annuler.UseVisualStyleBackColor = true;
+            this.button_annuler.Click += new System.EventHandler(this.Annuler_CreationVendeur);
             // 
             // button_valider
             // 
             this.button_valider.Location = new System.Drawing.Point(731, 524);
-            this.button_valider.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_valider.Margin = new System.Windows.Forms.Padding(4);
             this.button_valider.Name = "button_valider";
             this.button_valider.Size = new System.Drawing.Size(100, 28);
             this.button_valider.TabIndex = 18;
@@ -242,7 +243,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Creation_acheteur";
             this.Text = "Création acheteur";
             this.ResumeLayout(false);
