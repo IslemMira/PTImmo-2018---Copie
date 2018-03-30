@@ -78,6 +78,7 @@
             this.label26 = new System.Windows.Forms.Label();
             this.nbChambreBien = new System.Windows.Forms.NumericUpDown();
             this.Button_Valider = new System.Windows.Forms.Button();
+            this.Button_Annuler = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nbPiecesBien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbSDBien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbChambreBien)).BeginInit();
@@ -572,11 +573,22 @@
             this.Button_Valider.UseVisualStyleBackColor = true;
             this.Button_Valider.Click += new System.EventHandler(this.Button_Valider_Click);
             // 
+            // Button_Annuler
+            // 
+            this.Button_Annuler.Location = new System.Drawing.Point(829, 939);
+            this.Button_Annuler.Name = "Button_Annuler";
+            this.Button_Annuler.Size = new System.Drawing.Size(156, 53);
+            this.Button_Annuler.TabIndex = 54;
+            this.Button_Annuler.Text = "ANNULER";
+            this.Button_Annuler.UseVisualStyleBackColor = true;
+            this.Button_Annuler.Click += new System.EventHandler(this.Annuler_NouveauBien);
+            // 
             // Nouveau_bien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1224, 1037);
+            this.Controls.Add(this.Button_Annuler);
             this.Controls.Add(this.Button_Valider);
             this.Controls.Add(this.nbChambreBien);
             this.Controls.Add(this.label26);
@@ -690,5 +702,6 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.NumericUpDown nbChambreBien;
         private System.Windows.Forms.Button Button_Valider;
+        private System.Windows.Forms.Button Button_Annuler;
     }
 }
