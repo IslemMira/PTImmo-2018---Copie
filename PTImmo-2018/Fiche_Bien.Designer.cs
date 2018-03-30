@@ -76,7 +76,13 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Date = new System.Windows.Forms.TextBox();
             this.listView_VisitesBien = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.NumAcheteur = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Nom_acheteur = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.PrenomAcheteur = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.NumCom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.NomCom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.PrenomCom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Datevis = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.VisNbSDBien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VisNbPiecesBien)).BeginInit();
             this.SuspendLayout();
@@ -526,14 +532,55 @@
             // listView_VisitesBien
             // 
             this.listView_VisitesBien.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1});
-            this.listView_VisitesBien.Location = new System.Drawing.Point(41, 639);
+            this.NumAcheteur,
+            this.Nom_acheteur,
+            this.PrenomAcheteur,
+            this.NumCom,
+            this.NomCom,
+            this.PrenomCom,
+            this.Datevis});
+            this.listView_VisitesBien.GridLines = true;
+            this.listView_VisitesBien.Location = new System.Drawing.Point(16, 644);
             this.listView_VisitesBien.Name = "listView_VisitesBien";
-            this.listView_VisitesBien.Size = new System.Drawing.Size(840, 161);
+            this.listView_VisitesBien.Size = new System.Drawing.Size(865, 161);
             this.listView_VisitesBien.TabIndex = 114;
             this.listView_VisitesBien.UseCompatibleStateImageBehavior = false;
-            this.listView_VisitesBien.View = System.Windows.Forms.View.Tile;
-            
+            this.listView_VisitesBien.View = System.Windows.Forms.View.Details;
+            // 
+            // NumAcheteur
+            // 
+            this.NumAcheteur.Text = "Id Acheteur";
+            this.NumAcheteur.Width = 76;
+            // 
+            // Nom_acheteur
+            // 
+            this.Nom_acheteur.Text = "Nom acheteur";
+            this.Nom_acheteur.Width = 133;
+            // 
+            // PrenomAcheteur
+            // 
+            this.PrenomAcheteur.Text = "Prénom acheteur";
+            this.PrenomAcheteur.Width = 121;
+            // 
+            // NumCom
+            // 
+            this.NumCom.Text = "Id Commercial";
+            this.NumCom.Width = 88;
+            // 
+            // NomCom
+            // 
+            this.NomCom.Text = "Nom Commercial";
+            this.NomCom.Width = 120;
+            // 
+            // PrenomCom
+            // 
+            this.PrenomCom.Text = "Prénom Commercial";
+            this.PrenomCom.Width = 117;
+            // 
+            // Datevis
+            // 
+            this.Datevis.Text = "Date visite";
+            this.Datevis.Width = 204;
             // 
             // Fiche_Bien
             // 
@@ -647,6 +694,12 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox Date;
         private System.Windows.Forms.ListView listView_VisitesBien;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader NumAcheteur;
+        private System.Windows.Forms.ColumnHeader Nom_acheteur;
+        private System.Windows.Forms.ColumnHeader PrenomAcheteur;
+        private System.Windows.Forms.ColumnHeader NumCom;
+        private System.Windows.Forms.ColumnHeader NomCom;
+        private System.Windows.Forms.ColumnHeader PrenomCom;
+        private System.Windows.Forms.ColumnHeader Datevis;
     }
 }

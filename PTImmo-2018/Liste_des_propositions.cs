@@ -13,8 +13,9 @@ namespace PTImmo_2018
 {
 	public partial class Liste_des_propositions : Form
 	{
-        public static string id_proposition_visite;
+        public static string id_proposition_souhait;
         public static string id_proposition_bien;
+        public static string id_proposition;
 
         public Liste_des_propositions()
 		{
@@ -44,12 +45,12 @@ namespace PTImmo_2018
 
 
 
-            string sql1 = "select p.CODE_SOUHAIT, p.code_bien, p.DATE from PROPOSITION p  left join SOUHAIT s on p.CODE_SOUHAIT = s.CODE_SOUHAIT left join ACHETEUR a on s.NUM_ACHETEUR = a.NUM_ACHETEUR where a.NUM_ACHETEUR = " + textBox1.Text + ";";
+            string sql1 = "select p.CODE_SOUHAIT, p.code_bien, p.DATE, p.Code_Proposition from PROPOSITION p  left join SOUHAIT s on p.CODE_SOUHAIT = s.CODE_SOUHAIT left join ACHETEUR a on s.NUM_ACHETEUR = a.NUM_ACHETEUR where a.NUM_ACHETEUR = " + textBox1.Text + ";";
             OleDbCommand cmd1 = new OleDbCommand(sql1, dbConnection);
             OleDbDataReader reader1 = cmd1.ExecuteReader();
             while (reader1.Read())
             {
-                string[] row = { reader1.GetInt32(0).ToString(), reader1.GetValue(1).ToString(), reader1.GetValue(2).ToString() };
+                string[] row = { reader1.GetValue(3).ToString(),reader1.GetInt32(0).ToString(), reader1.GetValue(1).ToString(), reader1.GetValue(2).ToString() };
                 ListViewItem proposition = new ListViewItem(row);
                 listView1.Items.Add(proposition);
             }
@@ -98,11 +99,20 @@ namespace PTImmo_2018
 
         public void listView1_MouseClick(object sender, MouseEventArgs e)
         {
-            id_proposition_visite = listView1.SelectedItems[0].SubItems[0].Text;
-            id_proposition_bien = listView1.SelectedItems[0].SubItems[1].Text;
-           
+            id_proposition = listView1.SelectedItems[0].SubItems[0].Text;
+            id_proposition_souhait = listView1.SelectedItems[0].SubItems[1].Text;
+            id_proposition_bien = listView1.SelectedItems[0].SubItems[2].Text;
+            Console.WriteLine(listView1.SelectedItems[0].SubItems[0].Text);
+            Console.WriteLine(listView1.SelectedItems[0].SubItems[1].Text);
+            Console.WriteLine(listView1.SelectedItems[0].SubItems[2].Text);
+
         }
 
-       
+        private void button2_Click(object sender, EventArgs e)
+        {
+           PropositionBien pb = new PropositionBien();
+            pb.Show(this);
+            this.Hide();
+        }
     }
 }

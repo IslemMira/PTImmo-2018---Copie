@@ -55,7 +55,18 @@ namespace PTImmo_2018
                 textBox_VisTelephoneVendeur.Text = reader.GetInt32(17).ToString();
                 textBox_VisEmailVendeur.Text = reader.GetString(18);
             }
-            reader.Close(); 
+            reader.Close();
+
+            string sql1 = "select a.NUM_ACHETEUR,a.NOM_ACHETEUR, a.PRÉNOM_ACHETEUR, a.NUM_COMMERCIAL, c.nom, c.prenom, v.DATE from ACHETEUR a join COMMERCIAL c on c.NUM_COMMERCIAL = a.NUM_COMMERCIAL join SOUHAIT s on s.NUM_ACHETEUR = a.NUM_ACHETEUR join PROPOSITION p on p.CODE_SOUHAIT = s.CODE_SOUHAIT join VISITE v on v.CODE_PROPOSITION = p.CODE_PROPOSITION join Bien b on b.CODE_BIEN = p.CODE_BIEN where B.CODE_BIEN =  " + textBox1.Text + ";";
+            OleDbCommand cmd1 = new OleDbCommand(sql1, dbConnection);
+            OleDbDataReader reader1 = cmd1.ExecuteReader();
+            while (reader1.Read())
+            {
+                string[] row = { reader1.GetInt32(0).ToString(), reader1.GetString(1),reader1.GetString(2), reader1.GetInt32(3).ToString(),reader1.GetString(4), reader1.GetString(5), reader1.GetValue(6).ToString() };
+                ListViewItem visites = new ListViewItem(row);
+                listView_VisitesBien.Items.Add(visites);
+            }
+            reader1.Close();
         }
         private void Fiche_Bien_Load(object sender, EventArgs e)
         {

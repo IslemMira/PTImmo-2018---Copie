@@ -16,7 +16,7 @@ namespace PTImmo_2018
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Liste_des_propositions());
+            Application.Run(new Visualiser_Acheteur());
        
         }
     }

@@ -76,6 +76,7 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.CodeBien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Prix = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -199,11 +200,11 @@
             // RechercheListePropositions
             // 
             this.RechercheListePropositions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RechercheListePropositions.Location = new System.Drawing.Point(527, 140);
+            this.RechercheListePropositions.Location = new System.Drawing.Point(694, 140);
             this.RechercheListePropositions.Name = "RechercheListePropositions";
-            this.RechercheListePropositions.Size = new System.Drawing.Size(285, 57);
+            this.RechercheListePropositions.Size = new System.Drawing.Size(118, 57);
             this.RechercheListePropositions.TabIndex = 175;
-            this.RechercheListePropositions.Text = "Liste des propositions";
+            this.RechercheListePropositions.Text = "Rechercher";
             this.RechercheListePropositions.UseVisualStyleBackColor = true;
             this.RechercheListePropositions.Click += new System.EventHandler(this.RechercheListePropositions_Click);
             // 
@@ -234,7 +235,7 @@
             // Retour
             // 
             this.Retour.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Retour.Location = new System.Drawing.Point(136, 700);
+            this.Retour.Location = new System.Drawing.Point(64, 700);
             this.Retour.Name = "Retour";
             this.Retour.Size = new System.Drawing.Size(170, 46);
             this.Retour.TabIndex = 180;
@@ -508,11 +509,23 @@
             this.Prix.Text = "Prix";
             this.Prix.Width = 85;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(316, 700);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(170, 59);
+            this.button1.TabIndex = 209;
+            this.button1.Text = "Visualiser liste propositions";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // PropositionBien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(915, 837);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.textBox15);
             this.Controls.Add(this.label23);
@@ -620,5 +633,6 @@
 		private System.Windows.Forms.ListView listView1;
 		private System.Windows.Forms.ColumnHeader CodeBien;
 		private System.Windows.Forms.ColumnHeader Prix;
-	}
+        private System.Windows.Forms.Button button1;
+    }
 }

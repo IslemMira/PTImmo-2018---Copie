@@ -42,6 +42,7 @@
             this.Supprimer = new System.Windows.Forms.Button();
             this.FicheAcheteur = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.Code_Propo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Code_Souhait = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Code_Bien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Date_Propo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -50,6 +51,7 @@
             this.DateProposition = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DateVisite = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox4
@@ -185,6 +187,7 @@
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Code_Propo,
             this.Code_Souhait,
             this.Code_Bien,
             this.Date_Propo});
@@ -192,27 +195,32 @@
             this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(20, 118);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(518, 251);
+            this.listView1.Size = new System.Drawing.Size(518, 252);
             this.listView1.TabIndex = 194;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.VirtualListSize = 100;
             this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseClick);
             // 
+            // Code_Propo
+            // 
+            this.Code_Propo.Text = "Code Proposition";
+            this.Code_Propo.Width = 93;
+            // 
             // Code_Souhait
             // 
             this.Code_Souhait.Text = "Code Souhait";
-            this.Code_Souhait.Width = 210;
+            this.Code_Souhait.Width = 82;
             // 
             // Code_Bien
             // 
             this.Code_Bien.Text = "Code Bien";
-            this.Code_Bien.Width = 176;
+            this.Code_Bien.Width = 77;
             // 
             // Date_Propo
             // 
             this.Date_Propo.Text = "Date Proposition";
-            this.Date_Propo.Width = 128;
+            this.Date_Propo.Width = 262;
             // 
             // listView2
             // 
@@ -223,7 +231,7 @@
             this.listView2.FullRowSelect = true;
             this.listView2.GridLines = true;
             this.listView2.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView2.Location = new System.Drawing.Point(20, 435);
+            this.listView2.Location = new System.Drawing.Point(20, 450);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(518, 251);
             this.listView2.TabIndex = 195;
@@ -243,7 +251,7 @@
             // DateVisite
             // 
             this.DateVisite.Text = "DateVisite";
-            this.DateVisite.Width = 200;
+            this.DateVisite.Width = 211;
             // 
             // textBox2
             // 
@@ -254,11 +262,23 @@
             this.textBox2.Size = new System.Drawing.Size(120, 20);
             this.textBox2.TabIndex = 196;
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(61, 725);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(146, 53);
+            this.button2.TabIndex = 197;
+            this.button2.Text = "RETOUR";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Liste_des_propositions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 813);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.listView1);
@@ -308,5 +328,7 @@
         private System.Windows.Forms.ColumnHeader Code_Bien;
         private System.Windows.Forms.ColumnHeader Date_Propo;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ColumnHeader Code_Propo;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -9,20 +9,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-// work in progress : Arina
-
-
 namespace PTImmo_2018
 {
-    public partial class CreerVisite : Form
+    public partial class ModifierVisite : Form
     {
-        public CreerVisite()
+        public ModifierVisite()
         {
             InitializeComponent();
         }
 
-        private void CreerVisite_Load(object sender, EventArgs e)
+        private void ModifierVisite_Load(object sender, EventArgs e)
         {
             string nomBase = "IMMOBILLY_JACKYTEAM";
             string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
@@ -46,13 +42,13 @@ namespace PTImmo_2018
             comboBox_Commercial.DisplayMember = "Nom";
             comboBox_Commercial.DataSource = dt;
 
-            string sql1 = "Select nom_acheteur, PRÉNOM_ACHETEUR, b.CODE_BIEN, b.SURFACE_HABITABLE, b.SURFACE_PARCELLE, b.NB_PIÉCES, b.NB_CHAMBRES, b.NB_SALLE_DE_BAIN,b.GARAGE, b.CAVE,b.PRIX_VENDEUR,p.date from ACHETEUR inner join souhait s on s.NUM_ACHETEUR = ACHETEUR.NUM_ACHETEUR inner join PROPOSITION p on s.CODE_SOUHAIT = p.CODE_SOUHAIT inner join bien b on p.CODE_BIEN = b.CODE_BIEN where s.CODE_SOUHAIT = " + Liste_des_propositions.id_proposition_souhait + ";";
+            string sql1 = "Select nom_acheteur, PRÉNOM_ACHETEUR, b.CODE_BIEN, b.SURFACE_HABITABLE, b.SURFACE_PARCELLE, b.NB_PIÉCES, b.NB_CHAMBRES, b.NB_SALLE_DE_BAIN,b.GARAGE, b.CAVE,b.PRIX_VENDEUR,p.date from ACHETEUR inner join souhait s on s.NUM_ACHETEUR = ACHETEUR.NUM_ACHETEUR inner join PROPOSITION p on s.CODE_SOUHAIT = p.CODE_SOUHAIT inner join bien b on p.CODE_BIEN = b.CODE_BIEN inner join VISITE v on v.CODE_PROPOSITION = p.CODE_PROPOSITION where v.CODE_VISITE =  " + Visualiser_Acheteur.id_visite + ";";
             OleDbCommand cmd1 = new OleDbCommand(sql1, dbConnection);
-			OleDbDataReader reader1 = cmd1.ExecuteReader();
+            OleDbDataReader reader1 = cmd1.ExecuteReader();
 
-			while (reader1.Read())
-			{
-				textBox_Nom.Text = reader1.GetString(0);
+            while (reader1.Read())
+            {
+                textBox_Nom.Text = reader1.GetString(0);
                 textBox_Prénom.Text = reader1.GetString(1);
                 IdBien.Text = reader1.GetInt16(2).ToString();
                 textBox_SurfHab.Text = reader1.GetInt32(3).ToString();
@@ -66,35 +62,31 @@ namespace PTImmo_2018
                 dateTimePicker2.Text = reader1.GetDateTime(11).ToString();
                 this.dateTimePicker2.Enabled = false;
             }
-			reader1.Close();
-		}
+            reader1.Close();
+        }
 
-		private void button_Valider_Click(object sender, EventArgs e)
-		{
-			string nomBase = "IMMOBILLY_JACKYTEAM";
-			string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
-			OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
-			dbConnection.Open();
+        private void button_Valider_Click(object sender, EventArgs e)
+        {
+            string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
+            OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
+            dbConnection.Open();
 
-			string sql2 = "Insert into Visite (code_Visite, Code_Proposition,Date)"; 
-            string sql3 = "values('1','" + Liste_des_propositions.id_proposition + "', '" + dateTimePicker2.Value + "' ) ";
+            string sql = "UPDATE Visite  set Date = '" + dateTimePicker1.Value + "' ";
+            OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Saved");
 
-			string sql4 = sql2 + sql3;
-
-			OleDbCommand cmd2 = new OleDbCommand(sql4, dbConnection);
-			cmd2.ExecuteNonQuery();
-			MessageBox.Show("Saved");
-
-           Liste_des_propositions ldp = new Liste_des_propositions();
-            ldp.Show(this);
+            Visualiser_Acheteur va = new Visualiser_Acheteur();
+            va.Show(this);
             this.Hide();
         }
 
-		private void button_Annuler_Click(object sender, EventArgs e)
-		{
-			Liste_des_propositions ldp = new Liste_des_propositions();
-			ldp.Show(this);
-			this.Hide();
-		}
-	}
-}
+        private void button_Annuler_Click(object sender, EventArgs e)
+        {
+            Visualiser_Acheteur va = new Visualiser_Acheteur();
+            va.Show(this);
+            this.Hide();
+        }
+    }
+    }
+

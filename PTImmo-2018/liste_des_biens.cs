@@ -39,10 +39,6 @@ namespace PTImmo_2018
             OleDbDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                Console.WriteLine(reader.GetInt16(0));
-                Console.WriteLine(reader.GetString(1));
-                Console.WriteLine(reader.GetString(2));
-
                 string[] row = { reader.GetInt16(0).ToString(), reader.GetString(1), reader.GetString(2), reader.GetInt32(3).ToString() };
                 ListViewItem lvi = new ListViewItem(row);
                 listView1.Items.Add(lvi);

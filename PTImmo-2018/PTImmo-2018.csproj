@@ -100,6 +100,18 @@
     <Compile Include="Liste_des_propositions.Designer.cs">
       <DependentUpon>Liste_des_propositions.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModifierSouhait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierSouhait.Designer.cs">
+      <DependentUpon>ModifierSouhait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifierVisite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierVisite.Designer.cs">
+      <DependentUpon>ModifierVisite.cs</DependentUpon>
+    </Compile>
     <Compile Include="Nouveau Vendeur.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +201,12 @@
     <EmbeddedResource Include="Liste_des_propositions.resx">
       <DependentUpon>Liste_des_propositions.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModifierSouhait.resx">
+      <DependentUpon>ModifierSouhait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierVisite.resx">
+      <DependentUpon>ModifierVisite.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Nouveau Vendeur.resx">
       <DependentUpon>Nouveau Vendeur.cs</DependentUpon>
     </EmbeddedResource>
@@ -228,6 +246,7 @@
     <EmbeddedResource Include="visualiser_acheteur.resx">
       <DependentUpon>visualiser_acheteur.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram2.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
