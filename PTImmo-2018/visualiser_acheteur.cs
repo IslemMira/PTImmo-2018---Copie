@@ -13,9 +13,7 @@ namespace PTImmo_2018
 {
     public partial class visualiser_acheteur : Form
     {
-        public static string id_acheteur;
-        public static string id_souhait;
-        public static string id_visite;
+        
         public visualiser_acheteur()
         {
             InitializeComponent();
@@ -23,7 +21,7 @@ namespace PTImmo_2018
 
         private void button2_Click(object sender, EventArgs e)
         {
-            id_acheteur = textBox6.Text;
+            ApplicationState.id_acheteur = textBox6.Text;
             Liste_des_propositions ldp = new Liste_des_propositions();
             ldp.Show(this);
             this.Hide();
@@ -62,7 +60,7 @@ namespace PTImmo_2018
 
 
 
-            string sql = "SELECT nom_Acheteur, prénom_Acheteur, adresse, VILLE.CODE_POSTAL, Téléphone, E_MAIL,  c.Nom, c.Prenom, Num_Acheteur from ACHETEUR left join VILLE on ACHETEUR.Code_Ville = VILLE.Code_Ville join COMMERCIAL c on ACHETEUR.NUM_COMMERCIAL = c.NUM_COMMERCIAL where NUM_ACHETEUR = '" + RechercheAcheteur.Id_acheteur + "' ";
+            string sql = "SELECT nom_Acheteur, prénom_Acheteur, adresse, VILLE.CODE_POSTAL, Téléphone, E_MAIL,  c.Nom, c.Prenom, Num_Acheteur from ACHETEUR left join VILLE on ACHETEUR.Code_Ville = VILLE.Code_Ville join COMMERCIAL c on ACHETEUR.NUM_COMMERCIAL = c.NUM_COMMERCIAL where NUM_ACHETEUR = '" + ApplicationState.id_acheteur + "' ";
             OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
             OleDbDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
@@ -138,7 +136,7 @@ namespace PTImmo_2018
 
         private void listView1_MouseClick(object sender, MouseEventArgs e)
         {
-            id_souhait = listView1.SelectedItems[0].SubItems[0].Text;
+            ApplicationState.id_souhait = listView1.SelectedItems[0].SubItems[0].Text;
         }
 
         private void details_Click(object sender, EventArgs e)
@@ -165,12 +163,12 @@ namespace PTImmo_2018
 
         private void listView2_MouseClick(object sender, MouseEventArgs e)
         {
-            id_visite = listView2.SelectedItems[0].SubItems[0].Text;
+           ApplicationState.id_visite = listView2.SelectedItems[0].SubItems[0].Text;
         }
 
         private void modifier_Click(object sender, EventArgs e)
         {
-            id_acheteur = textBox6.Text;
+            ApplicationState.id_acheteur = textBox6.Text;
             ModifierAcheteur ma = new ModifierAcheteur();
             ma.Show(this);
             this.Hide();

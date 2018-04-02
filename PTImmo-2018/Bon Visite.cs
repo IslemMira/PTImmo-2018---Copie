@@ -25,7 +25,7 @@ namespace PTImmo_2018
 			OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
 			dbConnection.Open();
 
-			string sql = "select  b.surface_habitable, b.surface_parcelle, b.nb_piéces, b.nb_chambres, b.nb_Salle_de_bain, b.garage, b.cave, b.prix_vendeur,  b.adresse, vi.nom_ville, vi.code_postal, v.Date from bien b left join ville vi on vi.code_ville = b.code_ville join proposition p on b.code_proposition = p.code_proposition join visite v on p.code_proposition = v.code_proposition where p.code_proposition = '" + Liste_des_propositions.id_proposition_visite + "' ";
+			string sql = "select  b.surface_habitable, b.surface_parcelle, b.nb_piéces, b.nb_chambres, b.nb_Salle_de_bain, b.garage, b.cave, b.prix_vendeur,  b.adresse, vi.nom_ville, vi.code_postal, v.Date from bien b left join ville vi on vi.code_ville = b.code_ville join proposition p on b.code_proposition = p.code_proposition join visite v on p.code_proposition = v.code_proposition where p.code_proposition = '" + ApplicationState.id_proposition_visite + "' ";
 			OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
 			OleDbDataReader reader = cmd.ExecuteReader();
 			while (reader.Read())

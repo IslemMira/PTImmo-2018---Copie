@@ -55,7 +55,7 @@ namespace PTImmo_2018
 			dbConnection.Open();
 
 			string sqlS1 = "Select v.Num_Client, v.Nom_Client, v.Prénom_Client, v.Téléphone, v.E_mail, v.adresse, vi.nom_ville, vi.code_postal";
-			string sqlF1 = " from Vendeur v left join ville vi on vi.code_ville = v.code_ville  where v.num_client = '"+FicheVendeur.id_vendeur +"' ";
+			string sqlF1 = " from Vendeur v left join ville vi on vi.code_ville = v.code_ville  where v.num_client = '" + ApplicationState.id_vendeur +"' ";
 			string sql = sqlS1 + sqlF1;
 
 			OleDbCommand cmd = new OleDbCommand(sql, dbConnection);

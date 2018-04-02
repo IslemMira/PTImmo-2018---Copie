@@ -13,7 +13,7 @@ namespace PTImmo_2018
 {
     public partial class PropositionBien : Form
     {
-        static string id_bien_a_visualizer;
+        
         public PropositionBien()
         {
             InitializeComponent();
@@ -26,7 +26,7 @@ namespace PTImmo_2018
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
 
-            string sql = "select a.NOM_ACHETEUR, a.PRÉNOM_ACHETEUR,s.CODE_SOUHAIT, v.NOM_VILLE, s.SURFACE_HABITABLE_MIN, s.SURFACE_PARCELLE_MIN, s.NB_PIECES_MIN, s.PRIX_MAX, s.STATUT from SOUHAIT s left join ACHETEUR a on a.NUM_ACHETEUR = s.NUM_ACHETEUR left join VILLE v on v.CODE_VILLE = s.CODE_VILLE where s.Code_Souhait =  '" + visualiser_acheteur.id_souhait + "' ";
+            string sql = "select a.NOM_ACHETEUR, a.PRÉNOM_ACHETEUR,s.CODE_SOUHAIT, v.NOM_VILLE, s.SURFACE_HABITABLE_MIN, s.SURFACE_PARCELLE_MIN, s.NB_PIECES_MIN, s.PRIX_MAX, s.STATUT from SOUHAIT s left join ACHETEUR a on a.NUM_ACHETEUR = s.NUM_ACHETEUR left join VILLE v on v.CODE_VILLE = s.CODE_VILLE where s.Code_Souhait =  '" + ApplicationState.id_souhait + "' ";
 
 
             OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
@@ -39,8 +39,7 @@ namespace PTImmo_2018
                 textBox1.Text = reader.GetString(3);
                 numericUpDown1.Text = reader.GetInt32(4).ToString();
                 numericUpDown2.Text = reader.GetInt32(5).ToString();
-                numericUpDown3.Text = reader.GetInt32(6).ToString();
-                //numericUpDown4.TextAlign = reader.GetInt32().ToString(); WHERE ARE MY TOILETS???
+                numericUpDown3.Text = reader.GetInt32(6).ToString();        
                 textBox2.Text = reader.GetInt32(7).ToString();
             }
             reader.Close();
@@ -97,7 +96,7 @@ namespace PTImmo_2018
 
         private void listView1_MouseClick(object sender, MouseEventArgs e)
         {
-            id_bien_a_visualizer = listView1.SelectedItems[0].SubItems[0].Text;
+            ApplicationState.id_bien = listView1.SelectedItems[0].SubItems[0].Text;
             Console.WriteLine(listView1.SelectedItems[0].SubItems[0].Text);
 
             string nomBase = "IMMOBILLY_JACKYTEAM";

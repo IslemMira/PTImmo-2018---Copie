@@ -25,7 +25,7 @@ namespace PTImmo_2018
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
 
-            string sql = "SELECT nom_Acheteur, prénom_Acheteur, adresse, ville.nom_ville, VILLE.CODE_POSTAL, Téléphone, E_MAIL,  c.Nom, c.Prenom from ACHETEUR left join VILLE on ACHETEUR.Code_Ville = VILLE.Code_Ville join COMMERCIAL c on ACHETEUR.NUM_COMMERCIAL = c.NUM_COMMERCIAL where NUM_ACHETEUR = '" + visualiser_acheteur.id_acheteur + "' ";
+            string sql = "SELECT nom_Acheteur, prénom_Acheteur, adresse, ville.nom_ville, VILLE.CODE_POSTAL, Téléphone, E_MAIL,  c.Nom, c.Prenom from ACHETEUR left join VILLE on ACHETEUR.Code_Ville = VILLE.Code_Ville join COMMERCIAL c on ACHETEUR.NUM_COMMERCIAL = c.NUM_COMMERCIAL where NUM_ACHETEUR = '" + ApplicationState.id_acheteur + "' ";
             OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
             OleDbDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
@@ -48,7 +48,7 @@ namespace PTImmo_2018
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
 
-            string sql = "UPDATE ACHETEUR set Nom_Acheteur = '" + textBox_Nom.Text + "', Prénom_Acheteur = '" + textBox_Prénom.Text + "', Adresse = '" + textBox_Adresse.Text + "',  Téléphone = '" + textBox_tel.Text + "' where Num_Acheteur = '" + visualiser_acheteur.id_acheteur + "' ";
+            string sql = "UPDATE ACHETEUR set Nom_Acheteur = '" + textBox_Nom.Text + "', Prénom_Acheteur = '" + textBox_Prénom.Text + "', Adresse = '" + textBox_Adresse.Text + "',  Téléphone = '" + textBox_tel.Text + "' where Num_Acheteur = '" + ApplicationState.id_acheteur + "' ";
             OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Saved");

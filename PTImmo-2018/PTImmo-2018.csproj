@@ -57,6 +57,7 @@
     <Compile Include="Acceuil.Designer.cs">
       <DependentUpon>Acceuil.cs</DependentUpon>
     </Compile>
+    <Compile Include="ApplicationState.cs" />
     <Compile Include="ModifierCommercial.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -13,7 +13,7 @@ namespace PTImmo_2018
 {
     public partial class Recherche_Commerciaux : Form
     {
-		public static string id_commercial;
+		
 
         public Recherche_Commerciaux()
         {
@@ -115,7 +115,7 @@ namespace PTImmo_2018
 
 		private void listView1_Commerciaux_MouseClick(object sender, MouseEventArgs e)
 		{
-			id_commercial = listView1_Commerciaux.SelectedItems[0].SubItems[0].Text;
+			ApplicationState.id_commercial = listView1_Commerciaux.SelectedItems[0].SubItems[0].Text;
 		}
 	}
 }

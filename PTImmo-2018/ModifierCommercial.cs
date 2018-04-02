@@ -57,7 +57,7 @@ namespace PTImmo_2018
 			OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
 			dbConnection.Open();
 
-			string sql1 = "SELECT c.num_commercial, c.nom, c.prenom, c.telephone_fixe_pro, c.telephone_portable_pro, c.telephone_prive, c.email, c.statut where c.num_commercial = '" + Recherche_Commerciaux.id_commercial+"' ";
+			string sql = "SELECT c.num_commercial, c.nom, c.prenom, c.telephone_fixe_pro, c.telephone_portable_pro, c.telephone_prive, c.email, c.statut where c.num_commercial = '" + ApplicationState.id_commercial+"' ";
 			OleDbCommand cmd1 = new OleDbCommand(sql, dbConnection);
 			OleDbDataReader reader1 = cmd1.ExecuteReader();
 			while (reader1.Read())

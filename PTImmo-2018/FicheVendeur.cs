@@ -12,10 +12,7 @@ using System.Windows.Forms;
 namespace PTImmo_2018
 {
     public partial class FicheVendeur : Form
-    {
-		public static string id_bien;
-		public static string id_vendeur;
-
+	{ 
         public FicheVendeur()
         {
             InitializeComponent();
@@ -30,7 +27,7 @@ namespace PTImmo_2018
 			dbConnection.Open();
 
 			string sqlS1 = "Select v.Num_Client, v.Nom_Client, v.Prénom_Client, v.Téléphone, v.E_mail, v.adresse, vi.nom_ville, vi.code_postal";
-			string sqlF1 = " from Vendeur v left join ville vi on vi.code_ville = v.code_ville  where v.num_client = 2 ";
+			string sqlF1 = " from Vendeur v left join ville vi on vi.code_ville = v.code_ville  where v.num_client = '" + ApplicationState.id_vendeur + "' ";
 			string sql = sqlS1 + sqlF1;
 
 			OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
@@ -48,7 +45,7 @@ namespace PTImmo_2018
 			}
 			reader.Close();
 
-			string sql2 = "Select b.code_bien,b.adresse,b.statut, count(v.code_visite) nb_visite from bien b left join proposition p on p.code_bien = b.code_bien left join visite v on v.code_proposition = p.code_proposition where b.num_client =1 group by b.code_bien,b.adresse,b.statut ";
+			string sql2 = "Select b.code_bien,b.adresse,b.statut, count(v.code_visite) nb_visite from bien b left join proposition p on p.code_bien = b.code_bien left join visite v on v.code_proposition = p.code_proposition where b.num_client = '" + ApplicationState.id_vendeur + "'  group by b.code_bien,b.adresse,b.statut ";
 
 			cmd = new OleDbCommand(sql2, dbConnection);
 			reader = cmd.ExecuteReader();
@@ -63,7 +60,7 @@ namespace PTImmo_2018
 
 		private void ModifierVendeur_Click(object sender, EventArgs e)
 		{
-			id_vendeur = textBox_AjCodeVendeur.Text;
+			ApplicationState.id_vendeur = textBox_AjCodeVendeur.Text;
 			ModifierVendeur mv = new ModifierVendeur();
 			mv.Show(this);
 			this.Hide();
@@ -71,7 +68,7 @@ namespace PTImmo_2018
 
 		private void AjouterBien_Click(object sender, EventArgs e)
 		{
-			id_vendeur = textBox_AjCodeVendeur.Text;
+			
 			Nouveau_bien nb = new Nouveau_bien();
 			nb.Show(this);
 			this.Hide();
@@ -92,7 +89,7 @@ namespace PTImmo_2018
 
 		private void listView1_MouseClick(object sender, MouseEventArgs e)
 		{
-			id_bien = listView1.SelectedItems[0].SubItems[0].Text;
+			ApplicationState.id_bien = listView1.SelectedItems[0].SubItems[0].Text;
 		}
 	}
 }

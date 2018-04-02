@@ -13,10 +13,8 @@ namespace PTImmo_2018
 {
 	public partial class Liste_des_propositions : Form
 	{
-        public static string id_proposition_souhait;
-        public static string id_proposition_bien;
-        public static string id_proposition;
-		public static string id_proposition_visite;
+        
+		
 
         public Liste_des_propositions()
 		{
@@ -33,13 +31,13 @@ namespace PTImmo_2018
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
 
-            string sql2 = "SELECT nom_Acheteur, prénom_Acheteur FROM Acheteur where Num_Acheteur = '" + visualiser_acheteur.id_acheteur +"' ";
+            string sql2 = "SELECT nom_Acheteur, prénom_Acheteur FROM Acheteur where Num_Acheteur = '" + ApplicationState.id_acheteur +"' ";
             OleDbCommand cmd = new OleDbCommand(sql2, dbConnection);
             OleDbDataReader reader2 = cmd.ExecuteReader();
             while (reader2.Read())
             {
                 
-                textBox1.Text = visualiser_acheteur.id_acheteur;
+                textBox1.Text = ApplicationState.id_acheteur;
                 textBox2.Text = reader2.GetString(0);
                 textBox4.Text = reader2.GetString(1);
             }
@@ -114,9 +112,9 @@ namespace PTImmo_2018
 
         public void listView1_MouseClick(object sender, MouseEventArgs e)
         {
-            id_proposition = listView1.SelectedItems[0].SubItems[0].Text;
-            id_proposition_souhait = listView1.SelectedItems[0].SubItems[1].Text;
-            id_proposition_bien = listView1.SelectedItems[0].SubItems[2].Text;
+            ApplicationState.id_proposition = listView1.SelectedItems[0].SubItems[0].Text;
+            ApplicationState.id_proposition_souhait = listView1.SelectedItems[0].SubItems[1].Text;
+            ApplicationState.id_proposition_bien = listView1.SelectedItems[0].SubItems[2].Text;
             
 
         }
@@ -135,7 +133,7 @@ namespace PTImmo_2018
 
 		private void listView2_MouseClick(object sender, MouseEventArgs e)
 		{
-			id_proposition_visite = listView2.SelectedItems[0].SubItems[0].Text;
+			ApplicationState.id_proposition_visite = listView2.SelectedItems[0].SubItems[0].Text;
 		}
 	}
 }

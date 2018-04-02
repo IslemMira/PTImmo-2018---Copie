@@ -25,7 +25,7 @@ namespace PTImmo_2018
 			OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
 			dbConnection.Open();
 
-			string sql = "Select v.Num_Client, v.Nom_Client, v.Prénom_Client, v.Téléphone, v.E_mail, v.adresse, vi.nom_ville, vi.code_postal from Vendeur v left join ville vi on vi.code_ville = v.code_ville  where v.num_client = '" + FicheVendeur.id_vendeur + "'  ";
+			string sql = "Select v.Num_Client, v.Nom_Client, v.Prénom_Client, v.Téléphone, v.E_mail, v.adresse, vi.nom_ville, vi.code_postal from Vendeur v left join ville vi on vi.code_ville = v.code_ville  where v.num_client = '" + ApplicationState.id_vendeur + "'  ";
 		
 
 			OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
@@ -51,7 +51,7 @@ namespace PTImmo_2018
 			OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
 			dbConnection.Open();
 
-			string sql = "UPDATE VENDEUR SET v.Nom_Client = '" +textBox1_Nom + "', v.Prénom_Client = '" +textBox2_Prenom + "', v.Téléphone = = '" +textBox3_Telephone + "', v.E_mail = '" +textBox4_E_Mail + "', v.adresse = '" +textBox12_Adresse + "', vi.nom_ville = '" +textBox11_Ville + "', vi.code_postal = '" +textBox1 +"' from Vendeur v left join ville vi on vi.code_ville = v.code_ville  where v.num_client = '" + FicheVendeur.id_vendeur + "'  ";
+			string sql = "UPDATE VENDEUR SET v.Nom_Client = '" +textBox1_Nom + "', v.Prénom_Client = '" +textBox2_Prenom + "', v.Téléphone = = '" +textBox3_Telephone + "', v.E_mail = '" +textBox4_E_Mail + "', v.adresse = '" +textBox12_Adresse + "', vi.nom_ville = '" +textBox11_Ville + "', vi.code_postal = '" +textBox1 +"' from Vendeur v left join ville vi on vi.code_ville = v.code_ville  where v.num_client = '" + ApplicationState.id_vendeur + "'  ";
 			OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
 			cmd.ExecuteNonQuery();
 			MessageBox.Show("Saved");

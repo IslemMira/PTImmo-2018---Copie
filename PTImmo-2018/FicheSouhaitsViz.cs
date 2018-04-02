@@ -27,7 +27,7 @@ namespace PTImmo_2018
 
 
 
-                string sql = "select s.CODE_SOUHAIT,s.STATUT, s.SURFACE_HABITABLE_MIN, s.SURFACE_PARCELLE_MIN, s.NB_PIECES_MIN,  s.PRIX_MAX, v.NOM_VILLE, v.Code_Postal from SOUHAIT s left join VILLE v on v.CODE_VILLE = s.CODE_VILLE where s.CODE_SOUHAIT = '" +visualiser_acheteur.id_souhait+ "' ";
+                string sql = "select s.CODE_SOUHAIT,s.STATUT, s.SURFACE_HABITABLE_MIN, s.SURFACE_PARCELLE_MIN, s.NB_PIECES_MIN,  s.PRIX_MAX, v.NOM_VILLE, v.Code_Postal from SOUHAIT s left join VILLE v on v.CODE_VILLE = s.CODE_VILLE where s.CODE_SOUHAIT = '" +ApplicationState.id_souhait+ "' ";
                 OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
                 OleDbDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())

@@ -13,7 +13,7 @@ namespace PTImmo_2018
 {
     public partial class RechercheAcheteur : Form
     {
-		public static string Id_acheteur;
+		
 
         public RechercheAcheteur()
         {
@@ -94,7 +94,7 @@ namespace PTImmo_2018
 
 		private void listView1_MouseClick(object sender, MouseEventArgs e)
 		{
-			Id_acheteur = listView1.SelectedItems[0].SubItems[0].Text;
+			ApplicationState.id_acheteur = listView1.SelectedItems[0].SubItems[0].Text;
 		}
 	}
 }
