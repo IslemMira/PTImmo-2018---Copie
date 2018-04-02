@@ -46,7 +46,7 @@ namespace PTImmo_2018
             comboBox_Commercial.DisplayMember = "Nom";
             comboBox_Commercial.DataSource = dt;
 
-            string sql1 = "Select nom_acheteur, PRÉNOM_ACHETEUR, b.CODE_BIEN, b.SURFACE_HABITABLE, b.SURFACE_PARCELLE, b.NB_PIÉCES, b.NB_CHAMBRES, b.NB_SALLE_DE_BAIN,b.GARAGE, b.CAVE,b.PRIX_VENDEUR,p.date from ACHETEUR inner join souhait s on s.NUM_ACHETEUR = ACHETEUR.NUM_ACHETEUR inner join PROPOSITION p on s.CODE_SOUHAIT = p.CODE_SOUHAIT inner join bien b on p.CODE_BIEN = b.CODE_BIEN where s.CODE_SOUHAIT = " + Liste_des_propositions.id_proposition_souhait + ";";
+            string sql1 = "Select nom_acheteur, PRÉNOM_ACHETEUR, b.CODE_BIEN, b.SURFACE_HABITABLE, b.SURFACE_PARCELLE, b.NB_PIÉCES, b.NB_CHAMBRES, b.NB_SALLE_DE_BAIN,b.GARAGE, b.CAVE,b.PRIX_VENDEUR,p.date from ACHETEUR inner join souhait s on s.NUM_ACHETEUR = ACHETEUR.NUM_ACHETEUR inner join PROPOSITION p on s.CODE_SOUHAIT = p.CODE_SOUHAIT inner join bien b on p.CODE_BIEN = b.CODE_BIEN where s.CODE_SOUHAIT = " + ApplicationState.id_proposition_souhait + ";";
             OleDbCommand cmd1 = new OleDbCommand(sql1, dbConnection);
 			OleDbDataReader reader1 = cmd1.ExecuteReader();
 
@@ -77,7 +77,7 @@ namespace PTImmo_2018
 			dbConnection.Open();
 
 			string sql2 = "Insert into Visite (code_Visite, Code_Proposition,Date)"; 
-            string sql3 = "values('1','" + Liste_des_propositions.id_proposition + "', '" + dateTimePicker2.Value + "' ) ";
+            string sql3 = "values('1','" + ApplicationState.id_proposition + "', '" + dateTimePicker2.Value + "' ) ";
 
 			string sql4 = sql2 + sql3;
 

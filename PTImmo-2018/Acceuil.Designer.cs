@@ -44,7 +44,7 @@
 			this.GA.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.GA.Image = global::PTImmo_2018.Properties.Resources.icons8_team_96;
 			this.GA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.GA.Location = new System.Drawing.Point(526, 381);
+			this.GA.Location = new System.Drawing.Point(562, 389);
 			this.GA.Name = "GA";
 			this.GA.Size = new System.Drawing.Size(247, 98);
 			this.GA.TabIndex = 2;
@@ -64,7 +64,7 @@
 			this.GC.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.GC.Image = global::PTImmo_2018.Properties.Resources.icons8_name_tag_96;
 			this.GC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.GC.Location = new System.Drawing.Point(526, 517);
+			this.GC.Location = new System.Drawing.Point(562, 525);
 			this.GC.Name = "GC";
 			this.GC.Size = new System.Drawing.Size(247, 103);
 			this.GC.TabIndex = 3;
@@ -84,7 +84,7 @@
 			this.GB.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.GB.Image = global::PTImmo_2018.Properties.Resources.icons8_real_estate_96;
 			this.GB.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.GB.Location = new System.Drawing.Point(526, 244);
+			this.GB.Location = new System.Drawing.Point(562, 252);
 			this.GB.Name = "GB";
 			this.GB.Size = new System.Drawing.Size(247, 98);
 			this.GB.TabIndex = 1;
@@ -98,9 +98,9 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-			this.BackgroundImage = global::PTImmo_2018.Properties.Resources.background3;
+			this.BackgroundImage = global::PTImmo_2018.Properties.Resources.background11;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.ClientSize = new System.Drawing.Size(823, 714);
+			this.ClientSize = new System.Drawing.Size(903, 764);
 			this.Controls.Add(this.GC);
 			this.Controls.Add(this.GA);
 			this.Controls.Add(this.GB);

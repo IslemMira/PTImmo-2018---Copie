@@ -78,7 +78,7 @@ namespace PTImmo_2018
             dbConnection.Open();
 
             string sql1 = "Insert into Proposition (Code_Souhait, Code_Bien, Date) ";
-            string sql2 = "values('" +textBox15.Text  + "','" + id_bien_a_visualizer + "' , '"+ DateTime.Now+"')";
+            string sql2 = "values('" +textBox15.Text  + "','" + ApplicationState.id_bien + "' , '"+ DateTime.Now+"')";
 
             string sql = sql1 + sql2;
 
@@ -104,7 +104,7 @@ namespace PTImmo_2018
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
 
-            string sql = "select SURFACE_HABITABLE,SURFACE_PARCELLE,NB_PIÉCES, NB_SALLE_DE_BAIN, GARAGE, cave, PRIX_VENDEUR,ADRESSE, COMMENTAIRE from BIEN where code_bien =" + id_bien_a_visualizer+ "; ";
+            string sql = "select SURFACE_HABITABLE,SURFACE_PARCELLE,NB_PIÉCES, NB_SALLE_DE_BAIN, GARAGE, cave, PRIX_VENDEUR,ADRESSE, COMMENTAIRE from BIEN where code_bien =" + ApplicationState.id_bien+ "; ";
             OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
             OleDbDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
