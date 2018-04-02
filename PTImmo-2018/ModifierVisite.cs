@@ -71,7 +71,7 @@ namespace PTImmo_2018
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
 
-            string sql = "UPDATE Visite  set Date = '" + dateTimePicker1.Value + "' ";
+            string sql = "UPDATE Visite  set Date = '" + dateTimePicker1.Value + "' where";
             OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Saved");

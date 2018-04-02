@@ -67,6 +67,21 @@ namespace PTImmo_2018
             fsv.Show(this);
             this.Hide();
         }
-    }
+
+		private void label3_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label4_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void textBox1_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+	}
     }
 

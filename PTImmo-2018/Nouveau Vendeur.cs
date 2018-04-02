@@ -34,6 +34,10 @@ namespace PTImmo_2018
             cmd.ExecuteNonQuery();
             MessageBox.Show("Saved");
 
+			FicheVendeur fv = new FicheVendeur();
+			fv.Show(this);
+			this.Hide();
+
         }
 
         private void Annuler_NouveauVendeur(object sender, EventArgs e)
@@ -43,10 +47,7 @@ namespace PTImmo_2018
             this.Hide();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
 
     }

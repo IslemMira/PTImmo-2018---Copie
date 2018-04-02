@@ -113,5 +113,12 @@ namespace PTImmo_2018
             id_bien_a_modifier = listView1.SelectedItems[0].SubItems[0].Text;
             Console.WriteLine(listView1.SelectedItems[0].SubItems[0].Text);
         }
-    }
+
+		private void Ajouter_Click(object sender, EventArgs e)
+		{
+			Nouveau_Vendeur nv = new Nouveau_Vendeur();
+			nv.Show(this);
+			this.Hide();
+		}
+	}
 }

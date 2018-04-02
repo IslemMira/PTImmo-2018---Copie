@@ -62,7 +62,7 @@ namespace PTImmo_2018
 
 
 
-            string sql = "SELECT nom_Acheteur, prénom_Acheteur, adresse, VILLE.CODE_POSTAL, Téléphone, E_MAIL,  c.Nom, c.Prenom, Num_Acheteur from ACHETEUR left join VILLE on ACHETEUR.Code_Ville = VILLE.Code_Ville join COMMERCIAL c on ACHETEUR.NUM_COMMERCIAL = c.NUM_COMMERCIAL where NUM_ACHETEUR = 2";
+            string sql = "SELECT nom_Acheteur, prénom_Acheteur, adresse, VILLE.CODE_POSTAL, Téléphone, E_MAIL,  c.Nom, c.Prenom, Num_Acheteur from ACHETEUR left join VILLE on ACHETEUR.Code_Ville = VILLE.Code_Ville join COMMERCIAL c on ACHETEUR.NUM_COMMERCIAL = c.NUM_COMMERCIAL where NUM_ACHETEUR = '" + RechercheAcheteur.Id_acheteur + "' ";
             OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
             OleDbDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
@@ -182,5 +182,12 @@ namespace PTImmo_2018
             ra.Show(this);
             this.Hide();
         }
-    }
+
+		private void ListePropositions_Click(object sender, EventArgs e)
+		{
+			Liste_des_propositions ldp = new Liste_des_propositions();
+			ldp.Show(this);
+
+		}
+	}
 }

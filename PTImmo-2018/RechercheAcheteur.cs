@@ -13,6 +13,8 @@ namespace PTImmo_2018
 {
     public partial class RechercheAcheteur : Form
     {
+		public static string Id_acheteur;
+
         public RechercheAcheteur()
         {
             InitializeComponent();
@@ -55,13 +57,44 @@ namespace PTImmo_2018
 
         }
 
-        private void Button_NouvelAcheteur(object sender, EventArgs e)
-        {
-            Creation_acheteur ca = new Creation_acheteur();
-            ca.Show(this);
-            this.Hide();
-        }
 
+		private void RechercheAcheteur_Load(object sender, EventArgs e)
+		{
+			string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
 
-    }
+			OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
+			dbConnection.Open();
+
+			string sql = "SELECT num_acheteur, nom_Acheteur, prénom_Acheteur, téléphone, E_MAIL from ACHETEUR ";
+			OleDbCommand cmd1 = new OleDbCommand(sql, dbConnection);
+			OleDbDataReader reader1 = cmd1.ExecuteReader();
+			while (reader1.Read())
+			{
+				string[] row = { reader1.GetValue(0).ToString(), reader1.GetString(1), reader1.GetString(2), reader1.GetValue(3).ToString(), reader1.GetString(4)  };
+				ListViewItem listeAcheteurs = new ListViewItem(row);
+				listView1.Items.Add(listeAcheteurs);
+			}
+			reader1.Close();
+
+		}
+
+		private void Ajouter_Click(object sender, EventArgs e)
+		{
+			Creation_acheteur ca = new Creation_acheteur();
+			ca.Show(this);
+			this.Hide();
+		}
+
+		private void Visualiser_Click(object sender, EventArgs e)
+		{
+			visualiser_acheteur va = new visualiser_acheteur();
+			va.Show(this);
+			this.Hide();
+		}
+
+		private void listView1_MouseClick(object sender, MouseEventArgs e)
+		{
+			Id_acheteur = listView1.SelectedItems[0].SubItems[0].Text;
+		}
+	}
 }

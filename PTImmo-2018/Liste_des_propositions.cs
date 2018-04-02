@@ -16,6 +16,7 @@ namespace PTImmo_2018
         public static string id_proposition_souhait;
         public static string id_proposition_bien;
         public static string id_proposition;
+		public static string id_proposition_visite;
 
         public Liste_des_propositions()
 		{
@@ -37,7 +38,7 @@ namespace PTImmo_2018
             OleDbDataReader reader2 = cmd.ExecuteReader();
             while (reader2.Read())
             {
-                Console.WriteLine(textBox1.Text);
+                
                 textBox1.Text = visualiser_acheteur.id_acheteur;
                 textBox2.Text = reader2.GetString(0);
                 textBox4.Text = reader2.GetString(1);
@@ -57,12 +58,12 @@ namespace PTImmo_2018
             }
             reader1.Close();
 
-            string sql3 = "select p.CODE_SOUHAIT, p.DATE, v.date from PROPOSITION p inner join visite v on p.CODE_PROPOSITION = v.CODE_PROPOSITION  left join SOUHAIT s on p.CODE_SOUHAIT = s.CODE_SOUHAIT left join ACHETEUR a on s.NUM_ACHETEUR = a.NUM_ACHETEUR where a.NUM_ACHETEUR = '" + textBox1.Text + "'";
+            string sql3 = "select p.Code_proposition, p.CODE_SOUHAIT, p.DATE, v.date from PROPOSITION p inner join visite v on p.CODE_PROPOSITION = v.CODE_PROPOSITION  left join SOUHAIT s on p.CODE_SOUHAIT = s.CODE_SOUHAIT left join ACHETEUR a on s.NUM_ACHETEUR = a.NUM_ACHETEUR where a.NUM_ACHETEUR = '" + textBox1.Text + "'";
             OleDbCommand cmd3 = new OleDbCommand(sql3, dbConnection);
             OleDbDataReader reader3 = cmd3.ExecuteReader();
             while (reader3.Read())
             {
-                string[] row = { reader3.GetInt32(0).ToString(), reader3.GetValue(1).ToString(), reader3.GetValue(2).ToString() };
+                string[] row = { reader3.GetInt32(0).ToString(), reader3.GetInt32(1).ToString(), reader3.GetValue(2).ToString(), reader3.GetValue(3).ToString() };
                 ListViewItem visites = new ListViewItem(row);
                 listView2.Items.Add(visites);
             }
@@ -78,17 +79,30 @@ namespace PTImmo_2018
 
 		private void GenererBonVisite_Click(object sender, EventArgs e)
 		{
-
+			Bon_Visite bv = new Bon_Visite();
+			bv.Show(this);
+			this.Hide();
 		}
 
 		private void Modifier_Click(object sender, EventArgs e)
 		{
-
+			ModifierVisite mf = new ModifierVisite();
+			mf.Show(this);
+			this.Hide();
 		}
 
 		private void Supprimer_Click(object sender, EventArgs e)
 		{
+			string nomBase = "IMMOBILLY_JACKYTEAM";
+			string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
+			OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
+			dbConnection.Open();
 
+			string sql = "DELETE FROM Visite  where v.code_Visite = ";
+			OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
+			cmd.ExecuteNonQuery();
+
+			MessageBox.Show("Supprime");
 		}
 
 		private void FicheAcheteur_Click(object sender, EventArgs e)
@@ -103,9 +117,7 @@ namespace PTImmo_2018
             id_proposition = listView1.SelectedItems[0].SubItems[0].Text;
             id_proposition_souhait = listView1.SelectedItems[0].SubItems[1].Text;
             id_proposition_bien = listView1.SelectedItems[0].SubItems[2].Text;
-            Console.WriteLine(listView1.SelectedItems[0].SubItems[0].Text);
-            Console.WriteLine(listView1.SelectedItems[0].SubItems[1].Text);
-            Console.WriteLine(listView1.SelectedItems[0].SubItems[2].Text);
+            
 
         }
 
@@ -115,5 +127,15 @@ namespace PTImmo_2018
             pb.Show(this);
             this.Hide();
         }
-    }
+
+		private void textBox1_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void listView2_MouseClick(object sender, MouseEventArgs e)
+		{
+			id_proposition_visite = listView2.SelectedItems[0].SubItems[0].Text;
+		}
+	}
 }

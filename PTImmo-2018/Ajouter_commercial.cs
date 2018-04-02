@@ -45,7 +45,9 @@ namespace PTImmo_2018
 
         private void button1_annuler_Click(object sender, EventArgs e)
         {
-            
-        }
+			Recherche_Commerciaux rc = new Recherche_Commerciaux();
+			rc.Show(this);
+			this.Hide();
+		}
     }
 }
