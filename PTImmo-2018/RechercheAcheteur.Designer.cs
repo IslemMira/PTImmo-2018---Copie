@@ -170,6 +170,7 @@
             this.Rechercher.Text = "    Rechercher";
             this.Rechercher.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Rechercher.UseVisualStyleBackColor = true;
+            this.Rechercher.Click += new System.EventHandler(this.Rechercher_Click);
             // 
             // Ajouter
             // 

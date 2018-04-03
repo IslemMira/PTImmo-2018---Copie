@@ -61,13 +61,13 @@
             this.details = new System.Windows.Forms.Button();
             this.proposer = new System.Windows.Forms.Button();
             this.ListePropositions = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ModifierAcheteur = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox10
             // 
             this.textBox10.Enabled = false;
-            this.textBox10.Location = new System.Drawing.Point(655, 235);
+            this.textBox10.Location = new System.Drawing.Point(662, 207);
             this.textBox10.Name = "textBox10";
             this.textBox10.ReadOnly = true;
             this.textBox10.Size = new System.Drawing.Size(110, 20);
@@ -76,7 +76,7 @@
             // textBox12
             // 
             this.textBox12.Enabled = false;
-            this.textBox12.Location = new System.Drawing.Point(655, 163);
+            this.textBox12.Location = new System.Drawing.Point(662, 164);
             this.textBox12.Multiline = true;
             this.textBox12.Name = "textBox12";
             this.textBox12.ReadOnly = true;
@@ -299,7 +299,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 48);
             this.label1.TabIndex = 92;
-            this.label1.Text = "     Adresse";
+            this.label1.Text = "     Coordonnées";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -307,7 +307,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(599, 236);
+            this.label3.Location = new System.Drawing.Point(599, 208);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 15);
             this.label3.TabIndex = 91;
@@ -318,7 +318,7 @@
             this.Ville.AutoSize = true;
             this.Ville.BackColor = System.Drawing.Color.Transparent;
             this.Ville.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ville.Location = new System.Drawing.Point(599, 199);
+            this.Ville.Location = new System.Drawing.Point(599, 251);
             this.Ville.Name = "Ville";
             this.Ville.Size = new System.Drawing.Size(36, 15);
             this.Ville.TabIndex = 90;
@@ -329,16 +329,16 @@
             this.Adresse.AutoSize = true;
             this.Adresse.BackColor = System.Drawing.Color.Transparent;
             this.Adresse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Adresse.Location = new System.Drawing.Point(599, 164);
+            this.Adresse.Location = new System.Drawing.Point(599, 165);
             this.Adresse.Name = "Adresse";
-            this.Adresse.Size = new System.Drawing.Size(36, 15);
+            this.Adresse.Size = new System.Drawing.Size(57, 15);
             this.Adresse.TabIndex = 89;
-            this.Adresse.Text = "Rue :";
+            this.Adresse.Text = "Adresse :";
             // 
             // textBox7
             // 
             this.textBox7.Enabled = false;
-            this.textBox7.Location = new System.Drawing.Point(655, 196);
+            this.textBox7.Location = new System.Drawing.Point(662, 250);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;
@@ -416,18 +416,19 @@
             this.ListePropositions.UseVisualStyleBackColor = true;
             this.ListePropositions.Click += new System.EventHandler(this.ListePropositions_Click);
             // 
-            // button2
+            // ModifierAcheteur
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::PTImmo_2018.Properties.Resources.icons8_customer_48;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(142, 308);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(223, 56);
-            this.button2.TabIndex = 145;
-            this.button2.Text = "Modifier Acheteur";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.ModifierAcheteur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModifierAcheteur.Image = global::PTImmo_2018.Properties.Resources.icons8_customer_48;
+            this.ModifierAcheteur.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ModifierAcheteur.Location = new System.Drawing.Point(142, 308);
+            this.ModifierAcheteur.Name = "ModifierAcheteur";
+            this.ModifierAcheteur.Size = new System.Drawing.Size(223, 56);
+            this.ModifierAcheteur.TabIndex = 145;
+            this.ModifierAcheteur.Text = "Modifier Acheteur";
+            this.ModifierAcheteur.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ModifierAcheteur.UseVisualStyleBackColor = true;
+            this.ModifierAcheteur.Click += new System.EventHandler(this.ModifierAcheteur_Click);
             // 
             // visualiser_acheteur
             // 
@@ -436,7 +437,7 @@
             this.BackgroundImage = global::PTImmo_2018.Properties.Resources.otherbackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1001, 698);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.ModifierAcheteur);
             this.Controls.Add(this.ListePropositions);
             this.Controls.Add(this.proposer);
             this.Controls.Add(this.details);
@@ -509,6 +510,6 @@
 		private System.Windows.Forms.Button details;
 		private System.Windows.Forms.Button proposer;
 		private System.Windows.Forms.Button ListePropositions;
-		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button ModifierAcheteur;
 	}
 }
