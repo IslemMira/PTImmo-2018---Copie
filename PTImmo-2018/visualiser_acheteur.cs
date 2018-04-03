@@ -89,16 +89,16 @@ namespace PTImmo_2018
             reader1.Close();
             }
             
-            string sql2 = "select v.code_Visite, p.CODE_SOUHAIT, p.CODE_PROPOSITION, p.CODE_BIEN, v.DATE, c.nom, c.prenom from PROPOSITION p  inner join visite v on p.CODE_PROPOSITION = v.CODE_PROPOSITION left join SOUHAIT s on p.CODE_SOUHAIT = s.CODE_SOUHAIT left join ACHETEUR a on s.NUM_ACHETEUR = a.NUM_ACHETEUR join commercial c on a.NUM_COMMERCIAL = c.NUM_COMMERCIAL where a.NUM_ACHETEUR ='" + textBox6.Text + "'";
-            OleDbCommand cmd2 = new OleDbCommand(sql2, dbConnection);
-            OleDbDataReader reader2 = cmd2.ExecuteReader();
-            while (reader2.Read())
-            {
-                string[] row1 = { reader2.GetValue(0).ToString()  };
-                ListViewItem visites = new ListViewItem(row1);
-                listView2.Items.Add(visites);
-            }
-            reader2.Close();
+            //string sql2 = "select v.code_Visite, p.CODE_SOUHAIT, p.CODE_PROPOSITION, p.CODE_BIEN, v.DATE, c.nom, c.prenom from PROPOSITION p  inner join visite v on p.CODE_PROPOSITION = v.CODE_PROPOSITION left join SOUHAIT s on p.CODE_SOUHAIT = s.CODE_SOUHAIT left join ACHETEUR a on s.NUM_ACHETEUR = a.NUM_ACHETEUR join commercial c on a.NUM_COMMERCIAL = c.NUM_COMMERCIAL where a.NUM_ACHETEUR ='" + textBox6.Text + "'";
+            //OleDbCommand cmd2 = new OleDbCommand(sql2, dbConnection);
+            //OleDbDataReader reader2 = cmd2.ExecuteReader();
+            //while (reader2.Read())
+            //{
+            //    string[] row1 = { reader2.GetValue(0).ToString()  };
+            //    ListViewItem visites = new ListViewItem(row1);
+            //    listView2.Items.Add(visites);
+            //}
+            //reader2.Close();
 
 
         }
@@ -127,12 +127,7 @@ namespace PTImmo_2018
 
         }
 
-        private void Ajouter_un_souhait_Click(object sender, EventArgs e)
-        {
-            FicheSouhaitCreation fsc = new FicheSouhaitCreation();
-            fsc.Show(this);
-            this.Hide();
-        }
+        
 
         private void listView1_MouseClick(object sender, MouseEventArgs e)
         {
@@ -161,10 +156,10 @@ namespace PTImmo_2018
             this.Hide();
         }
 
-        private void listView2_MouseClick(object sender, MouseEventArgs e)
-        {
-           ApplicationState.id_visite = listView2.SelectedItems[0].SubItems[0].Text;
-        }
+        //private void listView2_MouseClick(object sender, MouseEventArgs e)
+        //{
+        //   ApplicationState.id_visite = listView2.SelectedItems[0].SubItems[0].Text;
+        //}
 
         private void modifier_Click(object sender, EventArgs e)
         {
@@ -187,5 +182,12 @@ namespace PTImmo_2018
 			ldp.Show(this);
 
 		}
-	}
+
+        private void Ajouter_un_souhait_Click_1(object sender, EventArgs e)
+        {
+            FicheSouhaitCreation fsc = new FicheSouhaitCreation();
+            fsc.Show(this);
+            this.Hide();
+        }
+    }
 }
