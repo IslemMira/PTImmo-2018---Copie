@@ -30,10 +30,8 @@
 		{
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox_commercial = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox_Identidiant = new System.Windows.Forms.TextBox();
             this.textBox_Nom = new System.Windows.Forms.TextBox();
             this.textBox_Prenom = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -68,24 +66,12 @@
             this.comboBox_commercial.TabIndex = 126;
             this.comboBox_commercial.SelectedIndexChanged += new System.EventHandler(this.Filtre_Commercial);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(128, 116);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 15);
-            this.label3.TabIndex = 128;
-            this.label3.Text = "Identifiant :";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(128, 156);
+            this.label4.Location = new System.Drawing.Point(128, 118);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 15);
             this.label4.TabIndex = 129;
@@ -97,30 +83,23 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(128, 199);
+            this.label5.Location = new System.Drawing.Point(128, 161);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 15);
             this.label5.TabIndex = 130;
             this.label5.Text = "Prenom :";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // textBox_Identidiant
-            // 
-            this.textBox_Identidiant.Location = new System.Drawing.Point(218, 115);
-            this.textBox_Identidiant.Name = "textBox_Identidiant";
-            this.textBox_Identidiant.Size = new System.Drawing.Size(188, 20);
-            this.textBox_Identidiant.TabIndex = 131;
-            // 
             // textBox_Nom
             // 
-            this.textBox_Nom.Location = new System.Drawing.Point(218, 154);
+            this.textBox_Nom.Location = new System.Drawing.Point(218, 116);
             this.textBox_Nom.Name = "textBox_Nom";
             this.textBox_Nom.Size = new System.Drawing.Size(188, 20);
             this.textBox_Nom.TabIndex = 132;
             // 
             // textBox_Prenom
             // 
-            this.textBox_Prenom.Location = new System.Drawing.Point(218, 199);
+            this.textBox_Prenom.Location = new System.Drawing.Point(218, 161);
             this.textBox_Prenom.Name = "textBox_Prenom";
             this.textBox_Prenom.Size = new System.Drawing.Size(188, 20);
             this.textBox_Prenom.TabIndex = 133;
@@ -133,7 +112,6 @@
             this.Prenom_acheteur,
             this.tel_acheteur,
             this.email_acheteur});
-            this.listView1.FullRowSelect = true;
             this.listView1.Location = new System.Drawing.Point(131, 359);
             this.listView1.Margin = new System.Windows.Forms.Padding(2);
             this.listView1.Name = "listView1";
@@ -238,10 +216,8 @@
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.textBox_Prenom);
             this.Controls.Add(this.textBox_Nom);
-            this.Controls.Add(this.textBox_Identidiant);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox_commercial);
             this.Controls.Add(this.label2);
             this.Name = "RechercheAcheteur";
@@ -255,10 +231,8 @@
 		#endregion
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.ComboBox comboBox_commercial;
-		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.TextBox textBox_Identidiant;
 		private System.Windows.Forms.TextBox textBox_Nom;
 		private System.Windows.Forms.TextBox textBox_Prenom;
         private System.Windows.Forms.ListView listView1;
