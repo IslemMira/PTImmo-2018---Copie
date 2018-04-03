@@ -20,29 +20,6 @@ namespace PTImmo_2018
             InitializeComponent();
         }
 
-
-     
-
-        private void button_valider_Click(object sender, EventArgs e)
-        {
-            string nomBase = "IMMOBILLY_JACKYTEAM";
-            string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
-            OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
-            dbConnection.Open();
-
-			string sql = "UPDATE COMMERCIAL set Nom = '" + textBox1_numCom.Text + "', Prenom = '" + textBox1_Prenom.Text + "',  c.telephone_fixe_pro = '" + textBox1_FixePro + "',  c.telephone_portable_pro = '" + textBox1_MobilePro.Text + "' , c.telephone_prive = '" + textBox1_Tel_Prive.Text + "', c.email = '" + textBox1_Email.Text + "', c.statut ='" + comboBox1.Text + "'   where Num_Commercial = '" + textBox1_numCom + "' ";
-			OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
-			cmd.ExecuteNonQuery();
-
-			MessageBox.Show("Saved");
-
-			Recherche_Commerciaux rc = new Recherche_Commerciaux();
-			rc.Show(this);
-			this.Hide();
-		}
-
-        
-
 		private void button_annuler_Click(object sender, EventArgs e)
 		{
 			Recherche_Commerciaux rc = new Recherche_Commerciaux();
@@ -57,7 +34,7 @@ namespace PTImmo_2018
 			OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
 			dbConnection.Open();
 
-			string sql = "SELECT c.num_commercial, c.nom, c.prenom, c.telephone_fixe_pro, c.telephone_portable_pro, c.telephone_prive, c.email, c.statut where c.num_commercial = '" + ApplicationState.id_commercial+"' ";
+			string sql = "SELECT c.NUM_COMMERCIAL, c.NOM, c.PRENOM, c.TELEPHONE_FIXE_PRO, c.TELEPHONE_PORTABLE_PRO, c.TELEPHONE_PRIVE, c.EMAIL, c.STATUT from COMMERCIAL c where c.NUM_COMMERCIAL = '" + ApplicationState.id_commercial +"' ";
 			OleDbCommand cmd1 = new OleDbCommand(sql, dbConnection);
 			OleDbDataReader reader1 = cmd1.ExecuteReader();
 			while (reader1.Read())
@@ -75,5 +52,23 @@ namespace PTImmo_2018
 
 			reader1.Close();
 		}
-	}
+
+        private void button_valider_Click_1(object sender, EventArgs e)
+        {
+            string nomBase = "IMMOBILLY_JACKYTEAM";
+            string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
+            OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
+            dbConnection.Open();
+
+            string sql = "Update Commercial  set NOM = '" + textBox1_Nom.Text + "', PRENOM = '" + textBox1_Prenom.Text + "',  TELEPHONE_FIXE_PRO = '" + textBox1_FixePro.Text + "',  TELEPHONE_PORTABLE_PRO = '" + textBox1_MobilePro.Text + "' , TELEPHONE_PRIVE = '" + textBox1_Tel_Prive.Text + "', EMAIL = '" + textBox1_Email.Text + "', STATUT ='" + comboBox1.Text + "'   where NUM_COMMERCIAL = '" + textBox1_numCom.Text + "' ";
+            OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
+            cmd.ExecuteNonQuery();
+
+            MessageBox.Show("Saved");
+
+            Recherche_Commerciaux rc = new Recherche_Commerciaux();
+            rc.Show(this);
+            this.Hide();
+        }
+    }
 }

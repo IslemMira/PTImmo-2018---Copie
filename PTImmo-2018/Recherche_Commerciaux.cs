@@ -91,7 +91,9 @@ namespace PTImmo_2018
 
         private void listView1_Commerciaux_MouseClick(object sender, MouseEventArgs e)
         {
+            
             ApplicationState.id_commercial = listView1_Commerciaux.SelectedItems[0].SubItems[0].Text;
+            Console.WriteLine(ApplicationState.id_commercial);
         }
 
         private void button1_rechercher_Click(object sender, EventArgs e)
