@@ -13,8 +13,9 @@ namespace PTImmo_2018
 {
     public partial class liste_des_biens : Form
     {
-        static string id_bien_a_modifier;
+        static string id_bien_selectionne;
         string statut = "d";
+        
 
 
         public liste_des_biens()
@@ -33,7 +34,7 @@ namespace PTImmo_2018
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
             
-            string sql = "select b.code_bien,b.adresse,b.statut, count(v.code_visite) nb_visite from bien b left join proposition p on p.code_bien = b.code_bien left join visite v on v.code_proposition = p.code_proposition left join vendeur ve on ve.num_client = b.num_client where ve.nom_client like '%" + textBox1.Text+  "%' and b.statut like '%"+ statut+ "' group by b.code_bien,b.adresse,b.statut; ";
+            string sql = "select b.code_bien,b.adresse,b.statut, count(v.code_visite) nb_visite from bien b left join proposition p on p.code_bien = b.code_bien left join visite v on v.code_proposition = p.code_proposition left join vendeur ve on ve.num_client = b.num_client where ve.nom_client like '%" + textBox2.Text+  "%' and b.statut like '%"+ statut+ "' group by b.code_bien,b.adresse,b.statut; ";
 
             OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
             OleDbDataReader reader = cmd.ExecuteReader();
@@ -110,8 +111,8 @@ namespace PTImmo_2018
 
         private void listView1_Click(object sender, EventArgs e)
         {
-            id_bien_a_modifier = listView1.SelectedItems[0].SubItems[0].Text;
-            Console.WriteLine(listView1.SelectedItems[0].SubItems[0].Text);
+            id_bien_selectionne = listView1.SelectedItems[0].SubItems[0].Text;
+            
         }
 
 		private void Ajouter_Click(object sender, EventArgs e)
@@ -120,5 +121,14 @@ namespace PTImmo_2018
 			nv.Show(this);
 			this.Hide();
 		}
-	}
+
+        private void Visualiser_Click(object sender, EventArgs e)
+        {
+            ApplicationState.id_bien = id_bien_selectionne;
+            this.Hide();
+            Fiche_Bien fb = new Fiche_Bien();
+            fb.Show();
+           
+        }
+    }
 }
