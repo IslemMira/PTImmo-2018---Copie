@@ -65,6 +65,7 @@
             this.comboBox_commercial.Size = new System.Drawing.Size(134, 21);
             this.comboBox_commercial.TabIndex = 126;
             this.comboBox_commercial.SelectedIndexChanged += new System.EventHandler(this.Filtre_Commercial);
+            this.comboBox_commercial.Validated += new System.EventHandler(this.comboBox_commercial_Validated);
             // 
             // label4
             // 
@@ -170,6 +171,7 @@
             this.Rechercher.Text = "    Rechercher";
             this.Rechercher.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Rechercher.UseVisualStyleBackColor = true;
+            this.Rechercher.Click += new System.EventHandler(this.Rechercher_Click);
             // 
             // Ajouter
             // 
