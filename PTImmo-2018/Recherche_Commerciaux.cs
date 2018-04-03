@@ -13,6 +13,8 @@ namespace PTImmo_2018
 {
     public partial class Recherche_Commerciaux : Form
     {
+		
+
         public Recherche_Commerciaux()
         {
             InitializeComponent();
@@ -23,7 +25,7 @@ namespace PTImmo_2018
             dbConnection.Open();
 
             string sqlS1 = "Select c.Num_Commercial, c.Nom, c.Prenom, count(a.num_acheteur) as nombre_acheteur, c.Statut";
-            string sqlF1 = " from Commercial c left join acheteur a on a.num_commercial = c.Num_Commercial";
+            string sqlF1 = "from Commercial c left join acheteur a on a.num_commercial = c.Num_Commercial";
             string sqlG1 = " group by c.Num_Commercial, c.Nom, c.Prenom, c.Statut";
             string sql = sqlS1 + sqlF1 + sqlG1;
 
@@ -66,5 +68,54 @@ namespace PTImmo_2018
             }
             reader.Close();
         }
-    }
+
+        private void Recherche_IdCommercial(object sender, EventArgs e)
+        {
+            string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
+
+            OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
+            dbConnection.Open();
+
+            string sqlS1 = "Select c.Num_Commercial, c.Nom, c.Prenom, count(a.num_acheteur) as nombre_acheteur, c.Statut";
+            string sqlF1 = " from Commercial c left join acheteur a on a.num_commercial = c.Num_Commercial";
+            string sqlW1 = " where c.NUM_COMMERCIAL = %";
+            string sqlG1 = " group by c.Num_Commercial, c.Nom, c.Prenom, c.Statut";
+            string sql = sqlS1 + sqlF1 + sqlW1 + sqlG1;
+
+            OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
+            OleDbDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                textBox_id.Text = reader.GetString(1);
+            }
+            reader.Close();
+        }
+
+        private void Button_AjouterCommercial(object sender, EventArgs e)
+        {
+           Ajouter_commercial ac = new Ajouter_commercial();
+            ac.Show(this);
+            this.Hide();
+        }
+
+        private void Fermer_RechercheCommercial(object sender, EventArgs e)
+        {
+            FormAcceuil Accueil = new FormAcceuil();
+            Accueil.Show(this);
+            this.Hide();
+        }
+
+		private void Visualiser_Click(object sender, EventArgs e)
+		{
+			ModifierCommercial mc = new ModifierCommercial();
+			mc.Show(this);
+			this.Hide();
+		}
+
+		private void listView1_Commerciaux_MouseClick(object sender, MouseEventArgs e)
+		{
+			ApplicationState.id_commercial = listView1_Commerciaux.SelectedItems[0].SubItems[0].Text;
+		}
+	}
 }

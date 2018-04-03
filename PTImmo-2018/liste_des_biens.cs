@@ -39,10 +39,6 @@ namespace PTImmo_2018
             OleDbDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                Console.WriteLine(reader.GetInt16(0));
-                Console.WriteLine(reader.GetString(1));
-                Console.WriteLine(reader.GetString(2));
-
                 string[] row = { reader.GetInt16(0).ToString(), reader.GetString(1), reader.GetString(2), reader.GetInt32(3).ToString() };
                 ListViewItem lvi = new ListViewItem(row);
                 listView1.Items.Add(lvi);
@@ -117,5 +113,12 @@ namespace PTImmo_2018
             id_bien_a_modifier = listView1.SelectedItems[0].SubItems[0].Text;
             Console.WriteLine(listView1.SelectedItems[0].SubItems[0].Text);
         }
-    }
+
+		private void Ajouter_Click(object sender, EventArgs e)
+		{
+			Nouveau_Vendeur nv = new Nouveau_Vendeur();
+			nv.Show(this);
+			this.Hide();
+		}
+	}
 }
