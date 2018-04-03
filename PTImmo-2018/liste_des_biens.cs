@@ -125,10 +125,11 @@ namespace PTImmo_2018
         private void Visualiser_Click(object sender, EventArgs e)
         {
             ApplicationState.id_bien = id_bien_selectionne;
-            this.Hide();
+            Console.WriteLine(ApplicationState.id_bien);
             Fiche_Bien fb = new Fiche_Bien();
-            fb.Show();
-           
+            fb.Show(this);
+            this.Hide();
+
         }
     }
 }
