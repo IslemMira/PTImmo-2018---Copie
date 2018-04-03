@@ -45,12 +45,12 @@ namespace PTImmo_2018
 
 
 
-            string sql1 = "select p.CODE_SOUHAIT, p.code_bien, p.DATE, p.Code_Proposition from PROPOSITION p  left join SOUHAIT s on p.CODE_SOUHAIT = s.CODE_SOUHAIT left join ACHETEUR a on s.NUM_ACHETEUR = a.NUM_ACHETEUR where a.NUM_ACHETEUR = '" + textBox1.Text + "' ";
+            string sql1 = "select p.CODE_PROPOSITION, a.NOM_ACHETEUR, a.PRÉNOM_ACHETEUR, c.NOM, c.PRENOM, b.CODE_BIEN, p.DATE from PROPOSITION p join bien b on b.CODE_BIEN = p.CODE_BIEN join souhait s on s.CODE_SOUHAIT = p.CODE_SOUHAIT join acheteur a on s.NUM_ACHETEUR = a.NUM_ACHETEUR join COMMERCIAL c on c.NUM_COMMERCIAL = a.NUM_COMMERCIAL where a.NUM_ACHETEUR = '" + textBox1.Text + "' ";
             OleDbCommand cmd1 = new OleDbCommand(sql1, dbConnection);
             OleDbDataReader reader1 = cmd1.ExecuteReader();
             while (reader1.Read())
             {
-                string[] row = { reader1.GetValue(3).ToString(),reader1.GetInt32(0).ToString(), reader1.GetValue(1).ToString(), reader1.GetValue(2).ToString() };
+                string[] row = { reader1.GetValue(0).ToString(), reader1.GetString(1), reader1.GetString(2), reader1.GetString(3), reader1.GetString(4), reader1.GetInt32(5).ToString(), reader1.GetValue(6).ToString() };
                 ListViewItem proposition = new ListViewItem(row);
                 listView1.Items.Add(proposition);
             }
@@ -113,10 +113,6 @@ namespace PTImmo_2018
         public void listView1_MouseClick(object sender, MouseEventArgs e)
         {
             ApplicationState.id_proposition = listView1.SelectedItems[0].SubItems[0].Text;
-            ApplicationState.id_proposition_souhait = listView1.SelectedItems[0].SubItems[1].Text;
-            ApplicationState.id_proposition_bien = listView1.SelectedItems[0].SubItems[2].Text;
-            
-
         }
 
         private void button2_Click(object sender, EventArgs e)

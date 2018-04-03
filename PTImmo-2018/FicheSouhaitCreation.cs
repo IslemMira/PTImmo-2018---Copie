@@ -45,6 +45,12 @@ namespace PTImmo_2018
 
         }
 
-
+        private void FicheSouhaitCreation_Load(object sender, EventArgs e)
+        {
+            string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
+            OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
+            dbConnection.Open();
+           
+        }
     }
 }
