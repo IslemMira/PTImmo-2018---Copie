@@ -65,6 +65,7 @@
             this.comboBox_commercial.Size = new System.Drawing.Size(134, 21);
             this.comboBox_commercial.TabIndex = 126;
             this.comboBox_commercial.SelectedIndexChanged += new System.EventHandler(this.Filtre_Commercial);
+            this.comboBox_commercial.Validated += new System.EventHandler(this.comboBox_commercial_Validated);
             // 
             // label4
             // 
