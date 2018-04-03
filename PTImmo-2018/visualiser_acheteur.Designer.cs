@@ -387,6 +387,7 @@
             this.details.Text = "      Visualiser";
             this.details.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.details.UseVisualStyleBackColor = false;
+            this.details.MouseClick += new System.Windows.Forms.MouseEventHandler(this.details_MouseClick);
             // 
             // proposer
             // 
@@ -402,6 +403,7 @@
             this.proposer.Text = "      Proposer";
             this.proposer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.proposer.UseVisualStyleBackColor = false;
+            this.proposer.MouseClick += new System.Windows.Forms.MouseEventHandler(this.proposer_MouseClick);
             // 
             // ListePropositions
             // 

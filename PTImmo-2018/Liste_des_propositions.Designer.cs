@@ -35,16 +35,22 @@
             this.GenererBonVisite = new System.Windows.Forms.Button();
             this.Modifier = new System.Windows.Forms.Button();
             this.Supprimer = new System.Windows.Forms.Button();
-            this.FicheAcheteur = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.CodeProp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.NomAcheteur = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.PrenomAcheteur = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.NomCom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.PrenomCom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.idBien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DateProp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Code_Propo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Code_Souhait = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Code_Bien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Date_Propo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView2 = new System.Windows.Forms.ListView();
             this.CodeProposition = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.CodeSouhait = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DateProposition = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CodeVisite = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.NomCo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DateVisite = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.Prenom = new System.Windows.Forms.Label();
@@ -53,13 +59,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.CodeProp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.NomAcheteur = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.PrenomAcheteur = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.NomCom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.PrenomCom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.idBien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DateProp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.PrenomCo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // textBox4
@@ -86,14 +86,13 @@
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(65, 20);
             this.textBox1.TabIndex = 184;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = global::PTImmo_2018.Properties.Resources.icons8_create_document_32;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(704, 302);
+            this.button1.Location = new System.Drawing.Point(689, 388);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(146, 39);
             this.button1.TabIndex = 189;
@@ -144,22 +143,9 @@
             this.Supprimer.UseVisualStyleBackColor = true;
             this.Supprimer.Click += new System.EventHandler(this.Supprimer_Click);
             // 
-            // FicheAcheteur
-            // 
-            this.FicheAcheteur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FicheAcheteur.Image = global::PTImmo_2018.Properties.Resources.icons8_customer_48;
-            this.FicheAcheteur.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.FicheAcheteur.Location = new System.Drawing.Point(704, 90);
-            this.FicheAcheteur.Name = "FicheAcheteur";
-            this.FicheAcheteur.Size = new System.Drawing.Size(146, 53);
-            this.FicheAcheteur.TabIndex = 193;
-            this.FicheAcheteur.Text = "Fiche Acheteur";
-            this.FicheAcheteur.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.FicheAcheteur.UseVisualStyleBackColor = true;
-            this.FicheAcheteur.Click += new System.EventHandler(this.FicheAcheteur_Click);
-            // 
             // listView1
             // 
+            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.CodeProp,
             this.NomAcheteur,
@@ -168,13 +154,49 @@
             this.PrenomCom,
             this.idBien,
             this.DateProp});
+            this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(105, 251);
+            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listView1.Location = new System.Drawing.Point(105, 221);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(568, 152);
+            this.listView1.Size = new System.Drawing.Size(730, 152);
             this.listView1.TabIndex = 204;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // CodeProp
+            // 
+            this.CodeProp.Text = "Code Proposition";
+            this.CodeProp.Width = 71;
+            // 
+            // NomAcheteur
+            // 
+            this.NomAcheteur.Text = "Nom Acheteur";
+            this.NomAcheteur.Width = 88;
+            // 
+            // PrenomAcheteur
+            // 
+            this.PrenomAcheteur.Text = "Prénom Acheteur";
+            this.PrenomAcheteur.Width = 101;
+            // 
+            // NomCom
+            // 
+            this.NomCom.Text = "Nom Commercial";
+            this.NomCom.Width = 102;
+            // 
+            // PrenomCom
+            // 
+            this.PrenomCom.Text = "Prénom Commercial";
+            this.PrenomCom.Width = 111;
+            // 
+            // idBien
+            // 
+            this.idBien.Text = "Id Bien";
+            // 
+            // DateProp
+            // 
+            this.DateProp.Text = "Date Proposition";
+            this.DateProp.Width = 191;
             // 
             // Code_Propo
             // 
@@ -199,10 +221,11 @@
             // listView2
             // 
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.CodeProposition,
-            this.CodeSouhait,
-            this.DateProposition,
-            this.DateVisite});
+            this.CodeVisite,
+            this.DateVisite,
+            this.NomCo,
+            this.PrenomCo,
+            this.CodeProposition});
             this.listView2.FullRowSelect = true;
             this.listView2.GridLines = true;
             this.listView2.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
@@ -217,22 +240,22 @@
             // CodeProposition
             // 
             this.CodeProposition.Text = "Code Proposition";
-            this.CodeProposition.Width = 126;
+            this.CodeProposition.Width = 68;
             // 
-            // CodeSouhait
+            // CodeVisite
             // 
-            this.CodeSouhait.Text = "Code Souhait";
-            this.CodeSouhait.Width = 100;
+            this.CodeVisite.Text = "Code Visite";
+            this.CodeVisite.Width = 66;
             // 
-            // DateProposition
+            // NomCo
             // 
-            this.DateProposition.Text = "Date Proposition";
-            this.DateProposition.Width = 200;
+            this.NomCo.Text = "Nom Commercial";
+            this.NomCo.Width = 137;
             // 
             // DateVisite
             // 
             this.DateVisite.Text = "DateVisite";
-            this.DateVisite.Width = 211;
+            this.DateVisite.Width = 161;
             // 
             // textBox2
             // 
@@ -315,33 +338,10 @@
             this.label6.Text = "Liste visites";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // CodeProp
+            // PrenomCo
             // 
-            this.CodeProp.Text = "Code Proposition";
-            // 
-            // NomAcheteur
-            // 
-            this.NomAcheteur.Text = "Nom Acheteur";
-            // 
-            // PrenomAcheteur
-            // 
-            this.PrenomAcheteur.Text = "Prénom Acheteur";
-            // 
-            // NomCom
-            // 
-            this.NomCom.Text = "Nom Commercial";
-            // 
-            // PrenomCom
-            // 
-            this.PrenomCom.Text = "Prénom Commercial";
-            // 
-            // idBien
-            // 
-            this.idBien.Text = "Id Bien";
-            // 
-            // DateProp
-            // 
-            this.DateProp.Text = "Date Proposition";
+            this.PrenomCo.Text = "Prénom Commercial";
+            this.PrenomCo.Width = 132;
             // 
             // Liste_des_propositions
             // 
@@ -359,7 +359,6 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.FicheAcheteur);
             this.Controls.Add(this.Supprimer);
             this.Controls.Add(this.Modifier);
             this.Controls.Add(this.GenererBonVisite);
@@ -384,11 +383,10 @@
 		private System.Windows.Forms.Button GenererBonVisite;
 		private System.Windows.Forms.Button Modifier;
 		private System.Windows.Forms.Button Supprimer;
-		private System.Windows.Forms.Button FicheAcheteur;
 		private System.Windows.Forms.ListView listView1;
 		private System.Windows.Forms.ListView listView2;
-		private System.Windows.Forms.ColumnHeader CodeSouhait;
-		private System.Windows.Forms.ColumnHeader DateProposition;
+		private System.Windows.Forms.ColumnHeader CodeVisite;
+		private System.Windows.Forms.ColumnHeader NomCo;
 		private System.Windows.Forms.ColumnHeader DateVisite;
         private System.Windows.Forms.ColumnHeader Code_Souhait;
         private System.Windows.Forms.ColumnHeader Code_Bien;
@@ -409,5 +407,6 @@
         private System.Windows.Forms.ColumnHeader PrenomCom;
         private System.Windows.Forms.ColumnHeader idBien;
         private System.Windows.Forms.ColumnHeader DateProp;
+        private System.Windows.Forms.ColumnHeader PrenomCo;
     }
 }

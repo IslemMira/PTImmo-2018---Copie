@@ -47,17 +47,12 @@ namespace PTImmo_2018
                 reader.Close();
             }
 
-        private void button2_Click(object sender, EventArgs e)
+
+
+        private void Modifier_MouseClick(object sender, MouseEventArgs e)
         {
             ModifierSouhait ms = new ModifierSouhait();
             ms.Show(this);
-            this.Hide();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            visualiser_acheteur va = new visualiser_acheteur();
-            va.Show(this);
             this.Hide();
         }
     }

@@ -29,8 +29,6 @@
 		private void InitializeComponent()
 		{
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FicheSouhaitCreation));
-            this.listBox_Ville = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.textBox_Ville = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.nbPieces = new System.Windows.Forms.NumericUpDown();
@@ -47,25 +45,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nbPieces)).BeginInit();
             this.SuspendLayout();
             // 
-            // listBox_Ville
-            // 
-            this.listBox_Ville.FormattingEnabled = true;
-            this.listBox_Ville.Location = new System.Drawing.Point(288, 380);
-            this.listBox_Ville.Name = "listBox_Ville";
-            this.listBox_Ville.Size = new System.Drawing.Size(147, 95);
-            this.listBox_Ville.TabIndex = 144;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(535, 327);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 143;
-            this.button1.Text = "Ajouter";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Ajouter_VilleSouhait);
-            // 
             // textBox_Ville
             // 
             this.textBox_Ville.Location = new System.Drawing.Point(288, 329);
@@ -80,9 +59,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(130, 330);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 15);
+            this.label2.Size = new System.Drawing.Size(93, 15);
             this.label2.TabIndex = 141;
-            this.label2.Text = "Villes souhaitees :";
+            this.label2.Text = "Ville souhaitée :";
             // 
             // nbPieces
             // 
@@ -213,8 +192,6 @@
             this.Controls.Add(this.textBox_SurfaceHabitable);
             this.Controls.Add(this.textBox_Prix);
             this.Controls.Add(this.nbPieces);
-            this.Controls.Add(this.listBox_Ville);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox_Ville);
             this.Controls.Add(this.label2);
             this.DoubleBuffered = true;
@@ -228,8 +205,6 @@
 		}
 
 		#endregion
-		private System.Windows.Forms.ListBox listBox_Ville;
-		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.TextBox textBox_Ville;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.NumericUpDown nbPieces;

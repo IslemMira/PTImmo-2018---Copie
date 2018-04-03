@@ -113,6 +113,8 @@
             this.Prenom_acheteur,
             this.tel_acheteur,
             this.email_acheteur});
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(131, 359);
             this.listView1.Margin = new System.Windows.Forms.Padding(2);
             this.listView1.Name = "listView1";

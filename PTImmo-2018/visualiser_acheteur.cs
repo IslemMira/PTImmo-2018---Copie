@@ -122,20 +122,6 @@ namespace PTImmo_2018
             ApplicationState.id_souhait = listView1.SelectedItems[0].SubItems[0].Text;
         }
 
-        private void details_Click(object sender, EventArgs e)
-        {
-            FicheSouhaitsViz fsv = new FicheSouhaitsViz();
-            fsv.Show(this);
-            this.Hide();
-        }
-
-        private void proposer_Click(object sender, EventArgs e)
-        {
-            PropositionBien pb = new PropositionBien();
-            pb.Show(this);
-            this.Hide();
-        }
-
         private void fermer_Click(object sender, EventArgs e)
         {
             RechercheAcheteur ra = new RechercheAcheteur();
@@ -164,6 +150,22 @@ namespace PTImmo_2018
             ApplicationState.id_acheteur = textBox6.Text;
             ModifierAcheteur ma = new ModifierAcheteur();
             ma.Show(this);
+            this.Hide();
+        }
+
+        private void details_MouseClick(object sender, MouseEventArgs e)
+        {
+            ApplicationState.id_souhait = listView1.SelectedItems[0].SubItems[0].Text;
+            FicheSouhaitsViz fsv = new FicheSouhaitsViz();
+            fsv.Show(this);
+            this.Hide();
+        }
+
+        private void proposer_MouseClick(object sender, MouseEventArgs e)
+        {
+            ApplicationState.id_souhait = listView1.SelectedItems[0].SubItems[0].Text;
+            PropositionBien pb = new PropositionBien();
+            pb.Show(this);
             this.Hide();
         }
     }

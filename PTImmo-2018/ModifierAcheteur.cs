@@ -42,7 +42,10 @@ namespace PTImmo_2018
             reader.Close();
         }
 
-        private void button_valider_Click(object sender, EventArgs e)
+       
+    
+
+        private void button1_MouseClick(object sender, MouseEventArgs e)
         {
             string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
@@ -58,7 +61,7 @@ namespace PTImmo_2018
             this.Hide();
         }
 
-        private void button_annuler_Click(object sender, EventArgs e)
+        private void button2_MouseClick(object sender, MouseEventArgs e)
         {
             visualiser_acheteur va = new visualiser_acheteur();
             va.Show(this);

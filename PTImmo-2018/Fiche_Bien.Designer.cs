@@ -603,7 +603,6 @@
             this.Controls.Add(this.textBox_VisRueBien);
             this.Name = "Fiche_Bien";
             this.Text = "Visualisation Bien";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Fiche_Bien_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.VisNbChambresBien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VisNbPiecesBien)).EndInit();

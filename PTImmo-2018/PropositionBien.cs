@@ -59,10 +59,6 @@ namespace PTImmo_2018
             OleDbDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                Console.WriteLine(reader.GetInt16(0));
-                Console.WriteLine(reader.GetInt32(1));
-
-
                 string[] row = { reader.GetInt16(0).ToString(), reader.GetInt32(1).ToString() };
                 ListViewItem lbp = new ListViewItem(row);
                 listView1.Items.Add(lbp);
@@ -70,22 +66,7 @@ namespace PTImmo_2018
             reader.Close();
         }
 
-        private void Proposer_Click(object sender, EventArgs e)
-        {
-            string nomBase = "IMMOBILLY_JACKYTEAM";
-            string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
-            OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
-            dbConnection.Open();
-
-            string sql1 = "Insert into Proposition (Code_Souhait, Code_Bien, Date) ";
-            string sql2 = "values('" +textBox15.Text  + "','" + ApplicationState.id_bien + "' , '"+ DateTime.Now+"')";
-
-            string sql = sql1 + sql2;
-
-            OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Proposition sauvegardée");
-        }
+       
 
         private void Retour_Click(object sender, EventArgs e)
         {
@@ -126,7 +107,25 @@ namespace PTImmo_2018
         {
             Liste_des_propositions ldp = new Liste_des_propositions();
             ldp.Show(this);
-            this.Hide();
+           
+        }
+
+        private void Proposer_MouseClick(object sender, MouseEventArgs e)
+        {
+            string nomBase = "IMMOBILLY_JACKYTEAM";
+            string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
+            OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
+            dbConnection.Open();
+
+            string sql1 = "Insert into Proposition (Code_Souhait, Code_Bien, Date) ";
+            string sql2 = "values('" + textBox15.Text + "','" + ApplicationState.id_bien + "' , '" + DateTime.Now + "')";
+
+            string sql = sql1 + sql2;
+
+            OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Proposition sauvegardée");
+
         }
     }
 }

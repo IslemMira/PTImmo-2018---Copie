@@ -42,7 +42,7 @@ namespace PTImmo_2018
             comboBox_Commercial.DisplayMember = "Nom";
             comboBox_Commercial.DataSource = dt;
 
-            string sql1 = "Select nom_acheteur, PRÉNOM_ACHETEUR, b.CODE_BIEN, b.SURFACE_HABITABLE, b.SURFACE_PARCELLE, b.NB_PIÉCES, b.NB_CHAMBRES, b.NB_SALLE_DE_BAIN,b.GARAGE, b.CAVE,b.PRIX_VENDEUR,p.date from ACHETEUR inner join souhait s on s.NUM_ACHETEUR = ACHETEUR.NUM_ACHETEUR inner join PROPOSITION p on s.CODE_SOUHAIT = p.CODE_SOUHAIT inner join bien b on p.CODE_BIEN = b.CODE_BIEN inner join VISITE v on v.CODE_PROPOSITION = p.CODE_PROPOSITION where v.CODE_VISITE =  " + ApplicationState.id_visite + ";";
+            string sql1 = "Select nom_acheteur, PRÉNOM_ACHETEUR, b.CODE_BIEN, b.SURFACE_HABITABLE, b.SURFACE_PARCELLE, b.NB_PIÉCES, b.NB_CHAMBRES, b.NB_SALLE_DE_BAIN,b.GARAGE, b.CAVE,b.PRIX_VENDEUR,p.date,v.Date,b.adresse,vi.nom_ville,vi.code_postal,Acheteur.Num_Acheteur from ACHETEUR inner join souhait s on s.NUM_ACHETEUR = ACHETEUR.NUM_ACHETEUR inner join PROPOSITION p on s.CODE_SOUHAIT = p.CODE_SOUHAIT inner join bien b on p.CODE_BIEN = b.CODE_BIEN left join ville vi on vi.code_ville = b.code_ville inner join VISITE v on v.CODE_PROPOSITION = p.CODE_PROPOSITION where v.CODE_VISITE =  " + ApplicationState.id_visite + ";";
             OleDbCommand cmd1 = new OleDbCommand(sql1, dbConnection);
             OleDbDataReader reader1 = cmd1.ExecuteReader();
 
@@ -61,32 +61,33 @@ namespace PTImmo_2018
                 textBox_Prix.Text = reader1.GetInt32(10).ToString();
                 dateTimePicker2.Text = reader1.GetDateTime(11).ToString();
                 this.dateTimePicker2.Enabled = false;
+                dateTimePicker1.Text = reader1.GetDateTime(12).ToString();
+                textBox_VisRueBien.Text = reader1.GetString(13);
+                textBox_Ville.Text = reader1.GetString(14);
+                textBox_VisCPBien.Text = reader1.GetValue(15).ToString();
+                textBox1.Text = reader1.GetValue(16).ToString();
             }
             reader1.Close();
         }
 
-        private void button_Valider_Click(object sender, EventArgs e)
+        private void button_Valider_MouseClick(object sender, MouseEventArgs e)
         {
             string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
 
-            string sql = "UPDATE Visite  set Date = '" + dateTimePicker1.Value + "' where";
+            string sql = "UPDATE Visite  set Date = '" + dateTimePicker1.Value + "' where CODE_VISITE = '" + ApplicationState.id_visite + "' ";
             OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Saved");
-
-            visualiser_acheteur va = new visualiser_acheteur();
-            va.Show(this);
             this.Hide();
+
         }
 
-        private void button_Annuler_Click(object sender, EventArgs e)
+        private void button_Annuler_MouseClick(object sender, MouseEventArgs e)
         {
-            visualiser_acheteur va = new visualiser_acheteur();
-            va.Show(this);
             this.Hide();
         }
     }
-    }
+}
 
