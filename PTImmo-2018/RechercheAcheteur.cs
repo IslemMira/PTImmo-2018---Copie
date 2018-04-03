@@ -11,69 +11,90 @@ using System.Windows.Forms;
 
 namespace PTImmo_2018
 {
-	public partial class RechercheAcheteur : Form
-	{
+    public partial class RechercheAcheteur : Form
+    {
+		
+
         public RechercheAcheteur()
         {
             InitializeComponent();
+        }
 
+        private void Button_RechercheAcheteur(object sender, EventArgs e)
+        {
 
             string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
+
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
-            string sql = "SELECT num_acheteur, nom_Acheteur, prénom_Acheteur, adresse, téléphone, E_MAIL, VILLE.Nom_Ville from ACHETEUR left join SOUHAIT on ACHETEUR.NUM_ACHETEUR = SOUHAIT.NUM_ACHETEUR left join VILLE on ACHETEUR.Code_Ville = VILLE.Code_Ville where Nom_Acheteur like '%" + "' and Prénom_Acheteur like '%'" + "%' and statut like '%" + "';";
 
+            string sql = "SELECT num_acheteur, nom_Acheteur, prénom_Acheteur, adresse, téléphone, E_MAIL, VILLE.Nom_Ville from ACHETEUR left join SOUHAIT on ACHETEUR.NUM_ACHETEUR = SOUHAIT.NUM_ACHETEUR left join VILLE on ACHETEUR.Code_Ville = VILLE.Code_Ville where Nom_Acheteur like '% %'   and Prénom_Acheteur like '% %' and statut like '% '";
+ 
             OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
             OleDbDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                identifiant.Text = reader.GetString(1);
-                nom.Text = reader.GetString(2);
-                prenom.Text = reader.GetString(3);
-                listBox1.Text = reader.GetString(4);
-                //comboBox_commercial.
-
+                textBox_Identidiant.Text = reader.GetInt32(1).ToString();
+                textBox_Nom.Text = reader.GetString(2);
+                textBox_Prenom.Text = reader.GetString(3);
+ 
             }
+            reader.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Filtre_Commercial(object sender, EventArgs e)
         {
-            string nomBase = "IMMOBILLY_JACKYTEAM";
+
             string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
+
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
 
+            string sql = "Select c.Nom, c.Prenom from Commercial c left join acheteur a on a.num_commercial = c.Num_Commercial order by NOM";
 
-            string statuts = " ";
-            string sql = "SELECT num_acheteur, nom_Acheteur, prénom_Acheteur, adresse, téléphone, E_MAIL, VILLE.Nom_Ville from ACHETEUR left join SOUHAIT on ACHETEUR.NUM_ACHETEUR = SOUHAIT.NUM_ACHETEUR left join VILLE on ACHETEUR.Code_Ville = VILLE.Code_Ville where Nom_Acheteur like '%" + "' and Prénom_Acheteur like '%'" + "%' and statut like '%" + "';";
-            string acheteur_d_exis = "";
-
-            if (en_cours.Checked == true)
-            {
-                acheteur_d_exis = "E";
-                afficher_tout.Checked = false;
-            }
-
-            if (afficher_tout.Checked == true)
-            {
-                acheteur_d_exis = "A";
-                en_cours.Checked = false;
-            }
-       
-            private void Charger_Liste_Commerciaux()
-        {
-            List<Ajouter_commercial> commerciaux = (from c in RechercheAcheteur.IMMOBILLY_JACKYTEAM.COMMERCIAL
-                                            select c).ToList();
-
-            foreach (COMMERCIAL c in commerciaux)
-
-                comboBox_commercial.Items.Add(c.NOM_COMMERCIAL);
-           
-        }
-
-
-        OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
+            OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
+            OleDbDataReader reader = cmd.ExecuteReader();
 
         }
-    }
 
+
+		private void RechercheAcheteur_Load(object sender, EventArgs e)
+		{
+			string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
+
+			OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
+			dbConnection.Open();
+
+			string sql = "SELECT num_acheteur, nom_Acheteur, prénom_Acheteur, téléphone, E_MAIL from ACHETEUR ";
+			OleDbCommand cmd1 = new OleDbCommand(sql, dbConnection);
+			OleDbDataReader reader1 = cmd1.ExecuteReader();
+			while (reader1.Read())
+			{
+				string[] row = { reader1.GetValue(0).ToString(), reader1.GetString(1), reader1.GetString(2), reader1.GetValue(3).ToString(), reader1.GetString(4)  };
+				ListViewItem listeAcheteurs = new ListViewItem(row);
+				listView1.Items.Add(listeAcheteurs);
+			}
+			reader1.Close();
+
+		}
+
+		private void Ajouter_Click(object sender, EventArgs e)
+		{
+			Creation_acheteur ca = new Creation_acheteur();
+			ca.Show(this);
+			this.Hide();
+		}
+
+		private void Visualiser_Click(object sender, EventArgs e)
+		{
+			visualiser_acheteur va = new visualiser_acheteur();
+			va.Show(this);
+			this.Hide();
+		}
+
+		private void listView1_MouseClick(object sender, MouseEventArgs e)
+		{
+			ApplicationState.id_acheteur = listView1.SelectedItems[0].SubItems[0].Text;
+		}
+	}
+}
