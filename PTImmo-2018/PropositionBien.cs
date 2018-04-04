@@ -85,11 +85,12 @@ namespace PTImmo_2018
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
 
-            string sql = "select SURFACE_HABITABLE,SURFACE_PARCELLE,NB_PIÉCES, NB_SALLE_DE_BAIN, GARAGE, cave, PRIX_VENDEUR,ADRESSE, COMMENTAIRE from BIEN where code_bien =" + ApplicationState.id_bien+ "; ";
+            string sql = "select SURFACE_HABITABLE,SURFACE_PARCELLE,NB_PIÉCES, NB_SALLE_DE_BAIN, GARAGE, cave, PRIX_VENDEUR,ADRESSE, COMMENTAIRE, NOM_VILLE, CODE_POSTAL from BIEN join ville on bien.CODE_VILLE = ville.CODE_VILLE where code_bien =" + ApplicationState.id_bien+ "; ";
             OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
             OleDbDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
+                textBox5.Text = ApplicationState.id_bien;
                 textBox6.Text = reader.GetInt32(0).ToString();
                 textBox7.Text = reader.GetInt32(1).ToString();
                 textBox8.Text = reader.GetInt32(2).ToString();
@@ -99,6 +100,8 @@ namespace PTImmo_2018
                 textBox10.Text = reader.GetInt32(6).ToString();
                 textBox11.Text = reader.GetString(7);
                 textBox14.Text = reader.GetString(8);
+                textBox12.Text = reader.GetString(9);
+                textBox13.Text = reader.GetValue(10).ToString();
             }
             reader.Close();
         }

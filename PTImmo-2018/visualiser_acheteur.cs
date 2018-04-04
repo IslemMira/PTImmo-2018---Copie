@@ -60,7 +60,7 @@ namespace PTImmo_2018
 
 
 
-            string sql = "SELECT nom_Acheteur, prénom_Acheteur, adresse, VILLE.CODE_POSTAL, Téléphone, E_MAIL,  c.Nom, c.Prenom, Num_Acheteur from ACHETEUR left join VILLE on ACHETEUR.Code_Ville = VILLE.Code_Ville join COMMERCIAL c on ACHETEUR.NUM_COMMERCIAL = c.NUM_COMMERCIAL where NUM_ACHETEUR = '" + ApplicationState.id_acheteur + "' ";
+            string sql = "SELECT nom_Acheteur, prénom_Acheteur, adresse, VILLE.CODE_POSTAL, Téléphone, E_MAIL,  c.Nom, c.Prenom, Num_Acheteur, VILLE.NOM_VILLE from ACHETEUR left join VILLE on ACHETEUR.Code_Ville = VILLE.Code_Ville join COMMERCIAL c on ACHETEUR.NUM_COMMERCIAL = c.NUM_COMMERCIAL where NUM_ACHETEUR = '" + ApplicationState.id_acheteur + "' ";
             OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
             OleDbDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
@@ -73,6 +73,7 @@ namespace PTImmo_2018
                 textBox4.Text = reader.GetString(5);
                 textBox5.Text = reader.GetString(6).Trim().ToUpper() + " " + reader.GetString(7).Trim();
                 textBox6.Text = reader.GetValue(8).ToString();
+                textBox7.Text = reader.GetString(9);
             }
             reader.Close();
 
@@ -142,7 +143,7 @@ namespace PTImmo_2018
             ApplicationState.id_acheteur = textBox6.Text;
             FicheSouhaitCreation fsc = new FicheSouhaitCreation();
             fsc.Show(this);
-            this.Hide();
+            
         }
 
         private void ModifierAcheteur_Click(object sender, EventArgs e)
@@ -158,7 +159,7 @@ namespace PTImmo_2018
             ApplicationState.id_souhait = listView1.SelectedItems[0].SubItems[0].Text;
             FicheSouhaitsViz fsv = new FicheSouhaitsViz();
             fsv.Show(this);
-            this.Hide();
+            
         }
 
         private void proposer_MouseClick(object sender, MouseEventArgs e)
@@ -166,7 +167,7 @@ namespace PTImmo_2018
             ApplicationState.id_souhait = listView1.SelectedItems[0].SubItems[0].Text;
             PropositionBien pb = new PropositionBien();
             pb.Show(this);
-            this.Hide();
+            
         }
     }
 }

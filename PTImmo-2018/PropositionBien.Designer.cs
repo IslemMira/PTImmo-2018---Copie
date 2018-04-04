@@ -184,6 +184,7 @@
             // 
             this.checkBox3.AutoSize = true;
             this.checkBox3.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox3.Enabled = false;
             this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox3.Location = new System.Drawing.Point(508, 615);
             this.checkBox3.Name = "checkBox3";
@@ -196,6 +197,7 @@
             // 
             this.checkBox4.AutoSize = true;
             this.checkBox4.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox4.Enabled = false;
             this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox4.Location = new System.Drawing.Point(374, 615);
             this.checkBox4.Name = "checkBox4";
@@ -208,6 +210,7 @@
             // 
             this.textBox5.Location = new System.Drawing.Point(488, 460);
             this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(84, 20);
             this.textBox5.TabIndex = 196;
             // 
@@ -215,6 +218,7 @@
             // 
             this.textBox6.Location = new System.Drawing.Point(486, 490);
             this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(84, 20);
             this.textBox6.TabIndex = 197;
             // 
@@ -222,6 +226,7 @@
             // 
             this.textBox7.Location = new System.Drawing.Point(486, 520);
             this.textBox7.Name = "textBox7";
+            this.textBox7.ReadOnly = true;
             this.textBox7.Size = new System.Drawing.Size(84, 20);
             this.textBox7.TabIndex = 198;
             // 
@@ -229,6 +234,7 @@
             // 
             this.textBox8.Location = new System.Drawing.Point(486, 551);
             this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
             this.textBox8.Size = new System.Drawing.Size(84, 20);
             this.textBox8.TabIndex = 199;
             // 
@@ -236,6 +242,7 @@
             // 
             this.textBox9.Location = new System.Drawing.Point(486, 583);
             this.textBox9.Name = "textBox9";
+            this.textBox9.ReadOnly = true;
             this.textBox9.Size = new System.Drawing.Size(84, 20);
             this.textBox9.TabIndex = 200;
             // 
@@ -243,6 +250,7 @@
             // 
             this.textBox10.Location = new System.Drawing.Point(488, 647);
             this.textBox10.Name = "textBox10";
+            this.textBox10.ReadOnly = true;
             this.textBox10.Size = new System.Drawing.Size(127, 20);
             this.textBox10.TabIndex = 201;
             // 
@@ -250,6 +258,7 @@
             // 
             this.textBox11.Location = new System.Drawing.Point(738, 430);
             this.textBox11.Name = "textBox11";
+            this.textBox11.ReadOnly = true;
             this.textBox11.Size = new System.Drawing.Size(166, 20);
             this.textBox11.TabIndex = 202;
             // 
@@ -257,6 +266,7 @@
             // 
             this.textBox12.Location = new System.Drawing.Point(738, 465);
             this.textBox12.Name = "textBox12";
+            this.textBox12.ReadOnly = true;
             this.textBox12.Size = new System.Drawing.Size(166, 20);
             this.textBox12.TabIndex = 203;
             // 
@@ -264,6 +274,7 @@
             // 
             this.textBox13.Location = new System.Drawing.Point(738, 502);
             this.textBox13.Name = "textBox13";
+            this.textBox13.ReadOnly = true;
             this.textBox13.Size = new System.Drawing.Size(166, 20);
             this.textBox13.TabIndex = 204;
             // 
@@ -272,6 +283,7 @@
             this.textBox14.Location = new System.Drawing.Point(675, 555);
             this.textBox14.Multiline = true;
             this.textBox14.Name = "textBox14";
+            this.textBox14.ReadOnly = true;
             this.textBox14.Size = new System.Drawing.Size(229, 112);
             this.textBox14.TabIndex = 205;
             // 
