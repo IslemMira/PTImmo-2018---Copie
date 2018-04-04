@@ -78,7 +78,8 @@ namespace PTImmo_2018
 
 		private void GenererBonVisite_Click(object sender, EventArgs e)
 		{
-			Bon_Visite bv = new Bon_Visite();
+            ApplicationState.id_proposition = listView2.SelectedItems[0].SubItems[4].Text;
+            Bon_Visite bv = new Bon_Visite();
 			bv.Show(this);
 			
 		}
