@@ -16,6 +16,7 @@ namespace PTImmo_2018
         public Nouveau_Vendeur()
         {
             InitializeComponent();
+
         }
 
         private void Valider_NouveauVendeur(object sender, EventArgs e)
@@ -42,12 +43,12 @@ namespace PTImmo_2018
 
         private void Annuler_NouveauVendeur(object sender, EventArgs e)
         {
-            FormAcceuil Accueil = new FormAcceuil();
-            Accueil.Show(this);
+            liste_des_biens lb = new liste_des_biens();
+            lb.Show(this);
             this.Hide();
+            
         }
-
-        
+               
 
 
     }
