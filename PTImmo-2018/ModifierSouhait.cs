@@ -25,7 +25,7 @@ namespace PTImmo_2018
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
 
-            string sql = "select s.CODE_SOUHAIT,s.STATUT, s.SURFACE_HABITABLE_MIN, s.SURFACE_PARCELLE_MIN, s.NB_PIECES_MIN,  s.PRIX_MAX, v.NOM_VILLE, v.Code_Postal from SOUHAIT s left join VILLE v on v.CODE_VILLE = s.CODE_VILLE where s.CODE_SOUHAIT =3 ";
+            string sql = "select s.CODE_SOUHAIT,s.STATUT, s.SURFACE_HABITABLE_MIN, s.SURFACE_PARCELLE_MIN, s.NB_PIECES_MIN,  s.PRIX_MAX, v.NOM_VILLE, v.Code_Postal from SOUHAIT s left join VILLE v on v.CODE_VILLE = s.CODE_VILLE where s.CODE_SOUHAIT = '" + ApplicationState.id_souhait + "' ";
             OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
             OleDbDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
@@ -33,8 +33,8 @@ namespace PTImmo_2018
                 Console.WriteLine(textBox1.Text);
                 textBox1.Text = reader.GetInt32(0).ToString();
                 comboBox1.Text = reader.GetString(1);
-                numericUpDown1.Text = reader.GetInt32(2).ToString();
-                numericUpDown2.Text = reader.GetInt32(3).ToString();
+                textBox_SurfaceHabitable.Text = reader.GetInt32(2).ToString();
+                textBox_Parcelle.Text = reader.GetInt32(3).ToString();
                 numericUpDown3.Text = reader.GetInt32(4).ToString();
 
                 textBox2.Text = reader.GetValue(5).ToString();
@@ -53,7 +53,7 @@ namespace PTImmo_2018
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
 
-            string sql = "UPDATE SOUHAIT  set STATUT = '" + comboBox1.Text + "', SURFACE_HABITABLE_MIN = '" + numericUpDown1.Text + "', SURFACE_PARCELLE_MIN = '" + numericUpDown2.Text + "', NB_PIECES_MIN = '" + numericUpDown3.Text + "',  PRIX_MAX = '" + textBox2.Text + "' where CODE_SOUHAIT = '" + textBox1.Text + "' ";
+            string sql = "UPDATE SOUHAIT  set STATUT = '" + comboBox1.Text + "', SURFACE_HABITABLE_MIN = '" + textBox_SurfaceHabitable.Text + "', SURFACE_PARCELLE_MIN = '" + textBox_Parcelle.Text + "', NB_PIECES_MIN = '" + numericUpDown3.Text + "',  PRIX_MAX = '" + textBox2.Text + "' where CODE_SOUHAIT = '" + textBox1.Text + "' ";
             OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Saved");
