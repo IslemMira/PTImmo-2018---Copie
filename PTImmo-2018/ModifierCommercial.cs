@@ -29,28 +29,29 @@ namespace PTImmo_2018
 
 		private void ModifierCommercial_Load(object sender, EventArgs e)
 		{
-			string nomBase = "IMMOBILLY_JACKYTEAM";
-			string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
-			OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
-			dbConnection.Open();
+           
+                string nomBase = "IMMOBILLY_JACKYTEAM";
+                string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
+                OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
+                dbConnection.Open();
 
-			string sql = "SELECT c.NUM_COMMERCIAL, c.NOM, c.PRENOM, c.TELEPHONE_FIXE_PRO, c.TELEPHONE_PORTABLE_PRO, c.TELEPHONE_PRIVE, c.EMAIL, c.STATUT from COMMERCIAL c where c.NUM_COMMERCIAL = '" + ApplicationState.id_commercial +"' ";
-			OleDbCommand cmd1 = new OleDbCommand(sql, dbConnection);
-			OleDbDataReader reader1 = cmd1.ExecuteReader();
-			while (reader1.Read())
-			{
-				textBox1_numCom.Text = reader1.GetInt32(0).ToString();
-				textBox1_Nom.Text = reader1.GetString(1);
-				textBox1_Prenom.Text = reader1.GetString(2);
-				textBox1_FixePro.Text = reader1.GetValue(3).ToString();
-				textBox1_MobilePro.Text = reader1.GetValue(4).ToString();
-				textBox1_Tel_Prive.Text = reader1.GetValue(5).ToString();
-				textBox1_Email.Text = reader1.GetString(6);
-				if (reader1.GetString(7) == "ACTIF") comboBox1.Text = "ACTIF";
-				if (reader1.GetString(7) == "ANCIEN EMPLOYE") comboBox1.Text = "ANCIEN EMPLOYE";
-			}
+                string sql = "SELECT c.NUM_COMMERCIAL, c.NOM, c.PRENOM, c.TELEPHONE_FIXE_PRO, c.TELEPHONE_PORTABLE_PRO, c.TELEPHONE_PRIVE, c.EMAIL, c.STATUT from COMMERCIAL c where c.NUM_COMMERCIAL = '" + ApplicationState.id_commercial + "' ";
+                OleDbCommand cmd1 = new OleDbCommand(sql, dbConnection);
+                OleDbDataReader reader1 = cmd1.ExecuteReader();
+                while (reader1.Read())
+                {
+                    textBox1_numCom.Text = reader1.GetInt32(0).ToString();
+                    textBox1_Nom.Text = reader1.GetString(1);
+                    textBox1_Prenom.Text = reader1.GetString(2);
+                    textBox1_FixePro.Text = reader1.GetValue(3).ToString();
+                    textBox1_MobilePro.Text = reader1.GetValue(4).ToString();
+                    textBox1_Tel_Prive.Text = reader1.GetValue(5).ToString();
+                    textBox1_Email.Text = reader1.GetString(6);
+                    if (reader1.GetString(7) == "ACTIF") comboBox1.Text = "ACTIF";
+                    if (reader1.GetString(7) == "ANCIEN EMPLOYE") comboBox1.Text = "ANCIEN EMPLOYE";
+                }
 
-			reader1.Close();
+                reader1.Close();
 		}
 
         private void button_valider_Click_1(object sender, EventArgs e)

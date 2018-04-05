@@ -12,10 +12,11 @@ using System.Windows.Forms;
 namespace PTImmo_2018
 {
     public partial class Recherche_Commerciaux : Form
-    {
+    {        
         public Recherche_Commerciaux()
         {
             InitializeComponent();
+            Visualiser.Enabled = false;
 
             string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
 
@@ -91,8 +92,8 @@ namespace PTImmo_2018
 
         private void listView1_Commerciaux_MouseClick(object sender, MouseEventArgs e)
         {
-            
-            ApplicationState.id_commercial = listView1_Commerciaux.SelectedItems[0].SubItems[0].Text;
+            Visualiser.Enabled = true;
+             ApplicationState.id_commercial = listView1_Commerciaux.SelectedItems[0].SubItems[0].Text;
             Console.WriteLine(ApplicationState.id_commercial);
         }
 
