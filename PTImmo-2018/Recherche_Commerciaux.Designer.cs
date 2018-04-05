@@ -51,9 +51,10 @@
             this.checkBox_actif.Checked = true;
             this.checkBox_actif.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_actif.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_actif.Location = new System.Drawing.Point(154, 110);
+            this.checkBox_actif.Location = new System.Drawing.Point(205, 135);
+            this.checkBox_actif.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox_actif.Name = "checkBox_actif";
-            this.checkBox_actif.Size = new System.Drawing.Size(48, 19);
+            this.checkBox_actif.Size = new System.Drawing.Size(58, 22);
             this.checkBox_actif.TabIndex = 0;
             this.checkBox_actif.Text = "Actif";
             this.checkBox_actif.UseVisualStyleBackColor = false;
@@ -61,9 +62,10 @@
             // 
             // textBox_id
             // 
-            this.textBox_id.Location = new System.Drawing.Point(154, 265);
+            this.textBox_id.Location = new System.Drawing.Point(205, 326);
+            this.textBox_id.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox_id.Name = "textBox_id";
-            this.textBox_id.Size = new System.Drawing.Size(135, 20);
+            this.textBox_id.Size = new System.Drawing.Size(179, 22);
             this.textBox_id.TabIndex = 1;
             // 
             // listView1_Commerciaux
@@ -76,9 +78,10 @@
             this.Statut});
             this.listView1_Commerciaux.FullRowSelect = true;
             this.listView1_Commerciaux.GridLines = true;
-            this.listView1_Commerciaux.Location = new System.Drawing.Point(154, 362);
+            this.listView1_Commerciaux.Location = new System.Drawing.Point(205, 446);
+            this.listView1_Commerciaux.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView1_Commerciaux.Name = "listView1_Commerciaux";
-            this.listView1_Commerciaux.Size = new System.Drawing.Size(597, 237);
+            this.listView1_Commerciaux.Size = new System.Drawing.Size(795, 291);
             this.listView1_Commerciaux.TabIndex = 12;
             this.listView1_Commerciaux.UseCompatibleStateImageBehavior = false;
             this.listView1_Commerciaux.View = System.Windows.Forms.View.Details;
@@ -115,9 +118,10 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Image = global::PTImmo_2018.Properties.Resources.icons8_name_tag_48;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Location = new System.Drawing.Point(101, 24);
+            this.label2.Location = new System.Drawing.Point(135, 30);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(310, 46);
+            this.label2.Size = new System.Drawing.Size(413, 57);
             this.label2.TabIndex = 15;
             this.label2.Text = "Liste de commerciaux";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -127,9 +131,10 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.Color.Transparent;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(154, 149);
+            this.checkBox1.Location = new System.Drawing.Point(205, 183);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(114, 19);
+            this.checkBox1.Size = new System.Drawing.Size(136, 22);
             this.checkBox1.TabIndex = 16;
             this.checkBox1.Text = "Ancien Employe";
             this.checkBox1.UseVisualStyleBackColor = false;
@@ -140,9 +145,10 @@
             this.IBien.AutoSize = true;
             this.IBien.BackColor = System.Drawing.Color.Transparent;
             this.IBien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IBien.Location = new System.Drawing.Point(151, 229);
+            this.IBien.Location = new System.Drawing.Point(201, 282);
+            this.IBien.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.IBien.Name = "IBien";
-            this.IBien.Size = new System.Drawing.Size(130, 15);
+            this.IBien.Size = new System.Drawing.Size(154, 18);
             this.IBien.TabIndex = 17;
             this.IBien.Text = "Identifiant Commercial";
             // 
@@ -151,9 +157,10 @@
             this.button1_rechercher.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1_rechercher.Image = global::PTImmo_2018.Properties.Resources.icons8_search_48;
             this.button1_rechercher.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1_rechercher.Location = new System.Drawing.Point(554, 233);
+            this.button1_rechercher.Location = new System.Drawing.Point(739, 287);
+            this.button1_rechercher.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1_rechercher.Name = "button1_rechercher";
-            this.button1_rechercher.Size = new System.Drawing.Size(197, 52);
+            this.button1_rechercher.Size = new System.Drawing.Size(263, 64);
             this.button1_rechercher.TabIndex = 18;
             this.button1_rechercher.Text = "    Rechercher";
             this.button1_rechercher.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -167,13 +174,15 @@
             this.Ajouter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ajouter.Image = global::PTImmo_2018.Properties.Resources.icons8_businessman_48;
             this.Ajouter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Ajouter.Location = new System.Drawing.Point(554, 127);
+            this.Ajouter.Location = new System.Drawing.Point(739, 156);
+            this.Ajouter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Ajouter.Name = "Ajouter";
-            this.Ajouter.Size = new System.Drawing.Size(197, 60);
+            this.Ajouter.Size = new System.Drawing.Size(263, 74);
             this.Ajouter.TabIndex = 19;
             this.Ajouter.Text = "      Ajouter        commercial";
             this.Ajouter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Ajouter.UseVisualStyleBackColor = false;
+            this.Ajouter.Click += new System.EventHandler(this.Button_AjouterCommercial);
             // 
             // Visualiser
             // 
@@ -181,9 +190,10 @@
             this.Visualiser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Visualiser.Image = global::PTImmo_2018.Properties.Resources.icons8_businessman_48;
             this.Visualiser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Visualiser.Location = new System.Drawing.Point(554, 645);
+            this.Visualiser.Location = new System.Drawing.Point(739, 794);
+            this.Visualiser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Visualiser.Name = "Visualiser";
-            this.Visualiser.Size = new System.Drawing.Size(197, 60);
+            this.Visualiser.Size = new System.Drawing.Size(263, 74);
             this.Visualiser.TabIndex = 20;
             this.Visualiser.Text = "      Modifier";
             this.Visualiser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -192,11 +202,11 @@
             // 
             // Recherche_Commerciaux
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PTImmo_2018.Properties.Resources.otherbackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(835, 709);
+            this.ClientSize = new System.Drawing.Size(1113, 873);
             this.Controls.Add(this.Visualiser);
             this.Controls.Add(this.Ajouter);
             this.Controls.Add(this.button1_rechercher);
@@ -206,6 +216,7 @@
             this.Controls.Add(this.listView1_Commerciaux);
             this.Controls.Add(this.textBox_id);
             this.Controls.Add(this.checkBox_actif);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Recherche_Commerciaux";
             this.Text = "Recherche_Commerciaux";
             this.ResumeLayout(false);
