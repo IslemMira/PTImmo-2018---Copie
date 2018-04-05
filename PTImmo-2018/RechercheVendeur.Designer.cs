@@ -35,7 +35,7 @@ namespace PTImmo_2018
             this.Nom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.prenom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label3 = new System.Windows.Forms.Label();
-            this.Rechercher = new System.Windows.Forms.Button();
+            this.RechercherVendeur_Load = new System.Windows.Forms.Button();
             this.textBox_Nom = new System.Windows.Forms.TextBox();
             this.textBox_Identidiant = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,7 +49,6 @@ namespace PTImmo_2018
             // listView1_vendeurs
             // 
             this.listView1_vendeurs.Activation = System.Windows.Forms.ItemActivation.OneClick;
-            this.listView1_vendeurs.Alignment = System.Windows.Forms.ListViewAlignment.SnapToGrid;
             this.listView1_vendeurs.BackColor = System.Drawing.Color.Gainsboro;
             this.listView1_vendeurs.BackgroundImageTiled = true;
             this.listView1_vendeurs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -58,10 +57,9 @@ namespace PTImmo_2018
             this.Nom,
             this.prenom});
             this.listView1_vendeurs.FullRowSelect = true;
-            this.listView1_vendeurs.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView1_vendeurs.HoverSelection = true;
             this.listView1_vendeurs.Location = new System.Drawing.Point(140, 264);
-            this.listView1_vendeurs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView1_vendeurs.Margin = new System.Windows.Forms.Padding(4);
             this.listView1_vendeurs.Name = "listView1_vendeurs";
             this.listView1_vendeurs.Size = new System.Drawing.Size(630, 272);
             this.listView1_vendeurs.TabIndex = 17;
@@ -98,25 +96,25 @@ namespace PTImmo_2018
             this.label3.Text = "     Liste vendeurs";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Rechercher
+            // RechercherVendeur_Load
             // 
-            this.Rechercher.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Rechercher.Image = global::PTImmo_2018.Properties.Resources.icons8_search_48;
-            this.Rechercher.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Rechercher.Location = new System.Drawing.Point(725, 162);
-            this.Rechercher.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Rechercher.Name = "Rechercher";
-            this.Rechercher.Size = new System.Drawing.Size(263, 64);
-            this.Rechercher.TabIndex = 140;
-            this.Rechercher.Text = "    Rechercher";
-            this.Rechercher.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Rechercher.UseVisualStyleBackColor = true;
-            this.Rechercher.Click += new System.EventHandler(this.Rechercher_Click);
+            this.RechercherVendeur_Load.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RechercherVendeur_Load.Image = global::PTImmo_2018.Properties.Resources.icons8_search_48;
+            this.RechercherVendeur_Load.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RechercherVendeur_Load.Location = new System.Drawing.Point(725, 162);
+            this.RechercherVendeur_Load.Margin = new System.Windows.Forms.Padding(4);
+            this.RechercherVendeur_Load.Name = "RechercherVendeur_Load";
+            this.RechercherVendeur_Load.Size = new System.Drawing.Size(263, 64);
+            this.RechercherVendeur_Load.TabIndex = 140;
+            this.RechercherVendeur_Load.Text = "    Rechercher";
+            this.RechercherVendeur_Load.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.RechercherVendeur_Load.UseVisualStyleBackColor = true;
+            this.RechercherVendeur_Load.Click += new System.EventHandler(this.RechercheVendeur_Load);
             // 
             // textBox_Nom
             // 
             this.textBox_Nom.Location = new System.Drawing.Point(281, 206);
-            this.textBox_Nom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_Nom.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_Nom.Name = "textBox_Nom";
             this.textBox_Nom.Size = new System.Drawing.Size(249, 22);
             this.textBox_Nom.TabIndex = 144;
@@ -124,7 +122,7 @@ namespace PTImmo_2018
             // textBox_Identidiant
             // 
             this.textBox_Identidiant.Location = new System.Drawing.Point(281, 158);
-            this.textBox_Identidiant.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_Identidiant.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_Identidiant.Name = "textBox_Identidiant";
             this.textBox_Identidiant.Size = new System.Drawing.Size(249, 22);
             this.textBox_Identidiant.TabIndex = 143;
@@ -162,7 +160,7 @@ namespace PTImmo_2018
             this.Visualiser.Image = global::PTImmo_2018.Properties.Resources.icons8_contact_details_481;
             this.Visualiser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Visualiser.Location = new System.Drawing.Point(801, 362);
-            this.Visualiser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Visualiser.Margin = new System.Windows.Forms.Padding(4);
             this.Visualiser.Name = "Visualiser";
             this.Visualiser.Size = new System.Drawing.Size(187, 79);
             this.Visualiser.TabIndex = 145;
@@ -185,6 +183,7 @@ namespace PTImmo_2018
             this.Ajouter.Text = "Créer Vendeur";
             this.Ajouter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Ajouter.UseVisualStyleBackColor = false;
+            this.Ajouter.Click += new System.EventHandler(this.Bouton_CreerVendeur);
             // 
             // Bouton_Ajouter_bien
             // 
@@ -231,10 +230,10 @@ namespace PTImmo_2018
             this.Controls.Add(this.textBox_Identidiant);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.Rechercher);
+            this.Controls.Add(this.RechercherVendeur_Load);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.listView1_vendeurs);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RechercheVendeur";
             this.Text = "RechercheVendeur";
             this.Load += new System.EventHandler(this.RechercheVendeur_Load);
@@ -248,7 +247,7 @@ namespace PTImmo_2018
         private System.Windows.Forms.ColumnHeader Nom;
         private System.Windows.Forms.ColumnHeader prenom;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Button Rechercher;
+		private System.Windows.Forms.Button RechercherVendeur_Load;
 		private System.Windows.Forms.TextBox textBox_Nom;
 		private System.Windows.Forms.TextBox textBox_Identidiant;
 		private System.Windows.Forms.Label label4;

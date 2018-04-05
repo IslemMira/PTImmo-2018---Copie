@@ -34,7 +34,7 @@ namespace PTImmo_2018
             while (reader.Read())
             {
 
-                string[] ligne = { reader.GetInt32(0).ToString(), reader.GetString(1), reader.GetString(2)};
+                string[] ligne = { reader.GetInt16(0).ToString(), reader.GetString(1), reader.GetString(2)};
                 ListViewItem lvi = new ListViewItem(ligne);
                 listView1_vendeurs.Items.Add(lvi);
             }
@@ -45,14 +45,11 @@ namespace PTImmo_2018
 		private void RechercheVendeur_Load(object sender, EventArgs e)
 		{
 
-		}
 
-		private void Rechercher_Click(object sender, EventArgs e)
-		{
+        }
 
-		}
 
-		private void Visualiser_Click(object sender, EventArgs e)
+        private void Visualiser_Click(object sender, EventArgs e)
 		{
 
 		}
@@ -75,6 +72,13 @@ namespace PTImmo_2018
             Nouveau_bien nb = new Nouveau_bien();
             nb.Show(this);
             this.Hide();
+        }
+
+        private void Bouton_CreerVendeur(object sender, EventArgs e)
+        {
+            Nouveau_Vendeur nv = new Nouveau_Vendeur();
+            nv.Show(this);
+         
         }
     }
 }

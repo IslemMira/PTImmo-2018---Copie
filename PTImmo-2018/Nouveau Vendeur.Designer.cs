@@ -44,17 +44,17 @@
             this.Nom = new System.Windows.Forms.Label();
             this.button_valider = new System.Windows.Forms.Button();
             this.button_annuler = new System.Windows.Forms.Button();
-            this.comboBox1_Ville = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1_codeVille = new System.Windows.Forms.TextBox();
+            this.textBox1_ville = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox10_CP
             // 
-            this.textBox10_CP.Location = new System.Drawing.Point(238, 434);
+            this.textBox10_CP.Location = new System.Drawing.Point(238, 473);
             this.textBox10_CP.Name = "textBox10_CP";
-            this.textBox10_CP.Size = new System.Drawing.Size(265, 24);
+            this.textBox10_CP.Size = new System.Drawing.Size(127, 24);
             this.textBox10_CP.TabIndex = 59;
             // 
             // textBox12_Adresse
@@ -195,14 +195,6 @@
             this.button_annuler.UseVisualStyleBackColor = true;
             this.button_annuler.Click += new System.EventHandler(this.Annuler_NouveauVendeur);
             // 
-            // comboBox1_Ville
-            // 
-            this.comboBox1_Ville.FormattingEnabled = true;
-            this.comboBox1_Ville.Location = new System.Drawing.Point(238, 470);
-            this.comboBox1_Ville.Name = "comboBox1_Ville";
-            this.comboBox1_Ville.Size = new System.Drawing.Size(112, 26);
-            this.comboBox1_Ville.TabIndex = 62;
-            // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
@@ -236,6 +228,13 @@
             this.textBox1_codeVille.Size = new System.Drawing.Size(62, 24);
             this.textBox1_codeVille.TabIndex = 65;
             // 
+            // textBox1_ville
+            // 
+            this.textBox1_ville.Location = new System.Drawing.Point(238, 437);
+            this.textBox1_ville.Name = "textBox1_ville";
+            this.textBox1_ville.Size = new System.Drawing.Size(127, 24);
+            this.textBox1_ville.TabIndex = 66;
+            // 
             // Nouveau_Vendeur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -243,10 +242,10 @@
             this.BackgroundImage = global::PTImmo_2018.Properties.Resources.otherbackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(791, 628);
+            this.Controls.Add(this.textBox1_ville);
             this.Controls.Add(this.textBox1_codeVille);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1_Ville);
             this.Controls.Add(this.button_valider);
             this.Controls.Add(this.button_annuler);
             this.Controls.Add(this.textBox10_CP);
@@ -287,9 +286,9 @@
         private System.Windows.Forms.Label Nom;
         private System.Windows.Forms.Button button_valider;
         private System.Windows.Forms.Button button_annuler;
-        private System.Windows.Forms.ComboBox comboBox1_Ville;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.TextBox textBox1_codeVille;
-	}
+        private System.Windows.Forms.TextBox textBox1_ville;
+    }
 }
