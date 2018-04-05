@@ -38,7 +38,10 @@ namespace PTImmo_2018
                 string sql = "SELECT c.NUM_COMMERCIAL, c.NOM, c.PRENOM, c.TELEPHONE_FIXE_PRO, c.TELEPHONE_PORTABLE_PRO, c.TELEPHONE_PRIVE, c.EMAIL, c.STATUT from COMMERCIAL c where c.NUM_COMMERCIAL = '" + ApplicationState.id_commercial + "' ";
                 OleDbCommand cmd1 = new OleDbCommand(sql, dbConnection);
                 OleDbDataReader reader1 = cmd1.ExecuteReader();
-                while (reader1.Read())
+
+                this.comboBox1.SelectedIndex = 0;
+
+            while (reader1.Read())
                 {
                     textBox1_numCom.Text = reader1.GetInt32(0).ToString();
                     textBox1_Nom.Text = reader1.GetString(1);
