@@ -78,7 +78,7 @@
             this.Statut});
             this.listView1_Commerciaux.FullRowSelect = true;
             this.listView1_Commerciaux.GridLines = true;
-            this.listView1_Commerciaux.Location = new System.Drawing.Point(205, 446);
+            this.listView1_Commerciaux.Location = new System.Drawing.Point(205, 381);
             this.listView1_Commerciaux.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView1_Commerciaux.Name = "listView1_Commerciaux";
             this.listView1_Commerciaux.Size = new System.Drawing.Size(795, 291);
@@ -190,7 +190,7 @@
             this.Visualiser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Visualiser.Image = global::PTImmo_2018.Properties.Resources.icons8_businessman_48;
             this.Visualiser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Visualiser.Location = new System.Drawing.Point(739, 794);
+            this.Visualiser.Location = new System.Drawing.Point(739, 718);
             this.Visualiser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Visualiser.Name = "Visualiser";
             this.Visualiser.Size = new System.Drawing.Size(263, 74);
