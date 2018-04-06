@@ -80,6 +80,11 @@ namespace PTImmo_2018
             }
             reader.Close();
         }
+
+        private void Button_Fermer_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

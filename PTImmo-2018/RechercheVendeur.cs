@@ -51,8 +51,10 @@ namespace PTImmo_2018
 
         private void Visualiser_Click(object sender, EventArgs e)
 		{
-
-		}
+            FicheVendeur fv = new FicheVendeur();
+            fv.Show(this);
+            
+        }
 
 		private void listView1_vendeurs_MouseClick(object sender, MouseEventArgs e)
 		{

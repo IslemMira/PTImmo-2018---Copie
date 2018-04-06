@@ -85,7 +85,7 @@
             // 
             this.textBox_AjPrenomVendeur.Enabled = false;
             this.textBox_AjPrenomVendeur.Location = new System.Drawing.Point(295, 153);
-            this.textBox_AjPrenomVendeur.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_AjPrenomVendeur.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjPrenomVendeur.Name = "textBox_AjPrenomVendeur";
             this.textBox_AjPrenomVendeur.ReadOnly = true;
             this.textBox_AjPrenomVendeur.Size = new System.Drawing.Size(204, 22);
@@ -95,7 +95,7 @@
             // 
             this.textBox_AjTelephoneVendeur.Enabled = false;
             this.textBox_AjTelephoneVendeur.Location = new System.Drawing.Point(295, 196);
-            this.textBox_AjTelephoneVendeur.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_AjTelephoneVendeur.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjTelephoneVendeur.Name = "textBox_AjTelephoneVendeur";
             this.textBox_AjTelephoneVendeur.ReadOnly = true;
             this.textBox_AjTelephoneVendeur.Size = new System.Drawing.Size(204, 22);
@@ -106,7 +106,7 @@
             this.textBox_AjNomVendeur.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox_AjNomVendeur.Enabled = false;
             this.textBox_AjNomVendeur.Location = new System.Drawing.Point(295, 110);
-            this.textBox_AjNomVendeur.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_AjNomVendeur.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjNomVendeur.Name = "textBox_AjNomVendeur";
             this.textBox_AjNomVendeur.ReadOnly = true;
             this.textBox_AjNomVendeur.Size = new System.Drawing.Size(204, 22);
@@ -117,7 +117,7 @@
             // 
             this.textBox_AjEmailVendeur.Enabled = false;
             this.textBox_AjEmailVendeur.Location = new System.Drawing.Point(295, 241);
-            this.textBox_AjEmailVendeur.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_AjEmailVendeur.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjEmailVendeur.Name = "textBox_AjEmailVendeur";
             this.textBox_AjEmailVendeur.ReadOnly = true;
             this.textBox_AjEmailVendeur.Size = new System.Drawing.Size(336, 22);
@@ -127,7 +127,7 @@
             // 
             this.textBox_AjRueVendeur.Enabled = false;
             this.textBox_AjRueVendeur.Location = new System.Drawing.Point(803, 153);
-            this.textBox_AjRueVendeur.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_AjRueVendeur.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjRueVendeur.Name = "textBox_AjRueVendeur";
             this.textBox_AjRueVendeur.ReadOnly = true;
             this.textBox_AjRueVendeur.Size = new System.Drawing.Size(245, 22);
@@ -137,7 +137,7 @@
             // 
             this.textBox_AjVilleVendeur.Enabled = false;
             this.textBox_AjVilleVendeur.Location = new System.Drawing.Point(803, 196);
-            this.textBox_AjVilleVendeur.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_AjVilleVendeur.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjVilleVendeur.Name = "textBox_AjVilleVendeur";
             this.textBox_AjVilleVendeur.ReadOnly = true;
             this.textBox_AjVilleVendeur.Size = new System.Drawing.Size(245, 22);
@@ -147,7 +147,7 @@
             // 
             this.textBox_AjCPVendeur.Enabled = false;
             this.textBox_AjCPVendeur.Location = new System.Drawing.Point(803, 241);
-            this.textBox_AjCPVendeur.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_AjCPVendeur.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjCPVendeur.Name = "textBox_AjCPVendeur";
             this.textBox_AjCPVendeur.ReadOnly = true;
             this.textBox_AjCPVendeur.Size = new System.Drawing.Size(127, 22);
@@ -157,7 +157,7 @@
             // 
             this.textBox_AjCodeVendeur.Enabled = false;
             this.textBox_AjCodeVendeur.Location = new System.Drawing.Point(1061, 30);
-            this.textBox_AjCodeVendeur.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_AjCodeVendeur.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjCodeVendeur.Name = "textBox_AjCodeVendeur";
             this.textBox_AjCodeVendeur.ReadOnly = true;
             this.textBox_AjCodeVendeur.Size = new System.Drawing.Size(115, 22);
@@ -166,7 +166,7 @@
             // textBox_AjCPBien
             // 
             this.textBox_AjCPBien.Location = new System.Drawing.Point(803, 530);
-            this.textBox_AjCPBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_AjCPBien.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjCPBien.Name = "textBox_AjCPBien";
             this.textBox_AjCPBien.Size = new System.Drawing.Size(127, 22);
             this.textBox_AjCPBien.TabIndex = 27;
@@ -174,7 +174,7 @@
             // textBox_AjVilleBien
             // 
             this.textBox_AjVilleBien.Location = new System.Drawing.Point(803, 485);
-            this.textBox_AjVilleBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_AjVilleBien.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjVilleBien.Name = "textBox_AjVilleBien";
             this.textBox_AjVilleBien.Size = new System.Drawing.Size(245, 22);
             this.textBox_AjVilleBien.TabIndex = 26;
@@ -182,7 +182,7 @@
             // textBox_AjRueBien
             // 
             this.textBox_AjRueBien.Location = new System.Drawing.Point(803, 442);
-            this.textBox_AjRueBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_AjRueBien.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjRueBien.Name = "textBox_AjRueBien";
             this.textBox_AjRueBien.Size = new System.Drawing.Size(245, 22);
             this.textBox_AjRueBien.TabIndex = 25;
@@ -274,7 +274,7 @@
             // textBox_AjSurfaceHabitableBien
             // 
             this.textBox_AjSurfaceHabitableBien.Location = new System.Drawing.Point(331, 388);
-            this.textBox_AjSurfaceHabitableBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_AjSurfaceHabitableBien.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjSurfaceHabitableBien.Name = "textBox_AjSurfaceHabitableBien";
             this.textBox_AjSurfaceHabitableBien.Size = new System.Drawing.Size(103, 22);
             this.textBox_AjSurfaceHabitableBien.TabIndex = 38;
@@ -282,7 +282,7 @@
             // textBox_AjSurfaceParcelleBien
             // 
             this.textBox_AjSurfaceParcelleBien.Location = new System.Drawing.Point(331, 425);
-            this.textBox_AjSurfaceParcelleBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_AjSurfaceParcelleBien.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjSurfaceParcelleBien.Name = "textBox_AjSurfaceParcelleBien";
             this.textBox_AjSurfaceParcelleBien.Size = new System.Drawing.Size(103, 22);
             this.textBox_AjSurfaceParcelleBien.TabIndex = 39;
@@ -290,18 +290,18 @@
             // textBox_AjPrixVendeurBien
             // 
             this.textBox_AjPrixVendeurBien.Location = new System.Drawing.Point(329, 662);
-            this.textBox_AjPrixVendeurBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_AjPrixVendeurBien.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjPrixVendeurBien.Name = "textBox_AjPrixVendeurBien";
             this.textBox_AjPrixVendeurBien.Size = new System.Drawing.Size(227, 22);
             this.textBox_AjPrixVendeurBien.TabIndex = 40;
             // 
             // textBox_AjCommentaireBien
             // 
-            this.textBox_AjCommentaireBien.Location = new System.Drawing.Point(713, 663);
-            this.textBox_AjCommentaireBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_AjCommentaireBien.Location = new System.Drawing.Point(713, 628);
+            this.textBox_AjCommentaireBien.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjCommentaireBien.Multiline = true;
             this.textBox_AjCommentaireBien.Name = "textBox_AjCommentaireBien";
-            this.textBox_AjCommentaireBien.Size = new System.Drawing.Size(335, 158);
+            this.textBox_AjCommentaireBien.Size = new System.Drawing.Size(404, 134);
             this.textBox_AjCommentaireBien.TabIndex = 41;
             // 
             // checkBox_GarageOuiBien
@@ -310,7 +310,7 @@
             this.checkBox_GarageOuiBien.BackColor = System.Drawing.Color.Transparent;
             this.checkBox_GarageOuiBien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox_GarageOuiBien.Location = new System.Drawing.Point(169, 601);
-            this.checkBox_GarageOuiBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox_GarageOuiBien.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox_GarageOuiBien.Name = "checkBox_GarageOuiBien";
             this.checkBox_GarageOuiBien.Size = new System.Drawing.Size(79, 22);
             this.checkBox_GarageOuiBien.TabIndex = 43;
@@ -323,7 +323,7 @@
             this.checkBoxCaveOuiBien.BackColor = System.Drawing.Color.Transparent;
             this.checkBoxCaveOuiBien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxCaveOuiBien.Location = new System.Drawing.Point(348, 601);
-            this.checkBoxCaveOuiBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBoxCaveOuiBien.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxCaveOuiBien.Name = "checkBoxCaveOuiBien";
             this.checkBoxCaveOuiBien.Size = new System.Drawing.Size(64, 22);
             this.checkBoxCaveOuiBien.TabIndex = 44;
@@ -333,7 +333,7 @@
             // nbPiecesBien
             // 
             this.nbPiecesBien.Location = new System.Drawing.Point(331, 464);
-            this.nbPiecesBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nbPiecesBien.Margin = new System.Windows.Forms.Padding(4);
             this.nbPiecesBien.Name = "nbPiecesBien";
             this.nbPiecesBien.Size = new System.Drawing.Size(104, 22);
             this.nbPiecesBien.TabIndex = 47;
@@ -341,7 +341,7 @@
             // nbSDBien
             // 
             this.nbSDBien.Location = new System.Drawing.Point(329, 544);
-            this.nbSDBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nbSDBien.Margin = new System.Windows.Forms.Padding(4);
             this.nbSDBien.Name = "nbSDBien";
             this.nbSDBien.Size = new System.Drawing.Size(105, 22);
             this.nbSDBien.TabIndex = 48;
@@ -350,7 +350,7 @@
             // 
             this.button_AnnulerAjBien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_AnnulerAjBien.Location = new System.Drawing.Point(145, 1065);
-            this.button_AnnulerAjBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_AnnulerAjBien.Margin = new System.Windows.Forms.Padding(4);
             this.button_AnnulerAjBien.Name = "button_AnnulerAjBien";
             this.button_AnnulerAjBien.Size = new System.Drawing.Size(220, 43);
             this.button_AnnulerAjBien.TabIndex = 49;
@@ -361,7 +361,7 @@
             // 
             this.button_AjouterNvBienVendeur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_AjouterNvBienVendeur.Location = new System.Drawing.Point(772, 1065);
-            this.button_AjouterNvBienVendeur.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_AjouterNvBienVendeur.Margin = new System.Windows.Forms.Padding(4);
             this.button_AjouterNvBienVendeur.Name = "button_AjouterNvBienVendeur";
             this.button_AjouterNvBienVendeur.Size = new System.Drawing.Size(220, 43);
             this.button_AjouterNvBienVendeur.TabIndex = 50;
@@ -383,7 +383,7 @@
             // nbChambreBien
             // 
             this.nbChambreBien.Location = new System.Drawing.Point(329, 505);
-            this.nbChambreBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nbChambreBien.Margin = new System.Windows.Forms.Padding(4);
             this.nbChambreBien.Name = "nbChambreBien";
             this.nbChambreBien.Size = new System.Drawing.Size(105, 22);
             this.nbChambreBien.TabIndex = 52;
@@ -392,7 +392,7 @@
             // 
             this.Button_Valider.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_Valider.Image = global::PTImmo_2018.Properties.Resources.icons8_check_file_48;
-            this.Button_Valider.Location = new System.Drawing.Point(965, 889);
+            this.Button_Valider.Location = new System.Drawing.Point(827, 840);
             this.Button_Valider.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Button_Valider.Name = "Button_Valider";
             this.Button_Valider.Size = new System.Drawing.Size(212, 70);
@@ -406,7 +406,7 @@
             // 
             this.Button_Annuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_Annuler.Image = global::PTImmo_2018.Properties.Resources.icons8_file_delete_48;
-            this.Button_Annuler.Location = new System.Drawing.Point(169, 889);
+            this.Button_Annuler.Location = new System.Drawing.Point(258, 840);
             this.Button_Annuler.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Button_Annuler.Name = "Button_Annuler";
             this.Button_Annuler.Size = new System.Drawing.Size(212, 70);
@@ -543,7 +543,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(365, 740);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(265, 22);
             this.dateTimePicker1.TabIndex = 74;
@@ -667,7 +667,7 @@
             this.Controls.Add(this.textBox_AjNomVendeur);
             this.Controls.Add(this.textBox_AjTelephoneVendeur);
             this.Controls.Add(this.textBox_AjPrenomVendeur);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Nouveau_bien";
             this.Text = "Nouveau Bien";
             this.Load += new System.EventHandler(this.Nouveau_bien_Load);

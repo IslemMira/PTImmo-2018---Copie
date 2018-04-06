@@ -137,7 +137,7 @@
             this.Statut,
             this.Nombre_de_visite});
             this.listView1.FullRowSelect = true;
-            this.listView1.Location = new System.Drawing.Point(181, 586);
+            this.listView1.Location = new System.Drawing.Point(181, 648);
             this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(995, 211);
@@ -305,7 +305,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(177, 546);
+            this.label3.Location = new System.Drawing.Point(177, 608);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 18);
@@ -318,10 +318,10 @@
             this.AjouterBien.FlatAppearance.BorderSize = 2;
             this.AjouterBien.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AjouterBien.Image = global::PTImmo_2018.Properties.Resources.icons8_add_property_48;
-            this.AjouterBien.Location = new System.Drawing.Point(912, 848);
+            this.AjouterBien.Location = new System.Drawing.Point(957, 552);
             this.AjouterBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AjouterBien.Name = "AjouterBien";
-            this.AjouterBien.Size = new System.Drawing.Size(263, 74);
+            this.AjouterBien.Size = new System.Drawing.Size(219, 74);
             this.AjouterBien.TabIndex = 133;
             this.AjouterBien.Text = "    Ajouter Bien";
             this.AjouterBien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -334,10 +334,10 @@
             this.Visualiser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Visualiser.Image = global::PTImmo_2018.Properties.Resources.icons8_show_property_48;
             this.Visualiser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Visualiser.Location = new System.Drawing.Point(519, 848);
+            this.Visualiser.Location = new System.Drawing.Point(619, 552);
             this.Visualiser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Visualiser.Name = "Visualiser";
-            this.Visualiser.Size = new System.Drawing.Size(239, 74);
+            this.Visualiser.Size = new System.Drawing.Size(220, 74);
             this.Visualiser.TabIndex = 134;
             this.Visualiser.Text = "      Visualiser";
             this.Visualiser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -349,10 +349,10 @@
             this.Button_Annuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_Annuler.Image = global::PTImmo_2018.Properties.Resources.icons8_file_delete_48;
             this.Button_Annuler.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_Annuler.Location = new System.Drawing.Point(181, 848);
+            this.Button_Annuler.Location = new System.Drawing.Point(957, 343);
             this.Button_Annuler.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Button_Annuler.Name = "Button_Annuler";
-            this.Button_Annuler.Size = new System.Drawing.Size(212, 70);
+            this.Button_Annuler.Size = new System.Drawing.Size(220, 70);
             this.Button_Annuler.TabIndex = 143;
             this.Button_Annuler.Text = "Fermer";
             this.Button_Annuler.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
