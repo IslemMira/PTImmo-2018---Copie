@@ -328,7 +328,7 @@
             this.Button_Annuler.Image = global::PTImmo_2018.Properties.Resources.icons8_file_delete_48;
             this.Button_Annuler.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Button_Annuler.Location = new System.Drawing.Point(136, 649);
-            this.Button_Annuler.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_Annuler.Margin = new System.Windows.Forms.Padding(2);
             this.Button_Annuler.Name = "Button_Annuler";
             this.Button_Annuler.Size = new System.Drawing.Size(165, 57);
             this.Button_Annuler.TabIndex = 143;
@@ -339,14 +339,14 @@
             // 
             // ModifierVendeur
             // 
-            this.ModifierVendeur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModifierVendeur.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ModifierVendeur.Image = global::PTImmo_2018.Properties.Resources.user;
             this.ModifierVendeur.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ModifierVendeur.Location = new System.Drawing.Point(718, 204);
             this.ModifierVendeur.Name = "ModifierVendeur";
             this.ModifierVendeur.Size = new System.Drawing.Size(165, 56);
             this.ModifierVendeur.TabIndex = 144;
-            this.ModifierVendeur.Text = "   Modifier     Vendeur";
+            this.ModifierVendeur.Text = "     Modifier        Vendeur";
             this.ModifierVendeur.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ModifierVendeur.UseVisualStyleBackColor = true;
             this.ModifierVendeur.Click += new System.EventHandler(this.ModifierVendeur_Click);

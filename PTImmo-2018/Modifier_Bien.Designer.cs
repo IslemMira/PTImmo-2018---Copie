@@ -399,7 +399,7 @@
             // 
             this.Button_Valider.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_Valider.Image = global::PTImmo_2018.Properties.Resources.icons8_check_file_48;
-            this.Button_Valider.Location = new System.Drawing.Point(692, 649);
+            this.Button_Valider.Location = new System.Drawing.Point(692, 614);
             this.Button_Valider.Margin = new System.Windows.Forms.Padding(2);
             this.Button_Valider.Name = "Button_Valider";
             this.Button_Valider.Size = new System.Drawing.Size(172, 57);
@@ -413,7 +413,7 @@
             // 
             this.Button_Annuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_Annuler.Image = global::PTImmo_2018.Properties.Resources.icons8_file_delete_48;
-            this.Button_Annuler.Location = new System.Drawing.Point(128, 649);
+            this.Button_Annuler.Location = new System.Drawing.Point(128, 614);
             this.Button_Annuler.Margin = new System.Windows.Forms.Padding(2);
             this.Button_Annuler.Name = "Button_Annuler";
             this.Button_Annuler.Size = new System.Drawing.Size(177, 57);
@@ -427,7 +427,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = global::PTImmo_2018.Properties.Resources.icons8_delete_document_48;
-            this.button1.Location = new System.Drawing.Point(392, 649);
+            this.button1.Location = new System.Drawing.Point(392, 614);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(186, 57);
@@ -443,7 +443,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PTImmo_2018.Properties.Resources.otherbackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(919, 823);
+            this.ClientSize = new System.Drawing.Size(922, 687);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Button_Annuler);
             this.Controls.Add(this.Button_Valider);
