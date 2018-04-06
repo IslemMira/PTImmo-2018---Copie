@@ -37,7 +37,7 @@ namespace PTImmo_2018
 
 			FicheVendeur fv = new FicheVendeur();
 			fv.Show(this);
-			
+            this.Hide();
 
         }
 

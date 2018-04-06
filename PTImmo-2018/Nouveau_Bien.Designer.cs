@@ -84,7 +84,7 @@
             // textBox_AjPrenomVendeur
             // 
             this.textBox_AjPrenomVendeur.Enabled = false;
-            this.textBox_AjPrenomVendeur.Location = new System.Drawing.Point(295, 153);
+            this.textBox_AjPrenomVendeur.Location = new System.Drawing.Point(294, 139);
             this.textBox_AjPrenomVendeur.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjPrenomVendeur.Name = "textBox_AjPrenomVendeur";
             this.textBox_AjPrenomVendeur.ReadOnly = true;
@@ -94,7 +94,7 @@
             // textBox_AjTelephoneVendeur
             // 
             this.textBox_AjTelephoneVendeur.Enabled = false;
-            this.textBox_AjTelephoneVendeur.Location = new System.Drawing.Point(295, 196);
+            this.textBox_AjTelephoneVendeur.Location = new System.Drawing.Point(294, 182);
             this.textBox_AjTelephoneVendeur.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjTelephoneVendeur.Name = "textBox_AjTelephoneVendeur";
             this.textBox_AjTelephoneVendeur.ReadOnly = true;
@@ -105,7 +105,7 @@
             // 
             this.textBox_AjNomVendeur.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox_AjNomVendeur.Enabled = false;
-            this.textBox_AjNomVendeur.Location = new System.Drawing.Point(295, 110);
+            this.textBox_AjNomVendeur.Location = new System.Drawing.Point(294, 96);
             this.textBox_AjNomVendeur.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjNomVendeur.Name = "textBox_AjNomVendeur";
             this.textBox_AjNomVendeur.ReadOnly = true;
@@ -116,7 +116,7 @@
             // textBox_AjEmailVendeur
             // 
             this.textBox_AjEmailVendeur.Enabled = false;
-            this.textBox_AjEmailVendeur.Location = new System.Drawing.Point(295, 241);
+            this.textBox_AjEmailVendeur.Location = new System.Drawing.Point(294, 227);
             this.textBox_AjEmailVendeur.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjEmailVendeur.Name = "textBox_AjEmailVendeur";
             this.textBox_AjEmailVendeur.ReadOnly = true;
@@ -126,7 +126,7 @@
             // textBox_AjRueVendeur
             // 
             this.textBox_AjRueVendeur.Enabled = false;
-            this.textBox_AjRueVendeur.Location = new System.Drawing.Point(803, 153);
+            this.textBox_AjRueVendeur.Location = new System.Drawing.Point(792, 105);
             this.textBox_AjRueVendeur.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjRueVendeur.Name = "textBox_AjRueVendeur";
             this.textBox_AjRueVendeur.ReadOnly = true;
@@ -136,7 +136,7 @@
             // textBox_AjVilleVendeur
             // 
             this.textBox_AjVilleVendeur.Enabled = false;
-            this.textBox_AjVilleVendeur.Location = new System.Drawing.Point(803, 196);
+            this.textBox_AjVilleVendeur.Location = new System.Drawing.Point(792, 148);
             this.textBox_AjVilleVendeur.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjVilleVendeur.Name = "textBox_AjVilleVendeur";
             this.textBox_AjVilleVendeur.ReadOnly = true;
@@ -146,7 +146,7 @@
             // textBox_AjCPVendeur
             // 
             this.textBox_AjCPVendeur.Enabled = false;
-            this.textBox_AjCPVendeur.Location = new System.Drawing.Point(803, 241);
+            this.textBox_AjCPVendeur.Location = new System.Drawing.Point(792, 193);
             this.textBox_AjCPVendeur.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjCPVendeur.Name = "textBox_AjCPVendeur";
             this.textBox_AjCPVendeur.ReadOnly = true;
@@ -165,7 +165,7 @@
             // 
             // textBox_AjCPBien
             // 
-            this.textBox_AjCPBien.Location = new System.Drawing.Point(803, 530);
+            this.textBox_AjCPBien.Location = new System.Drawing.Point(793, 449);
             this.textBox_AjCPBien.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjCPBien.Name = "textBox_AjCPBien";
             this.textBox_AjCPBien.Size = new System.Drawing.Size(127, 22);
@@ -173,7 +173,7 @@
             // 
             // textBox_AjVilleBien
             // 
-            this.textBox_AjVilleBien.Location = new System.Drawing.Point(803, 485);
+            this.textBox_AjVilleBien.Location = new System.Drawing.Point(793, 404);
             this.textBox_AjVilleBien.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjVilleBien.Name = "textBox_AjVilleBien";
             this.textBox_AjVilleBien.Size = new System.Drawing.Size(245, 22);
@@ -181,7 +181,7 @@
             // 
             // textBox_AjRueBien
             // 
-            this.textBox_AjRueBien.Location = new System.Drawing.Point(803, 442);
+            this.textBox_AjRueBien.Location = new System.Drawing.Point(793, 361);
             this.textBox_AjRueBien.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjRueBien.Name = "textBox_AjRueBien";
             this.textBox_AjRueBien.Size = new System.Drawing.Size(245, 22);
@@ -192,7 +192,7 @@
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(165, 389);
+            this.label17.Location = new System.Drawing.Point(165, 361);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(129, 18);
@@ -204,7 +204,7 @@
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(165, 426);
+            this.label18.Location = new System.Drawing.Point(165, 398);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(122, 18);
@@ -216,7 +216,7 @@
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(165, 464);
+            this.label19.Location = new System.Drawing.Point(165, 436);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(84, 18);
@@ -228,7 +228,7 @@
             this.label20.AutoSize = true;
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(167, 544);
+            this.label20.Location = new System.Drawing.Point(167, 516);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(70, 18);
@@ -240,7 +240,7 @@
             this.label23.AutoSize = true;
             this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(165, 663);
+            this.label23.Location = new System.Drawing.Point(165, 595);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(99, 18);
@@ -252,7 +252,7 @@
             this.label24.AutoSize = true;
             this.label24.BackColor = System.Drawing.Color.Transparent;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(165, 740);
+            this.label24.Location = new System.Drawing.Point(164, 640);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(162, 18);
@@ -264,7 +264,7 @@
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.Color.Transparent;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(709, 602);
+            this.label25.Location = new System.Drawing.Point(699, 500);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(106, 18);
@@ -273,7 +273,7 @@
             // 
             // textBox_AjSurfaceHabitableBien
             // 
-            this.textBox_AjSurfaceHabitableBien.Location = new System.Drawing.Point(331, 388);
+            this.textBox_AjSurfaceHabitableBien.Location = new System.Drawing.Point(331, 360);
             this.textBox_AjSurfaceHabitableBien.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjSurfaceHabitableBien.Name = "textBox_AjSurfaceHabitableBien";
             this.textBox_AjSurfaceHabitableBien.Size = new System.Drawing.Size(103, 22);
@@ -281,7 +281,7 @@
             // 
             // textBox_AjSurfaceParcelleBien
             // 
-            this.textBox_AjSurfaceParcelleBien.Location = new System.Drawing.Point(331, 425);
+            this.textBox_AjSurfaceParcelleBien.Location = new System.Drawing.Point(331, 397);
             this.textBox_AjSurfaceParcelleBien.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjSurfaceParcelleBien.Name = "textBox_AjSurfaceParcelleBien";
             this.textBox_AjSurfaceParcelleBien.Size = new System.Drawing.Size(103, 22);
@@ -289,7 +289,7 @@
             // 
             // textBox_AjPrixVendeurBien
             // 
-            this.textBox_AjPrixVendeurBien.Location = new System.Drawing.Point(329, 662);
+            this.textBox_AjPrixVendeurBien.Location = new System.Drawing.Point(364, 595);
             this.textBox_AjPrixVendeurBien.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjPrixVendeurBien.Name = "textBox_AjPrixVendeurBien";
             this.textBox_AjPrixVendeurBien.Size = new System.Drawing.Size(227, 22);
@@ -297,7 +297,7 @@
             // 
             // textBox_AjCommentaireBien
             // 
-            this.textBox_AjCommentaireBien.Location = new System.Drawing.Point(713, 628);
+            this.textBox_AjCommentaireBien.Location = new System.Drawing.Point(703, 526);
             this.textBox_AjCommentaireBien.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjCommentaireBien.Multiline = true;
             this.textBox_AjCommentaireBien.Name = "textBox_AjCommentaireBien";
@@ -309,7 +309,7 @@
             this.checkBox_GarageOuiBien.AutoSize = true;
             this.checkBox_GarageOuiBien.BackColor = System.Drawing.Color.Transparent;
             this.checkBox_GarageOuiBien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_GarageOuiBien.Location = new System.Drawing.Point(169, 601);
+            this.checkBox_GarageOuiBien.Location = new System.Drawing.Point(169, 558);
             this.checkBox_GarageOuiBien.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox_GarageOuiBien.Name = "checkBox_GarageOuiBien";
             this.checkBox_GarageOuiBien.Size = new System.Drawing.Size(79, 22);
@@ -322,7 +322,7 @@
             this.checkBoxCaveOuiBien.AutoSize = true;
             this.checkBoxCaveOuiBien.BackColor = System.Drawing.Color.Transparent;
             this.checkBoxCaveOuiBien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxCaveOuiBien.Location = new System.Drawing.Point(348, 601);
+            this.checkBoxCaveOuiBien.Location = new System.Drawing.Point(348, 558);
             this.checkBoxCaveOuiBien.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxCaveOuiBien.Name = "checkBoxCaveOuiBien";
             this.checkBoxCaveOuiBien.Size = new System.Drawing.Size(64, 22);
@@ -332,7 +332,7 @@
             // 
             // nbPiecesBien
             // 
-            this.nbPiecesBien.Location = new System.Drawing.Point(331, 464);
+            this.nbPiecesBien.Location = new System.Drawing.Point(331, 436);
             this.nbPiecesBien.Margin = new System.Windows.Forms.Padding(4);
             this.nbPiecesBien.Name = "nbPiecesBien";
             this.nbPiecesBien.Size = new System.Drawing.Size(104, 22);
@@ -340,7 +340,7 @@
             // 
             // nbSDBien
             // 
-            this.nbSDBien.Location = new System.Drawing.Point(329, 544);
+            this.nbSDBien.Location = new System.Drawing.Point(329, 516);
             this.nbSDBien.Margin = new System.Windows.Forms.Padding(4);
             this.nbSDBien.Name = "nbSDBien";
             this.nbSDBien.Size = new System.Drawing.Size(105, 22);
@@ -373,7 +373,7 @@
             this.label26.AutoSize = true;
             this.label26.BackColor = System.Drawing.Color.Transparent;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(167, 505);
+            this.label26.Location = new System.Drawing.Point(167, 477);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(108, 18);
@@ -382,7 +382,7 @@
             // 
             // nbChambreBien
             // 
-            this.nbChambreBien.Location = new System.Drawing.Point(329, 505);
+            this.nbChambreBien.Location = new System.Drawing.Point(329, 477);
             this.nbChambreBien.Margin = new System.Windows.Forms.Padding(4);
             this.nbChambreBien.Name = "nbChambreBien";
             this.nbChambreBien.Size = new System.Drawing.Size(105, 22);
@@ -392,7 +392,7 @@
             // 
             this.Button_Valider.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_Valider.Image = global::PTImmo_2018.Properties.Resources.icons8_check_file_48;
-            this.Button_Valider.Location = new System.Drawing.Point(827, 840);
+            this.Button_Valider.Location = new System.Drawing.Point(825, 700);
             this.Button_Valider.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Button_Valider.Name = "Button_Valider";
             this.Button_Valider.Size = new System.Drawing.Size(212, 70);
@@ -406,7 +406,7 @@
             // 
             this.Button_Annuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_Annuler.Image = global::PTImmo_2018.Properties.Resources.icons8_file_delete_48;
-            this.Button_Annuler.Location = new System.Drawing.Point(258, 840);
+            this.Button_Annuler.Location = new System.Drawing.Point(256, 700);
             this.Button_Annuler.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Button_Annuler.Name = "Button_Annuler";
             this.Button_Annuler.Size = new System.Drawing.Size(212, 70);
@@ -422,7 +422,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Image = global::PTImmo_2018.Properties.Resources.user;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(135, 30);
+            this.label1.Location = new System.Drawing.Point(135, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(352, 65);
@@ -435,7 +435,7 @@
             this.E_email.AutoSize = true;
             this.E_email.BackColor = System.Drawing.Color.Transparent;
             this.E_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.E_email.Location = new System.Drawing.Point(165, 242);
+            this.E_email.Location = new System.Drawing.Point(164, 228);
             this.E_email.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.E_email.Name = "E_email";
             this.E_email.Size = new System.Drawing.Size(58, 18);
@@ -447,7 +447,7 @@
             this.Telephone.AutoSize = true;
             this.Telephone.BackColor = System.Drawing.Color.Transparent;
             this.Telephone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Telephone.Location = new System.Drawing.Point(165, 197);
+            this.Telephone.Location = new System.Drawing.Point(164, 183);
             this.Telephone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Telephone.Name = "Telephone";
             this.Telephone.Size = new System.Drawing.Size(85, 18);
@@ -459,7 +459,7 @@
             this.Prenom.AutoSize = true;
             this.Prenom.BackColor = System.Drawing.Color.Transparent;
             this.Prenom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Prenom.Location = new System.Drawing.Point(165, 154);
+            this.Prenom.Location = new System.Drawing.Point(164, 140);
             this.Prenom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Prenom.Name = "Prenom";
             this.Prenom.Size = new System.Drawing.Size(69, 18);
@@ -471,7 +471,7 @@
             this.Nom.AutoSize = true;
             this.Nom.BackColor = System.Drawing.Color.Transparent;
             this.Nom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nom.Location = new System.Drawing.Point(165, 111);
+            this.Nom.Location = new System.Drawing.Point(164, 97);
             this.Nom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Nom.Name = "Nom";
             this.Nom.Size = new System.Drawing.Size(49, 18);
@@ -483,7 +483,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(709, 242);
+            this.label3.Location = new System.Drawing.Point(698, 194);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 18);
@@ -495,7 +495,7 @@
             this.Ville.AutoSize = true;
             this.Ville.BackColor = System.Drawing.Color.Transparent;
             this.Ville.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ville.Location = new System.Drawing.Point(709, 197);
+            this.Ville.Location = new System.Drawing.Point(698, 149);
             this.Ville.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Ville.Name = "Ville";
             this.Ville.Size = new System.Drawing.Size(42, 18);
@@ -507,7 +507,7 @@
             this.Adresse.AutoSize = true;
             this.Adresse.BackColor = System.Drawing.Color.Transparent;
             this.Adresse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Adresse.Location = new System.Drawing.Point(709, 154);
+            this.Adresse.Location = new System.Drawing.Point(698, 106);
             this.Adresse.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Adresse.Name = "Adresse";
             this.Adresse.Size = new System.Drawing.Size(43, 18);
@@ -520,7 +520,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Image = global::PTImmo_2018.Properties.Resources.map32;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Location = new System.Drawing.Point(709, 70);
+            this.label2.Location = new System.Drawing.Point(699, 33);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(191, 59);
@@ -542,7 +542,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(365, 740);
+            this.dateTimePicker1.Location = new System.Drawing.Point(364, 640);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(265, 22);
@@ -554,7 +554,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Image = global::PTImmo_2018.Properties.Resources.icons8_home_48;
             this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Location = new System.Drawing.Point(135, 300);
+            this.label5.Location = new System.Drawing.Point(135, 281);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(352, 65);
@@ -568,7 +568,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Image = global::PTImmo_2018.Properties.Resources.map32;
             this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label6.Location = new System.Drawing.Point(709, 368);
+            this.label6.Location = new System.Drawing.Point(699, 287);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(191, 59);
@@ -581,7 +581,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(709, 532);
+            this.label7.Location = new System.Drawing.Point(699, 451);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 18);
@@ -593,7 +593,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(709, 486);
+            this.label8.Location = new System.Drawing.Point(699, 405);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(42, 18);
@@ -605,7 +605,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(709, 443);
+            this.label9.Location = new System.Drawing.Point(699, 362);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(43, 18);
@@ -618,7 +618,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PTImmo_2018.Properties.Resources.otherbackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1225, 1013);
+            this.ClientSize = new System.Drawing.Size(1198, 811);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);

@@ -74,7 +74,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button1_Modifier_Bien = new System.Windows.Forms.Button();
             this.Button_Fermer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.VisNbChambresBien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VisNbPiecesBien)).BeginInit();
@@ -581,19 +581,19 @@
             this.label3.TabIndex = 131;
             this.label3.Text = "Liste visites :";
             // 
-            // button1
+            // button1_Modifier_Bien
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::PTImmo_2018.Properties.Resources.icons8_edit_property_48;
-            this.button1.Location = new System.Drawing.Point(944, 320);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(220, 69);
-            this.button1.TabIndex = 132;
-            this.button1.Text = "Modifier Bien";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1_Modifier_Bien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1_Modifier_Bien.Image = global::PTImmo_2018.Properties.Resources.icons8_edit_property_48;
+            this.button1_Modifier_Bien.Location = new System.Drawing.Point(944, 320);
+            this.button1_Modifier_Bien.Margin = new System.Windows.Forms.Padding(4);
+            this.button1_Modifier_Bien.Name = "button1_Modifier_Bien";
+            this.button1_Modifier_Bien.Size = new System.Drawing.Size(220, 69);
+            this.button1_Modifier_Bien.TabIndex = 132;
+            this.button1_Modifier_Bien.Text = "Modifier Bien";
+            this.button1_Modifier_Bien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1_Modifier_Bien.UseVisualStyleBackColor = true;
+            this.button1_Modifier_Bien.Click += new System.EventHandler(this.button1_Modifier_Bien_Click);
             // 
             // Button_Fermer
             // 
@@ -618,7 +618,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1246, 930);
             this.Controls.Add(this.Button_Fermer);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button1_Modifier_Bien);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.label7);
@@ -718,7 +718,7 @@
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.Label label25;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button button1_Modifier_Bien;
         private System.Windows.Forms.Button Button_Fermer;
     }
 }

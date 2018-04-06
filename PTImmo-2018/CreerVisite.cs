@@ -21,7 +21,7 @@ namespace PTImmo_2018
 
         private void CreerVisite_Load(object sender, EventArgs e)
         {
-            string nomBase = "IMMOBILLY_JACKYTEAM";
+            //string nomBase = "IMMOBILLY_JACKYTEAM";
             string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
@@ -71,7 +71,7 @@ namespace PTImmo_2018
 
         private void button_Valider_MouseClick(object sender, MouseEventArgs e)
         {
-            string nomBase = "IMMOBILLY_JACKYTEAM";
+            //string nomBase = "IMMOBILLY_JACKYTEAM";
             string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();

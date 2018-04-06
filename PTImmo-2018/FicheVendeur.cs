@@ -70,8 +70,8 @@ namespace PTImmo_2018
 		{
             Nouveau_bien nb = new Nouveau_bien();
 			nb.Show(this);
-			
-		}
+            this.Hide();
+        }
 
 		private void Visualiser_Click(object sender, EventArgs e)
 		{

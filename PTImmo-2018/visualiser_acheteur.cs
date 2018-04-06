@@ -32,7 +32,8 @@ namespace PTImmo_2018
             if (en_cours.Checked == true)
             {
                 listView1.Items.Clear();
-                string nomBase = "IMMOBILLY_JACKYTEAM";
+
+                //string nomBase = "IMMOBILLY_JACKYTEAM";
                 string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
                 OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
                 dbConnection.Open();
@@ -53,7 +54,7 @@ namespace PTImmo_2018
 
         public void Visualiser_Acheteur_Load(object sender, EventArgs e)
         {
-            string nomBase = "IMMOBILLY_JACKYTEAM";
+            //string nomBase = "IMMOBILLY_JACKYTEAM";
             string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
@@ -98,7 +99,7 @@ namespace PTImmo_2018
             if (Afficher_tout.Checked == true)
             {
                 listView1.Items.Clear();
-                string nomBase = "IMMOBILLY_JACKYTEAM";
+                //string nomBase = "IMMOBILLY_JACKYTEAM";
                 string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
                 OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
                 dbConnection.Open();

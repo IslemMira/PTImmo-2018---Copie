@@ -21,7 +21,7 @@ namespace PTImmo_2018
 
         private void PropositionBien_Load(object sender, EventArgs e)
         {
-            string nomBase = "IMMOBILLY_JACKYTEAM";
+            //string nomBase = "IMMOBILLY_JACKYTEAM";
             string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
@@ -49,7 +49,7 @@ namespace PTImmo_2018
         {
             listView1.Items.Clear();
 
-            string nomBase = "IMMOBILLY_JACKYTEAM";
+            //string nomBase = "IMMOBILLY_JACKYTEAM";
             string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
@@ -80,7 +80,7 @@ namespace PTImmo_2018
             ApplicationState.id_bien = listView1.SelectedItems[0].SubItems[0].Text;
             Console.WriteLine(listView1.SelectedItems[0].SubItems[0].Text);
 
-            string nomBase = "IMMOBILLY_JACKYTEAM";
+            //string nomBase = "IMMOBILLY_JACKYTEAM";
             string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
@@ -115,7 +115,7 @@ namespace PTImmo_2018
 
         private void Proposer_MouseClick(object sender, MouseEventArgs e)
         {
-            string nomBase = "IMMOBILLY_JACKYTEAM";
+            //string nomBase = "IMMOBILLY_JACKYTEAM";
             string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();

@@ -48,6 +48,7 @@ namespace PTImmo_2018
             // 
             // listView1_vendeurs
             // 
+            this.listView1_vendeurs.Activation = System.Windows.Forms.ItemActivation.OneClick;
             this.listView1_vendeurs.BackColor = System.Drawing.Color.Gainsboro;
             this.listView1_vendeurs.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.code_vendeur,
@@ -66,7 +67,7 @@ namespace PTImmo_2018
             // 
             // code_vendeur
             // 
-            this.code_vendeur.Text = "Code vendeur";
+            this.code_vendeur.Text = "Identifiant";
             this.code_vendeur.Width = 148;
             // 
             // Nom
