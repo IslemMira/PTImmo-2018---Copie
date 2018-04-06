@@ -34,7 +34,7 @@ namespace PTImmo_2018
 			OleDbDataReader reader = cmd.ExecuteReader();
 			while (reader.Read())
 			{
-				textBox_AjCodeVendeur.Text = reader.GetInt32(0).ToString();
+				textBox_AjCodeVendeur.Text = reader.GetValue(0).ToString();
 				textBox1_Nom.Text = reader.GetString(1);
 				textBox2_Prenom.Text = reader.GetString(2);
 				textBox3_Telephone.Text = reader.GetInt32(3).ToString();
