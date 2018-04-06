@@ -105,7 +105,9 @@ namespace PTImmo_2018
 			cmd.ExecuteNonQuery();
 
 			MessageBox.Show("Supprime");
-          
+            Liste_des_propositions ldp = new Liste_des_propositions();
+            ldp.Show(this);
+            this.Hide();
 
         }
 

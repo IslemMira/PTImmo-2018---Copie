@@ -54,7 +54,7 @@ namespace PTImmo_2018
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
 
-            string sql = "select b.code_bien, b.prix_vendeur from bien b where b.surface_habitable >= " + numericUpDown1.Text + "and b.surface_parcelle >=" + numericUpDown2.Text + "and b.nb_piéces >=" + numericUpDown3.Text + "and b.prix_vendeur <=" + textBox2.Text + "and statut in ('D','S')  ; ";
+            string sql = "select b.code_bien, b.prix_vendeur from bien b join VILLE v on b.CODE_VILLE = v.code_ville where b.surface_habitable >= " + numericUpDown1.Text + "and b.surface_parcelle >=" + numericUpDown2.Text + "and b.nb_piéces >=" + numericUpDown3.Text + "and b.prix_vendeur <=" + textBox2.Text + "and statut in ('D','S') and v.NOM_VILLE like '" +textBox1.Text +"'  ; ";
             OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
             OleDbDataReader reader = cmd.ExecuteReader();
             while (reader.Read())

@@ -36,7 +36,6 @@
             this.RechercheListePropositions = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.Retour = new System.Windows.Forms.Button();
             this.Proposer = new System.Windows.Forms.Button();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
@@ -151,20 +150,6 @@
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(147, 20);
             this.textBox4.TabIndex = 177;
-            // 
-            // Retour
-            // 
-            this.Retour.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Retour.Image = global::PTImmo_2018.Properties.Resources.icons8_delete_document_48;
-            this.Retour.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Retour.Location = new System.Drawing.Point(145, 705);
-            this.Retour.Name = "Retour";
-            this.Retour.Size = new System.Drawing.Size(170, 59);
-            this.Retour.TabIndex = 180;
-            this.Retour.Text = "   Retour";
-            this.Retour.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Retour.UseVisualStyleBackColor = true;
-            this.Retour.Click += new System.EventHandler(this.Retour_Click);
             // 
             // Proposer
             // 
@@ -336,7 +321,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = global::PTImmo_2018.Properties.Resources.icons8_bulleted_list_48;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(451, 705);
+            this.button1.Location = new System.Drawing.Point(145, 711);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(197, 59);
             this.button1.TabIndex = 209;
@@ -431,9 +416,9 @@
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.Location = new System.Drawing.Point(142, 257);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(105, 15);
+            this.label25.Size = new System.Drawing.Size(93, 15);
             this.label25.TabIndex = 217;
-            this.label25.Text = "Villes souhaitees :";
+            this.label25.Text = "Ville souhaitée :";
             // 
             // label4
             // 
@@ -590,7 +575,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PTImmo_2018.Properties.Resources.otherbackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(966, 873);
+            this.ClientSize = new System.Drawing.Size(949, 807);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label14);
@@ -629,7 +614,6 @@
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox4);
             this.Controls.Add(this.Proposer);
-            this.Controls.Add(this.Retour);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.RechercheListePropositions);
@@ -658,7 +642,6 @@
 		private System.Windows.Forms.Button RechercheListePropositions;
 		private System.Windows.Forms.TextBox textBox3;
 		private System.Windows.Forms.TextBox textBox4;
-		private System.Windows.Forms.Button Retour;
 		private System.Windows.Forms.Button Proposer;
 		private System.Windows.Forms.CheckBox checkBox3;
 		private System.Windows.Forms.CheckBox checkBox4;

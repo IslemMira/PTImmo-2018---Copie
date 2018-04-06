@@ -30,6 +30,7 @@ namespace PTImmo_2018
             OleDbDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
+                textBox1_codeAcheteur.Text = ApplicationState.id_acheteur;
                 textBox_Nom.Text = reader.GetString(0).ToString().Trim();
                 textBox_Prénom.Text = reader.GetString(1);
                 textBox_Adresse.Text = reader.GetString(2);

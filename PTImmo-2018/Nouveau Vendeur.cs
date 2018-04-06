@@ -35,8 +35,8 @@ namespace PTImmo_2018
             cmd.ExecuteNonQuery();
             MessageBox.Show("Saved");
 
-			FicheVendeur fv = new FicheVendeur();
-			fv.Show(this);
+			RechercheVendeur rv = new RechercheVendeur();
+			rv.Show(this);
             this.Hide();
 
         }

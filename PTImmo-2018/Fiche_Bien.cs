@@ -29,7 +29,7 @@ namespace PTImmo_2018
 
 		private void button_FicheVendeurConsultationBien_Click(object sender, EventArgs e)
 		{
-			ApplicationState.id_bien = textBox1.Text;
+            ApplicationState.id_vendeur = textBox2.Text;
 			FicheVendeur fv = new FicheVendeur();
 			fv.Show(this);
 			this.Hide();
@@ -51,7 +51,7 @@ namespace PTImmo_2018
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
 
-            string sql = "select b.code_bien, b.surface_habitable, b.surface_parcelle, b.nb_piéces, b.nb_chambres, b.nb_Salle_de_bain, b.garage, b.cave, b.prix_vendeur, b.date_Mise_en_Vente, b.commentaire, b.statut, b.adresse, vi.nom_ville, vi.code_postal, ve.nom_client, ve.prénom_client, ve.téléphone, ve.e_mail from bien b left join ville vi on vi.code_ville = b.code_ville left  join vendeur ve on ve.num_client = b.num_client where b.code_bien = '" + ApplicationState.id_bien +"' ";
+            string sql = "select b.code_bien, b.surface_habitable, b.surface_parcelle, b.nb_piéces, b.nb_chambres, b.nb_Salle_de_bain, b.garage, b.cave, b.prix_vendeur, b.date_Mise_en_Vente, b.commentaire, b.statut, b.adresse, vi.nom_ville, vi.code_postal, ve.Num_Client from bien b left join ville vi on vi.code_ville = b.code_ville left  join vendeur ve on ve.num_client = b.num_client where b.code_bien = '" + ApplicationState.id_bien +"' ";
             OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
             OleDbDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
@@ -75,18 +75,16 @@ namespace PTImmo_2018
                 textBox_VisRueBien.Text = reader.GetString(12);
                 textBox_VisVilleBien.Text = reader.GetString(13);
                 textBox_VisCPBien.Text = reader.GetInt32(14).ToString();
-                //textBox_VisNomVendeur.Text = reader.GetString(15);
-                //textBox_VisPrenomVendeur.Text = reader.GetString(16);
-                //textBox_VisTelephoneVendeur.Text = reader.GetInt32(17).ToString();
-                //textBox_VisEmailVendeur.Text = reader.GetString(18);
+                textBox2.Text = reader.GetValue(15).ToString();
+                
             }
             reader.Close();
         }
 
         private void Button_Fermer_Click(object sender, EventArgs e)
         {
-            FicheVendeur fv = new FicheVendeur();
-            fv.Show(this);
+            liste_des_biens ldb = new liste_des_biens();
+            ldb.Show(this);
             this.Hide();
         }
                

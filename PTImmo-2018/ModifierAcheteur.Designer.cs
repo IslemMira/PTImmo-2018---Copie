@@ -40,7 +40,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1_codeVille = new System.Windows.Forms.TextBox();
+            this.textBox1_codeAcheteur = new System.Windows.Forms.TextBox();
             this.E_email = new System.Windows.Forms.Label();
             this.Telephone = new System.Windows.Forms.Label();
             this.Prenom = new System.Windows.Forms.Label();
@@ -145,14 +145,14 @@
             this.label2.TabIndex = 87;
             this.label2.Text = "Code acheteur:";
             // 
-            // textBox1_codeVille
+            // textBox1_codeAcheteur
             // 
-            this.textBox1_codeVille.Enabled = false;
-            this.textBox1_codeVille.Location = new System.Drawing.Point(662, 23);
-            this.textBox1_codeVille.Name = "textBox1_codeVille";
-            this.textBox1_codeVille.ReadOnly = true;
-            this.textBox1_codeVille.Size = new System.Drawing.Size(78, 20);
-            this.textBox1_codeVille.TabIndex = 86;
+            this.textBox1_codeAcheteur.Enabled = false;
+            this.textBox1_codeAcheteur.Location = new System.Drawing.Point(662, 23);
+            this.textBox1_codeAcheteur.Name = "textBox1_codeAcheteur";
+            this.textBox1_codeAcheteur.ReadOnly = true;
+            this.textBox1_codeAcheteur.Size = new System.Drawing.Size(78, 20);
+            this.textBox1_codeAcheteur.TabIndex = 86;
             // 
             // E_email
             // 
@@ -288,7 +288,7 @@
             this.Controls.Add(this.Prenom);
             this.Controls.Add(this.Nom);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1_codeVille);
+            this.Controls.Add(this.textBox1_codeAcheteur);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label9);
@@ -320,7 +320,7 @@
         private System.Windows.Forms.TextBox textBox1;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.TextBox textBox1_codeVille;
+		private System.Windows.Forms.TextBox textBox1_codeAcheteur;
 		private System.Windows.Forms.Label E_email;
 		private System.Windows.Forms.Label Telephone;
 		private System.Windows.Forms.Label Prenom;

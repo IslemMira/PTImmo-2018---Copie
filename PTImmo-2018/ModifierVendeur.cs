@@ -32,7 +32,7 @@ namespace PTImmo_2018
 			OleDbDataReader reader = cmd.ExecuteReader();
 			while (reader.Read())
 			{
-				textBox1_codeVendeur.Text = reader.GetInt32(0).ToString();
+				textBox1_codeVendeur.Text = reader.GetValue(0).ToString();
 				textBox1_Nom.Text = reader.GetString(1);
 				textBox2_Prenom.Text = reader.GetString(2);
 				textBox3_Telephone.Text = reader.GetInt32(3).ToString();
@@ -44,22 +44,8 @@ namespace PTImmo_2018
 			reader.Close();
 		}
 
-		private void button_valider_Click(object sender, EventArgs e)
-		{
-			string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
-
-			OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
-			dbConnection.Open();
-
-			string sql = "UPDATE VENDEUR SET v.Nom_Client = '" +textBox1_Nom + "', v.Prénom_Client = '" +textBox2_Prenom + "', v.Téléphone = = '" +textBox3_Telephone + "', v.E_mail = '" +textBox4_E_Mail + "', v.adresse = '" +textBox12_Adresse + "', vi.nom_ville = '" +textBox11_Ville + "', vi.code_postal = '" +textBox1 +"' from Vendeur v left join ville vi on vi.code_ville = v.code_ville  where v.num_client = '" + ApplicationState.id_vendeur + "'  ";
-			OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
-			cmd.ExecuteNonQuery();
-			MessageBox.Show("Saved");
-
-			FicheVendeur fv = new FicheVendeur();
-			fv.Show(this);
-			this.Hide();
-		}
+		
+			
 
 		private void button_annuler_Click(object sender, EventArgs e)
 		{
@@ -67,5 +53,23 @@ namespace PTImmo_2018
 			fv.Show(this);
 			this.Hide();
 		}
-	}
+
+        private void button_valider_MouseClick(object sender, MouseEventArgs e)
+        {
+            string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
+
+            OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
+            dbConnection.Open();
+
+            string sql = "UPDATE VENDEUR SET Nom_Client = '" + textBox1_Nom.Text + "', Prénom_Client = '" + textBox2_Prenom.Text + "', Téléphone =  '" + textBox3_Telephone.Text + "', E_mail = '" + textBox4_E_Mail.Text + "', Adresse = '" + textBox12_Adresse.Text + "', code_ville = (select code_ville from ville where upper(nom_ville) = '" + textBox11_Ville.Text + "' and Code_Postal = '" + textBox1.Text + "') where Num_Client = '" + ApplicationState.id_vendeur + "'  ";
+            OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Saved");
+
+            FicheVendeur fv = new FicheVendeur();
+            fv.Show(this);
+            this.Hide();
+        
+    }
+    }
 }
