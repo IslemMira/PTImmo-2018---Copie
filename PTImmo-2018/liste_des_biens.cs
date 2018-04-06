@@ -30,7 +30,7 @@ namespace PTImmo_2018
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
 
-            string sql = "select b.CODE_BIEN, b.SURFACE_HABITABLE, b.NB_PIÉCES, b.STATUT,vi.NOM_VILLE, v.NOM_CLIENT, v.PRÉNOM_CLIENT from  Bien b join VENDEUR v on b.NUM_CLIENT = v.NUM_CLIENT join ville vi on b.CODE_VILLE = vi.CODE_VILLE where v.nom_client like '%" + textBox2.Text + "%' and b.statut like '%" + statut + "' ; ";
+            string sql = "select b.CODE_BIEN, b.SURFACE_HABITABLE, b.NB_PIÉCES, b.STATUT,vi.NOM_VILLE, v.NOM_CLIENT, v.PRÉNOM_CLIENT from  Bien b join VENDEUR v on b.NUM_CLIENT = v.NUM_CLIENT join ville vi on b.CODE_VILLE = vi.CODE_VILLE where v.nom_client like '%" + textBox2.Text + "%' and b.statut like '%" + statut + "' and date_suppression is null; ";
 
             OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
             OleDbDataReader reader = cmd.ExecuteReader();
@@ -56,7 +56,7 @@ namespace PTImmo_2018
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
             
-            string sql = "select b.CODE_BIEN, b.SURFACE_HABITABLE, b.NB_PIÉCES, b.STATUT,vi.NOM_VILLE, v.NOM_CLIENT, v.PRÉNOM_CLIENT from  Bien b join VENDEUR v on b.NUM_CLIENT = v.NUM_CLIENT join ville vi on b.CODE_VILLE = vi.CODE_VILLE where v.nom_client like '%" + textBox2.Text + "%' and b.statut like '%" + statut + "' ; ";
+            string sql = "select b.CODE_BIEN, b.SURFACE_HABITABLE, b.NB_PIÉCES, b.STATUT,vi.NOM_VILLE, v.NOM_CLIENT, v.PRÉNOM_CLIENT from  Bien b join VENDEUR v on b.NUM_CLIENT = v.NUM_CLIENT join ville vi on b.CODE_VILLE = vi.CODE_VILLE where v.nom_client like '%" + textBox2.Text + "%' and b.statut like '%" + statut + "' and date_suppression is null ; ";
 
             OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
             OleDbDataReader reader = cmd.ExecuteReader();
