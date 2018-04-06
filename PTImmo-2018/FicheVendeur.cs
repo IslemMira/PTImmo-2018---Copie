@@ -68,11 +68,10 @@ namespace PTImmo_2018
 
 		private void AjouterBien_Click(object sender, EventArgs e)
 		{
-			
-			Nouveau_bien nb = new Nouveau_bien();
+            Nouveau_bien nb = new Nouveau_bien();
 			nb.Show(this);
-			this.Hide();
-		}
+            this.Hide();
+        }
 
 		private void Visualiser_Click(object sender, EventArgs e)
 		{
@@ -84,8 +83,10 @@ namespace PTImmo_2018
 
 		private void Button_Annuler_Click(object sender, EventArgs e)
 		{
-			
-		}
+            RechercheVendeur rv = new RechercheVendeur();
+            rv.Show(this);
+            this.Hide();
+        }
 
 		private void listView1_MouseClick(object sender, MouseEventArgs e)
 		{

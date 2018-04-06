@@ -23,7 +23,9 @@ namespace PTImmo_2018
             InitializeComponent();
 
             listView1.Items.Clear();
-            string nomBase = "IMMOBILLY_JACKYTEAM";
+            Visualiser.Enabled = false;
+
+            //string nomBase = "IMMOBILLY_JACKYTEAM";
             string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
@@ -47,9 +49,9 @@ namespace PTImmo_2018
         
         private void Rechercher_Click(object sender, EventArgs e)
         {
-            
             listView1.Items.Clear();
-            string nomBase = "IMMOBILLY_JACKYTEAM";
+            
+            //string nomBase = "IMMOBILLY_JACKYTEAM";
             string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
@@ -131,6 +133,7 @@ namespace PTImmo_2018
 
         private void listView1_Click(object sender, EventArgs e)
         {
+            Visualiser.Enabled = true;
             id_bien_selectionne = listView1.SelectedItems[0].SubItems[0].Text;
             
         }

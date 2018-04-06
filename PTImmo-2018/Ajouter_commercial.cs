@@ -25,7 +25,7 @@ namespace PTImmo_2018
 
         private void button1_ajouter_Click(object sender, EventArgs e)
         {
-            string nomBase = "IMMOBILLY_JACKYTEAM";
+            //string nomBase = "IMMOBILLY_JACKYTEAM";
             string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();

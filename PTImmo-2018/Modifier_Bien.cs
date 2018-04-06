@@ -18,9 +18,7 @@ namespace PTImmo_2018
         {
             
         }
-
-
-
+        
 		private void Modifier_Bien_Load(object sender, EventArgs e)
         {
 			InitializeComponent();
@@ -63,7 +61,7 @@ namespace PTImmo_2018
 		#region Button Valider : Modifier bien
 		private void Button_Valider_Click(object sender, EventArgs e)
         {
-            string nomBase = "IMMOBILLY_JACKYTEAM";
+            //string nomBase = "IMMOBILLY_JACKYTEAM";
             string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();

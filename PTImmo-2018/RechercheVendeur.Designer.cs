@@ -50,14 +50,12 @@ namespace PTImmo_2018
             // 
             this.listView1_vendeurs.Activation = System.Windows.Forms.ItemActivation.OneClick;
             this.listView1_vendeurs.BackColor = System.Drawing.Color.Gainsboro;
-            this.listView1_vendeurs.BackgroundImageTiled = true;
-            this.listView1_vendeurs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listView1_vendeurs.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.code_vendeur,
             this.Nom,
             this.prenom});
             this.listView1_vendeurs.FullRowSelect = true;
-            this.listView1_vendeurs.HoverSelection = true;
+            this.listView1_vendeurs.GridLines = true;
             this.listView1_vendeurs.Location = new System.Drawing.Point(140, 264);
             this.listView1_vendeurs.Margin = new System.Windows.Forms.Padding(4);
             this.listView1_vendeurs.Name = "listView1_vendeurs";
@@ -69,7 +67,7 @@ namespace PTImmo_2018
             // 
             // code_vendeur
             // 
-            this.code_vendeur.Text = "Code vendeur";
+            this.code_vendeur.Text = "Identifiant";
             this.code_vendeur.Width = 148;
             // 
             // Nom

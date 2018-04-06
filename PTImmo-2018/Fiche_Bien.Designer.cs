@@ -74,7 +74,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button1_Modifier_Bien = new System.Windows.Forms.Button();
+            this.Button_Fermer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.VisNbChambresBien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VisNbPiecesBien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VisNbSDBBien)).BeginInit();
@@ -84,7 +85,7 @@
             // 
             this.button_FermerConsultationBien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_FermerConsultationBien.Location = new System.Drawing.Point(892, 1095);
-            this.button_FermerConsultationBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_FermerConsultationBien.Margin = new System.Windows.Forms.Padding(4);
             this.button_FermerConsultationBien.Name = "button_FermerConsultationBien";
             this.button_FermerConsultationBien.Size = new System.Drawing.Size(220, 43);
             this.button_FermerConsultationBien.TabIndex = 101;
@@ -95,7 +96,7 @@
             // 
             this.button_ModifierBien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_ModifierBien.Location = new System.Drawing.Point(72, 1095);
-            this.button_ModifierBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_ModifierBien.Margin = new System.Windows.Forms.Padding(4);
             this.button_ModifierBien.Name = "button_ModifierBien";
             this.button_ModifierBien.Size = new System.Drawing.Size(220, 43);
             this.button_ModifierBien.TabIndex = 100;
@@ -105,7 +106,7 @@
             // VisNbChambresBien
             // 
             this.VisNbChambresBien.Location = new System.Drawing.Point(345, 239);
-            this.VisNbChambresBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VisNbChambresBien.Margin = new System.Windows.Forms.Padding(4);
             this.VisNbChambresBien.Name = "VisNbChambresBien";
             this.VisNbChambresBien.ReadOnly = true;
             this.VisNbChambresBien.Size = new System.Drawing.Size(105, 22);
@@ -114,7 +115,7 @@
             // VisNbPiecesBien
             // 
             this.VisNbPiecesBien.Location = new System.Drawing.Point(347, 197);
-            this.VisNbPiecesBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VisNbPiecesBien.Margin = new System.Windows.Forms.Padding(4);
             this.VisNbPiecesBien.Name = "VisNbPiecesBien";
             this.VisNbPiecesBien.ReadOnly = true;
             this.VisNbPiecesBien.Size = new System.Drawing.Size(104, 22);
@@ -127,7 +128,7 @@
             this.checkBox_Cave.Enabled = false;
             this.checkBox_Cave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox_Cave.Location = new System.Drawing.Point(368, 329);
-            this.checkBox_Cave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox_Cave.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox_Cave.Name = "checkBox_Cave";
             this.checkBox_Cave.Size = new System.Drawing.Size(64, 22);
             this.checkBox_Cave.TabIndex = 95;
@@ -141,7 +142,7 @@
             this.checkBox_Garage.Enabled = false;
             this.checkBox_Garage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox_Garage.Location = new System.Drawing.Point(168, 329);
-            this.checkBox_Garage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox_Garage.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox_Garage.Name = "checkBox_Garage";
             this.checkBox_Garage.Size = new System.Drawing.Size(79, 22);
             this.checkBox_Garage.TabIndex = 94;
@@ -152,7 +153,7 @@
             // 
             this.textBox_VisCommentaireBien.Enabled = false;
             this.textBox_VisCommentaireBien.Location = new System.Drawing.Point(167, 487);
-            this.textBox_VisCommentaireBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_VisCommentaireBien.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_VisCommentaireBien.Multiline = true;
             this.textBox_VisCommentaireBien.Name = "textBox_VisCommentaireBien";
             this.textBox_VisCommentaireBien.ReadOnly = true;
@@ -163,7 +164,7 @@
             // 
             this.textBox_AjPrixVendeurBien.Enabled = false;
             this.textBox_AjPrixVendeurBien.Location = new System.Drawing.Point(345, 389);
-            this.textBox_AjPrixVendeurBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_AjPrixVendeurBien.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_AjPrixVendeurBien.Name = "textBox_AjPrixVendeurBien";
             this.textBox_AjPrixVendeurBien.ReadOnly = true;
             this.textBox_AjPrixVendeurBien.Size = new System.Drawing.Size(227, 22);
@@ -172,7 +173,7 @@
             // textBox_VisSurfaceParcelleBien
             // 
             this.textBox_VisSurfaceParcelleBien.Location = new System.Drawing.Point(347, 161);
-            this.textBox_VisSurfaceParcelleBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_VisSurfaceParcelleBien.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_VisSurfaceParcelleBien.Name = "textBox_VisSurfaceParcelleBien";
             this.textBox_VisSurfaceParcelleBien.ReadOnly = true;
             this.textBox_VisSurfaceParcelleBien.Size = new System.Drawing.Size(103, 22);
@@ -181,7 +182,7 @@
             // textBox_VisSourfaceHabitableBien
             // 
             this.textBox_VisSourfaceHabitableBien.Location = new System.Drawing.Point(347, 119);
-            this.textBox_VisSourfaceHabitableBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_VisSourfaceHabitableBien.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_VisSourfaceHabitableBien.Name = "textBox_VisSourfaceHabitableBien";
             this.textBox_VisSourfaceHabitableBien.ReadOnly = true;
             this.textBox_VisSourfaceHabitableBien.Size = new System.Drawing.Size(103, 22);
@@ -191,7 +192,7 @@
             // 
             this.textBox_VisCPBien.Enabled = false;
             this.textBox_VisCPBien.Location = new System.Drawing.Point(852, 580);
-            this.textBox_VisCPBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_VisCPBien.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_VisCPBien.Name = "textBox_VisCPBien";
             this.textBox_VisCPBien.ReadOnly = true;
             this.textBox_VisCPBien.Size = new System.Drawing.Size(139, 22);
@@ -201,7 +202,7 @@
             // 
             this.textBox_VisVilleBien.Enabled = false;
             this.textBox_VisVilleBien.Location = new System.Drawing.Point(852, 534);
-            this.textBox_VisVilleBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_VisVilleBien.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_VisVilleBien.Name = "textBox_VisVilleBien";
             this.textBox_VisVilleBien.ReadOnly = true;
             this.textBox_VisVilleBien.Size = new System.Drawing.Size(245, 22);
@@ -211,7 +212,7 @@
             // 
             this.textBox_VisRueBien.Enabled = false;
             this.textBox_VisRueBien.Location = new System.Drawing.Point(852, 491);
-            this.textBox_VisRueBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_VisRueBien.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_VisRueBien.Name = "textBox_VisRueBien";
             this.textBox_VisRueBien.ReadOnly = true;
             this.textBox_VisRueBien.Size = new System.Drawing.Size(245, 22);
@@ -223,8 +224,8 @@
             this.checkBox_VisRetireBien.BackColor = System.Drawing.Color.Transparent;
             this.checkBox_VisRetireBien.Enabled = false;
             this.checkBox_VisRetireBien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_VisRetireBien.Location = new System.Drawing.Point(941, 318);
-            this.checkBox_VisRetireBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox_VisRetireBien.Location = new System.Drawing.Point(743, 298);
+            this.checkBox_VisRetireBien.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox_VisRetireBien.Name = "checkBox_VisRetireBien";
             this.checkBox_VisRetireBien.Size = new System.Drawing.Size(69, 22);
             this.checkBox_VisRetireBien.TabIndex = 106;
@@ -237,8 +238,8 @@
             this.checkBox_VisVenduBien.BackColor = System.Drawing.Color.Transparent;
             this.checkBox_VisVenduBien.Enabled = false;
             this.checkBox_VisVenduBien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_VisVenduBien.Location = new System.Drawing.Point(941, 278);
-            this.checkBox_VisVenduBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox_VisVenduBien.Location = new System.Drawing.Point(743, 258);
+            this.checkBox_VisVenduBien.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox_VisVenduBien.Name = "checkBox_VisVenduBien";
             this.checkBox_VisVenduBien.Size = new System.Drawing.Size(71, 22);
             this.checkBox_VisVenduBien.TabIndex = 105;
@@ -251,8 +252,8 @@
             this.checkBox_VisSousSeingBien.BackColor = System.Drawing.Color.Transparent;
             this.checkBox_VisSousSeingBien.Enabled = false;
             this.checkBox_VisSousSeingBien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_VisSousSeingBien.Location = new System.Drawing.Point(755, 316);
-            this.checkBox_VisSousSeingBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox_VisSousSeingBien.Location = new System.Drawing.Point(557, 296);
+            this.checkBox_VisSousSeingBien.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox_VisSousSeingBien.Name = "checkBox_VisSousSeingBien";
             this.checkBox_VisSousSeingBien.Size = new System.Drawing.Size(107, 22);
             this.checkBox_VisSousSeingBien.TabIndex = 104;
@@ -265,8 +266,8 @@
             this.checkBox_VisDispoBien.BackColor = System.Drawing.Color.Transparent;
             this.checkBox_VisDispoBien.Enabled = false;
             this.checkBox_VisDispoBien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_VisDispoBien.Location = new System.Drawing.Point(755, 277);
-            this.checkBox_VisDispoBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox_VisDispoBien.Location = new System.Drawing.Point(557, 257);
+            this.checkBox_VisDispoBien.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox_VisDispoBien.Name = "checkBox_VisDispoBien";
             this.checkBox_VisDispoBien.Size = new System.Drawing.Size(99, 22);
             this.checkBox_VisDispoBien.TabIndex = 103;
@@ -277,7 +278,7 @@
             // 
             this.button1_ImprimerDescriptionBien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1_ImprimerDescriptionBien.Location = new System.Drawing.Point(463, 1095);
-            this.button1_ImprimerDescriptionBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1_ImprimerDescriptionBien.Margin = new System.Windows.Forms.Padding(4);
             this.button1_ImprimerDescriptionBien.Name = "button1_ImprimerDescriptionBien";
             this.button1_ImprimerDescriptionBien.Size = new System.Drawing.Size(220, 43);
             this.button1_ImprimerDescriptionBien.TabIndex = 110;
@@ -288,8 +289,8 @@
             // 
             this.button_FicheVendeurConsultationBien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_FicheVendeurConsultationBien.Image = global::PTImmo_2018.Properties.Resources.user;
-            this.button_FicheVendeurConsultationBien.Location = new System.Drawing.Point(680, 75);
-            this.button_FicheVendeurConsultationBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_FicheVendeurConsultationBien.Location = new System.Drawing.Point(944, 225);
+            this.button_FicheVendeurConsultationBien.Margin = new System.Windows.Forms.Padding(4);
             this.button_FicheVendeurConsultationBien.Name = "button_FicheVendeurConsultationBien";
             this.button_FicheVendeurConsultationBien.Size = new System.Drawing.Size(220, 69);
             this.button_FicheVendeurConsultationBien.TabIndex = 111;
@@ -302,7 +303,7 @@
             // 
             this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(1061, 30);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(103, 22);
@@ -312,7 +313,7 @@
             // 
             this.Date.Enabled = false;
             this.Date.Location = new System.Drawing.Point(345, 424);
-            this.Date.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Date.Margin = new System.Windows.Forms.Padding(4);
             this.Date.Name = "Date";
             this.Date.ReadOnly = true;
             this.Date.Size = new System.Drawing.Size(227, 22);
@@ -331,7 +332,7 @@
             this.listView_VisitesBien.FullRowSelect = true;
             this.listView_VisitesBien.GridLines = true;
             this.listView_VisitesBien.Location = new System.Drawing.Point(167, 689);
-            this.listView_VisitesBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView_VisitesBien.Margin = new System.Windows.Forms.Padding(4);
             this.listView_VisitesBien.Name = "listView_VisitesBien";
             this.listView_VisitesBien.Size = new System.Drawing.Size(997, 226);
             this.listView_VisitesBien.TabIndex = 114;
@@ -450,7 +451,7 @@
             // VisNbSDBBien
             // 
             this.VisNbSDBBien.Location = new System.Drawing.Point(345, 276);
-            this.VisNbSDBBien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VisNbSDBBien.Margin = new System.Windows.Forms.Padding(4);
             this.VisNbSDBBien.Name = "VisNbSDBBien";
             this.VisNbSDBBien.ReadOnly = true;
             this.VisNbSDBBien.Size = new System.Drawing.Size(105, 22);
@@ -486,7 +487,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Image = global::PTImmo_2018.Properties.Resources.icons8_synchronize_32;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(751, 196);
+            this.label1.Location = new System.Drawing.Point(553, 176);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(191, 59);
@@ -580,19 +581,34 @@
             this.label3.TabIndex = 131;
             this.label3.Text = "Liste visites :";
             // 
-            // button1
+            // button1_Modifier_Bien
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::PTImmo_2018.Properties.Resources.icons8_edit_property_48;
-            this.button1.Location = new System.Drawing.Point(945, 75);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(220, 69);
-            this.button1.TabIndex = 132;
-            this.button1.Text = "Modifier Bien";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1_Modifier_Bien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1_Modifier_Bien.Image = global::PTImmo_2018.Properties.Resources.icons8_edit_property_48;
+            this.button1_Modifier_Bien.Location = new System.Drawing.Point(944, 320);
+            this.button1_Modifier_Bien.Margin = new System.Windows.Forms.Padding(4);
+            this.button1_Modifier_Bien.Name = "button1_Modifier_Bien";
+            this.button1_Modifier_Bien.Size = new System.Drawing.Size(220, 69);
+            this.button1_Modifier_Bien.TabIndex = 132;
+            this.button1_Modifier_Bien.Text = "Modifier Bien";
+            this.button1_Modifier_Bien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1_Modifier_Bien.UseVisualStyleBackColor = true;
+            this.button1_Modifier_Bien.Click += new System.EventHandler(this.button1_Modifier_Bien_Click);
+            // 
+            // Button_Fermer
+            // 
+            this.Button_Fermer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Fermer.Image = global::PTImmo_2018.Properties.Resources.icons8_file_delete_48;
+            this.Button_Fermer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_Fermer.Location = new System.Drawing.Point(944, 94);
+            this.Button_Fermer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Button_Fermer.Name = "Button_Fermer";
+            this.Button_Fermer.Size = new System.Drawing.Size(220, 70);
+            this.Button_Fermer.TabIndex = 144;
+            this.Button_Fermer.Text = "Fermer";
+            this.Button_Fermer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Button_Fermer.UseVisualStyleBackColor = true;
+            this.Button_Fermer.Click += new System.EventHandler(this.Button_Fermer_Click);
             // 
             // Fiche_Bien
             // 
@@ -601,7 +617,8 @@
             this.BackgroundImage = global::PTImmo_2018.Properties.Resources.otherbackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1246, 930);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Button_Fermer);
+            this.Controls.Add(this.button1_Modifier_Bien);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.label7);
@@ -641,7 +658,7 @@
             this.Controls.Add(this.textBox_VisCPBien);
             this.Controls.Add(this.textBox_VisVilleBien);
             this.Controls.Add(this.textBox_VisRueBien);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Fiche_Bien";
             this.Text = "Visualisation Bien";
             this.Load += new System.EventHandler(this.Fiche_Bien_Load_1);
@@ -701,6 +718,7 @@
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.Label label25;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Button button1;
-	}
+		private System.Windows.Forms.Button button1_Modifier_Bien;
+        private System.Windows.Forms.Button Button_Fermer;
+    }
 }

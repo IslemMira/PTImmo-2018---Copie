@@ -22,6 +22,8 @@ namespace PTImmo_2018
 		public Fiche_Bien()
 		{
             InitializeComponent();
+
+           
         }
 		
 
@@ -34,7 +36,7 @@ namespace PTImmo_2018
 		}
 
 		#region Button Modifier Bien
-		private void button1_Click(object sender, EventArgs e)
+		private void button1_Modifier_Bien_Click(object sender, EventArgs e)
 		{
 			ApplicationState.id_bien = textBox1.Text;
 			Modifier_Bien mb = new Modifier_Bien();
@@ -80,6 +82,14 @@ namespace PTImmo_2018
             }
             reader.Close();
         }
+
+        private void Button_Fermer_Click(object sender, EventArgs e)
+        {
+            FicheVendeur fv = new FicheVendeur();
+            fv.Show(this);
+            this.Hide();
+        }
+               
     }
 }
 
