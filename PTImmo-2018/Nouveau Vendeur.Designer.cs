@@ -46,7 +46,6 @@
             this.button_annuler = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1_codeVille = new System.Windows.Forms.TextBox();
             this.textBox1_ville = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -221,13 +220,6 @@
             this.label2.Text = "           Adresse";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1_codeVille
-            // 
-            this.textBox1_codeVille.Location = new System.Drawing.Point(386, 473);
-            this.textBox1_codeVille.Name = "textBox1_codeVille";
-            this.textBox1_codeVille.Size = new System.Drawing.Size(62, 24);
-            this.textBox1_codeVille.TabIndex = 65;
-            // 
             // textBox1_ville
             // 
             this.textBox1_ville.Location = new System.Drawing.Point(238, 437);
@@ -243,7 +235,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(791, 628);
             this.Controls.Add(this.textBox1_ville);
-            this.Controls.Add(this.textBox1_codeVille);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button_valider);
@@ -288,7 +279,6 @@
         private System.Windows.Forms.Button button_annuler;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.TextBox textBox1_codeVille;
         private System.Windows.Forms.TextBox textBox1_ville;
     }
 }

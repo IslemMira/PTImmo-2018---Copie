@@ -27,7 +27,7 @@ namespace PTImmo_2018
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
             string sql1 = "INSERT into Vendeur(Nom_Client, PRÉNOM_Client, Adresse, TÉLÉPHONE, E_MAIL, CODE_VILLE) ";
-            string sql2 = " VALUES('"+textBox1_Nom.Text+"', '"+textBox2_Prenom.Text+"', '"+textBox12_Adresse.Text+"','"+textBox3_Telephone.Text+"','"+textBox4_E_Mail + "', (SELECT v.code_ville from VILLE v where v.NOM_VILLE like  '" + textBox1_ville.Text + "' and v.CODE_POSTAL like '" + textBox10_CP.Text + "'))";
+            string sql2 = " VALUES('"+textBox1_Nom.Text+"', '"+textBox2_Prenom.Text+"', '"+textBox12_Adresse.Text+"','"+textBox3_Telephone.Text+"','"+textBox4_E_Mail.Text + "', (SELECT v.code_ville from VILLE v where v.NOM_VILLE like  '" + textBox1_ville.Text + "' and v.CODE_POSTAL like '" + textBox10_CP.Text + "'))";
 
             string sql = sql1 + sql2;
 
@@ -43,8 +43,8 @@ namespace PTImmo_2018
 
         private void Annuler_NouveauVendeur(object sender, EventArgs e)
         {
-            liste_des_biens lb = new liste_des_biens();
-            lb.Show(this);
+            RechercheVendeur rv = new RechercheVendeur();
+            rv.Show(this);
             this.Hide();
             
         }
