@@ -28,13 +28,13 @@ namespace PTImmo_2018
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
 
-            string sql = "select b.code_bien,b.adresse,b.statut, count(v.code_visite) nb_visite from bien b left join proposition p on p.code_bien = b.code_bien left join visite v on v.code_proposition = p.code_proposition left join vendeur ve on ve.num_client = b.num_client where ve.nom_client like '%" + textBox2.Text + "%' and b.statut like '%" + statut + "' group by b.code_bien,b.adresse,b.statut; ";
+            string sql = "select b.CODE_BIEN, b.SURFACE_HABITABLE, b.NB_PIÉCES, b.STATUT,vi.NOM_VILLE, v.NOM_CLIENT, v.PRÉNOM_CLIENT from  Bien b join VENDEUR v on b.NUM_CLIENT = v.NUM_CLIENT join ville vi on b.CODE_VILLE = vi.CODE_VILLE where v.nom_client like '%" + textBox2.Text + "%' and b.statut like '%" + statut + "' ; ";
 
             OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
             OleDbDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                string[] row = { reader.GetInt16(0).ToString(), reader.GetString(1), reader.GetString(2), reader.GetInt32(3).ToString() };
+                string[] row = { reader.GetInt16(0).ToString(), reader.GetInt32(1).ToString(), reader.GetInt32(2).ToString(), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6) };
                 ListViewItem lvi = new ListViewItem(row);
                 listView1.Items.Add(lvi);
 
@@ -54,13 +54,13 @@ namespace PTImmo_2018
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
             
-            string sql = "select b.code_bien,b.adresse,b.statut, count(v.code_visite) nb_visite from bien b left join proposition p on p.code_bien = b.code_bien left join visite v on v.code_proposition = p.code_proposition left join vendeur ve on ve.num_client = b.num_client where ve.nom_client like '%" + textBox2.Text+  "%' and b.statut like '%"+ statut+ "' group by b.code_bien,b.adresse,b.statut; ";
+            string sql = "select b.CODE_BIEN, b.SURFACE_HABITABLE, b.NB_PIÉCES, b.STATUT,vi.NOM_VILLE, v.NOM_CLIENT, v.PRÉNOM_CLIENT from  Bien b join VENDEUR v on b.NUM_CLIENT = v.NUM_CLIENT join ville vi on b.CODE_VILLE = vi.CODE_VILLE where v.nom_client like '%" + textBox2.Text + "%' and b.statut like '%" + statut + "' ; ";
 
             OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
             OleDbDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                string[] row = { reader.GetInt16(0).ToString(), reader.GetString(1), reader.GetString(2), reader.GetInt32(3).ToString() };
+                string[] row = { reader.GetInt16(0).ToString(), reader.GetInt32(1).ToString(), reader.GetInt32(2).ToString(), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6) };
                 ListViewItem lvi = new ListViewItem(row);
                 listView1.Items.Add(lvi);
                 

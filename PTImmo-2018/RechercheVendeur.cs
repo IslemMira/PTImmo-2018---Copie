@@ -17,7 +17,7 @@ namespace PTImmo_2018
         public RechercheVendeur()
         {
             InitializeComponent();
-            listView1_vendeurs.Enabled = false;
+            listView1_vendeurs.Enabled = true;
 
             string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
 
@@ -56,7 +56,6 @@ namespace PTImmo_2018
 
 		private void listView1_vendeurs_MouseClick(object sender, MouseEventArgs e)
 		{
-            listView1_vendeurs.Enabled = true;
 			ApplicationState.id_vendeur = listView1_vendeurs.SelectedItems[0].SubItems[0].Text;
 		}
 
@@ -69,6 +68,7 @@ namespace PTImmo_2018
 
         private void Bouton_Ajouter_bien_MouseClick(object sender, MouseEventArgs e)
         {
+            ApplicationState.id_vendeur = listView1_vendeurs.SelectedItems[0].SubItems[0].Text;
             Nouveau_bien nb = new Nouveau_bien();
             nb.Show(this);
             this.Hide();
