@@ -54,8 +54,6 @@
             this.checkBoxCaveOuiBien = new System.Windows.Forms.CheckBox();
             this.nbPiecesBien = new System.Windows.Forms.NumericUpDown();
             this.nbSDBien = new System.Windows.Forms.NumericUpDown();
-            this.button_AnnulerAjBien = new System.Windows.Forms.Button();
-            this.button_AjouterNvBienVendeur = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
             this.nbChambreBien = new System.Windows.Forms.NumericUpDown();
             this.Button_Valider = new System.Windows.Forms.Button();
@@ -150,7 +148,7 @@
             // textBox_AjCodeVendeur
             // 
             this.textBox_AjCodeVendeur.Enabled = false;
-            this.textBox_AjCodeVendeur.Location = new System.Drawing.Point(796, 24);
+            this.textBox_AjCodeVendeur.Location = new System.Drawing.Point(700, 32);
             this.textBox_AjCodeVendeur.Name = "textBox_AjCodeVendeur";
             this.textBox_AjCodeVendeur.ReadOnly = true;
             this.textBox_AjCodeVendeur.Size = new System.Drawing.Size(87, 20);
@@ -162,7 +160,6 @@
             this.textBox_AjCPBien.Name = "textBox_AjCPBien";
             this.textBox_AjCPBien.Size = new System.Drawing.Size(96, 20);
             this.textBox_AjCPBien.TabIndex = 27;
-            
             // 
             // textBox_AjVilleBien
             // 
@@ -278,7 +275,7 @@
             // 
             // textBox_AjCommentaireBien
             // 
-            this.textBox_AjCommentaireBien.Location = new System.Drawing.Point(535, 539);
+            this.textBox_AjCommentaireBien.Location = new System.Drawing.Point(535, 526);
             this.textBox_AjCommentaireBien.Multiline = true;
             this.textBox_AjCommentaireBien.Name = "textBox_AjCommentaireBien";
             this.textBox_AjCommentaireBien.Size = new System.Drawing.Size(252, 129);
@@ -322,26 +319,6 @@
             this.nbSDBien.Size = new System.Drawing.Size(79, 20);
             this.nbSDBien.TabIndex = 48;
             // 
-            // button_AnnulerAjBien
-            // 
-            this.button_AnnulerAjBien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_AnnulerAjBien.Location = new System.Drawing.Point(109, 865);
-            this.button_AnnulerAjBien.Name = "button_AnnulerAjBien";
-            this.button_AnnulerAjBien.Size = new System.Drawing.Size(165, 35);
-            this.button_AnnulerAjBien.TabIndex = 49;
-            this.button_AnnulerAjBien.Text = "ANNULER";
-            this.button_AnnulerAjBien.UseVisualStyleBackColor = true;
-            // 
-            // button_AjouterNvBienVendeur
-            // 
-            this.button_AjouterNvBienVendeur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_AjouterNvBienVendeur.Location = new System.Drawing.Point(579, 865);
-            this.button_AjouterNvBienVendeur.Name = "button_AjouterNvBienVendeur";
-            this.button_AjouterNvBienVendeur.Size = new System.Drawing.Size(165, 35);
-            this.button_AjouterNvBienVendeur.TabIndex = 50;
-            this.button_AjouterNvBienVendeur.Text = "AJOUTER";
-            this.button_AjouterNvBienVendeur.UseVisualStyleBackColor = true;
-            // 
             // label26
             // 
             this.label26.AutoSize = true;
@@ -364,7 +341,7 @@
             // 
             this.Button_Valider.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_Valider.Image = global::PTImmo_2018.Properties.Resources.icons8_check_file_48;
-            this.Button_Valider.Location = new System.Drawing.Point(724, 722);
+            this.Button_Valider.Location = new System.Drawing.Point(628, 670);
             this.Button_Valider.Margin = new System.Windows.Forms.Padding(2);
             this.Button_Valider.Name = "Button_Valider";
             this.Button_Valider.Size = new System.Drawing.Size(159, 57);
@@ -378,7 +355,7 @@
             // 
             this.Button_Annuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_Annuler.Image = global::PTImmo_2018.Properties.Resources.icons8_file_delete_48;
-            this.Button_Annuler.Location = new System.Drawing.Point(127, 722);
+            this.Button_Annuler.Location = new System.Drawing.Point(127, 670);
             this.Button_Annuler.Margin = new System.Windows.Forms.Padding(2);
             this.Button_Annuler.Name = "Button_Annuler";
             this.Button_Annuler.Size = new System.Drawing.Size(159, 57);
@@ -496,7 +473,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(701, 25);
+            this.label4.Location = new System.Drawing.Point(612, 33);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 15);
             this.label4.TabIndex = 73;
@@ -582,7 +559,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PTImmo_2018.Properties.Resources.otherbackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(919, 709);
+            this.ClientSize = new System.Drawing.Size(854, 730);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
@@ -604,8 +581,6 @@
             this.Controls.Add(this.Button_Valider);
             this.Controls.Add(this.nbChambreBien);
             this.Controls.Add(this.label26);
-            this.Controls.Add(this.button_AjouterNvBienVendeur);
-            this.Controls.Add(this.button_AnnulerAjBien);
             this.Controls.Add(this.nbSDBien);
             this.Controls.Add(this.nbPiecesBien);
             this.Controls.Add(this.checkBoxCaveOuiBien);
@@ -670,8 +645,6 @@
         private System.Windows.Forms.CheckBox checkBoxCaveOuiBien;
         private System.Windows.Forms.NumericUpDown nbPiecesBien;
         private System.Windows.Forms.NumericUpDown nbSDBien;
-        private System.Windows.Forms.Button button_AnnulerAjBien;
-        private System.Windows.Forms.Button button_AjouterNvBienVendeur;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.NumericUpDown nbChambreBien;
         private System.Windows.Forms.Button Button_Valider;

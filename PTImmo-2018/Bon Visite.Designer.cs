@@ -69,12 +69,13 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = global::PTImmo_2018.Properties.Resources.icons8_print_32;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(678, 667);
+            this.button2.Location = new System.Drawing.Point(661, 596);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(168, 43);
             this.button2.TabIndex = 17;
             this.button2.Text = "     IMPRIMER";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label13
             // 

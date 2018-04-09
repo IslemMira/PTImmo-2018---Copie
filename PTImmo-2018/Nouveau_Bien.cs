@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,8 +17,8 @@ namespace PTImmo_2018
     {
         public Nouveau_bien()
         {
-            string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
-            OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
+            
+            OleDbConnection dbConnection = new OleDbConnection(ApplicationState.ChaineBd);
             dbConnection.Open();
             InitializeComponent();
             string sql = "select Code_Ville, Nom_Ville from Ville  ";
@@ -38,19 +40,49 @@ namespace PTImmo_2018
 
         private void Button_Valider_Click(object sender, EventArgs e)
         {
-			string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
-			OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
-			dbConnection.Open();
+            #region insertion du bien
+            OleDbConnection dbConnection = new OleDbConnection(ApplicationState.ChaineBd);
+            dbConnection.Open();
 
-			string sql1 = "INSERT Into Bien (SURFACE_HABITABLE, SURFACE_PARCELLE, NB_PIéCES, NB_CHAMBRES, NB_SALLE_DE_BAIN, GARAGE, CAVE, PRIX_VENDEUR, ADRESSE, DATE_MISE_EN_VENTE, COMMENTAIRE, STATUT, CODE_VILLE, NUM_CLIENT)";
-            string sql2 = "VALUES ('" + textBox_AjSurfaceHabitableBien.Text + "','" + textBox_AjSurfaceParcelleBien.Text + "','" +nbPiecesBien.Text + "','" + nbChambreBien.Text + "','" + nbSDBien.Text + "', '" + checkBox_GarageOuiBien.Checked + "', '"+checkBoxCaveOuiBien.Checked + "', '"+ textBox_AjPrixVendeurBien.Text + "','" + textBox_AjRueBien.Text + "','"+ dateTimePicker1.Value + "', '" + textBox_AjCommentaireBien.Text + "', 'D',(SELECT v.code_ville from VILLE v where v.NOM_VILLE LIKE '" + textBox_AjVilleBien.Text + "' AND v.code_postal like '" + textBox_AjCPBien.Text + "'),'"+textBox_AjCodeVendeur.Text + "' ) ";
+            string sql1 = "INSERT Into Bien (SURFACE_HABITABLE, SURFACE_PARCELLE, NB_PIéCES, NB_CHAMBRES, NB_SALLE_DE_BAIN, GARAGE, CAVE, PRIX_VENDEUR, ADRESSE, DATE_MISE_EN_VENTE, COMMENTAIRE, STATUT, CODE_VILLE, NUM_CLIENT)";
+            string sql2 = "VALUES ('" + textBox_AjSurfaceHabitableBien.Text + "','" + textBox_AjSurfaceParcelleBien.Text + "','" + nbPiecesBien.Text + "','" + nbChambreBien.Text + "','" + nbSDBien.Text + "', '" + checkBox_GarageOuiBien.Checked + "', '" + checkBoxCaveOuiBien.Checked + "', '" + textBox_AjPrixVendeurBien.Text + "','" + textBox_AjRueBien.Text + "','" + dateTimePicker1.Value + "', '" + textBox_AjCommentaireBien.Text + "', 'D',(SELECT v.code_ville from VILLE v where v.NOM_VILLE LIKE '" + textBox_AjVilleBien.Text + "' AND v.code_postal like '" + textBox_AjCPBien.Text + "'),'" + textBox_AjCodeVendeur.Text + "' ) ";
             string sql = sql1 + sql2;
 
-            
+
             OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
-			cmd.ExecuteNonQuery();
-			MessageBox.Show("Saved");
-			FicheVendeur fv = new FicheVendeur();
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Saved");
+            #endregion
+
+            #region  mail de notification aux commerciaux
+
+            MailMessage email = new MailMessage();
+            email.From =new System.Net.Mail.MailAddress("ImmoJackyTeam@gmail.com");
+            string sqlMailCommerciaux = "SELECT Email from COMMERCIAL";
+            cmd = new OleDbCommand(sqlMailCommerciaux, dbConnection);
+            OleDbDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                email.To.Add(new MailAddress(reader.GetString(0)));
+
+            }
+            reader.Close();
+            
+            email.IsBodyHtml = false;
+            email.Subject = "Arrivée d'un nouveau Bien";
+            email.Body = "Description du Bien : \n Nom vendeur: " + textBox_AjNomVendeur.Text + " " + textBox_AjPrenomVendeur.Text + "\n Adresse du bien: " + textBox_AjRueBien.Text + " " + textBox_AjVilleBien.Text + textBox_AjCPBien.Text + "\n Surface habitable : " + textBox_AjSurfaceHabitableBien.Text + "\n Surface parcelle : " + textBox_AjSurfaceParcelleBien.Text + "\n Nb Pièces: " + nbPiecesBien.Value.ToString() + "\n Nb Chambres : " + nbChambreBien.Value.ToString() + "\n Nb Sdb: " + nbSDBien.Value.ToString() + "\n Commentaire :" + textBox_AjCommentaireBien.Text;         
+            SmtpClient smtp = new SmtpClient();
+            smtp.Host = "smtp.gmail.com";
+            smtp.EnableSsl = true;
+            smtp.Credentials = new System.Net.NetworkCredential("ImmoJackyChan", "ImmoBilly123");
+
+           
+            
+
+
+                #endregion
+
+                FicheVendeur fv = new FicheVendeur();
 			fv.Show(this);
 			this.Hide();
 
@@ -67,9 +99,9 @@ namespace PTImmo_2018
 
 		private void Nouveau_bien_Load(object sender, EventArgs e)
 		{
-			string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
+			
 
-			OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
+			OleDbConnection dbConnection = new OleDbConnection(ApplicationState.ChaineBd);
 			dbConnection.Open();
 
 			string sqlS1 = "Select v.Num_Client, v.Nom_Client, v.Prénom_Client, v.Téléphone, v.E_mail, v.adresse, vi.nom_ville, vi.code_postal";

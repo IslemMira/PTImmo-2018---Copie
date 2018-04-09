@@ -15,5 +15,6 @@ namespace PTImmo_2018
 		public static string id_visite;
 		public static string id_souhait;
 		public static string id_commercial;
-	}
+        public static string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
+    }
 }
