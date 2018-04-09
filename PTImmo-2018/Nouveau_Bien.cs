@@ -17,7 +17,7 @@ namespace PTImmo_2018
     {
         public Nouveau_bien()
         {
-            
+
             OleDbConnection dbConnection = new OleDbConnection(ApplicationState.ChaineBd);
             dbConnection.Open();
             InitializeComponent();
@@ -45,19 +45,18 @@ namespace PTImmo_2018
             dbConnection.Open();
 
             string sql1 = "INSERT Into Bien (SURFACE_HABITABLE, SURFACE_PARCELLE, NB_PIéCES, NB_CHAMBRES, NB_SALLE_DE_BAIN, GARAGE, CAVE, PRIX_VENDEUR, ADRESSE, DATE_MISE_EN_VENTE, COMMENTAIRE, STATUT, CODE_VILLE, NUM_CLIENT)";
-            string sql2 = "VALUES ('" + textBox_AjSurfaceHabitableBien.Text + "','" + textBox_AjSurfaceParcelleBien.Text + "','" + nbPiecesBien.Text + "','" + nbChambreBien.Text + "','" + nbSDBien.Text + "', '" + checkBox_GarageOuiBien.Checked + "', '" + checkBoxCaveOuiBien.Checked + "', '" + textBox_AjPrixVendeurBien.Text + "','" + textBox_AjRueBien.Text + "','" + dateTimePicker1.Value + "', '" + textBox_AjCommentaireBien.Text + "', 'D',(SELECT v.code_ville from VILLE v where v.NOM_VILLE LIKE '" + textBox_AjVilleBien.Text + "' AND v.code_postal like '" + textBox_AjCPBien.Text + "'),'" + textBox_AjCodeVendeur.Text + "' ) ";
+            string sql2 = "VALUES ('" + textBox_AjSurfaceHabitableBien.Text + "','" + textBox_AjSurfaceParcelleBien.Text + "','" + nbPiecesBien.Text + "','" + nbChambreBien.Text + "','" + nbSDBien.Text + "', '" + checkBox_GarageOuiBien.Checked + "', '" + checkBoxCaveOuiBien.Checked + "', '" + textBox_AjPrixVendeurBien.Text + "','" + textBox_AjRueBien.Text.Replace("'","''") + "','" + dateTimePicker1.Value + "', '" + textBox_AjCommentaireBien.Text + "', 'D',(SELECT v.code_ville from VILLE v where v.NOM_VILLE LIKE '" + textBox_AjVilleBien.Text + "' AND v.code_postal like '" + textBox_AjCPBien.Text + "'),'" + textBox_AjCodeVendeur.Text + "' ) ";
             string sql = sql1 + sql2;
 
 
             OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Saved");
-            #endregion
 
+            #endregion
             #region  mail de notification aux commerciaux
 
             MailMessage email = new MailMessage();
-            email.From =new System.Net.Mail.MailAddress("ImmoJackyTeam@gmail.com");
+            email.From = new MailAddress("ImmoJackyTeam@gmail.com");
             string sqlMailCommerciaux = "SELECT Email from COMMERCIAL";
             cmd = new OleDbCommand(sqlMailCommerciaux, dbConnection);
             OleDbDataReader reader = cmd.ExecuteReader();
@@ -67,26 +66,29 @@ namespace PTImmo_2018
 
             }
             reader.Close();
-            
+            email.To.Add(new MailAddress("gyzmogato@gmail.com"));
             email.IsBodyHtml = false;
             email.Subject = "Arrivée d'un nouveau Bien";
-            email.Body = "Description du Bien : \n Nom vendeur: " + textBox_AjNomVendeur.Text + " " + textBox_AjPrenomVendeur.Text + "\n Adresse du bien: " + textBox_AjRueBien.Text + " " + textBox_AjVilleBien.Text + textBox_AjCPBien.Text + "\n Surface habitable : " + textBox_AjSurfaceHabitableBien.Text + "\n Surface parcelle : " + textBox_AjSurfaceParcelleBien.Text + "\n Nb Pièces: " + nbPiecesBien.Value.ToString() + "\n Nb Chambres : " + nbChambreBien.Value.ToString() + "\n Nb Sdb: " + nbSDBien.Value.ToString() + "\n Commentaire :" + textBox_AjCommentaireBien.Text;         
+            email.Body = "Description du Bien : \n Nom vendeur: " + textBox_AjNomVendeur.Text.Replace(" ","") + " " + textBox_AjPrenomVendeur.Text.Replace(" ","") + "\n Adresse du bien: " + textBox_AjRueBien.Text + "\n " + textBox_AjVilleBien.Text +" "+ textBox_AjCPBien.Text + "\n Prix : " + textBox_AjPrixVendeurBien.Text  + "\n Surface habitable : " + textBox_AjSurfaceHabitableBien.Text + "\n Surface parcelle : " + textBox_AjSurfaceParcelleBien.Text + "\n Nb Pièces: " + nbPiecesBien.Value.ToString() + "\n Nb Chambres : " + nbChambreBien.Value.ToString() + "\n Nb Sdb: " + nbSDBien.Value.ToString() + "\n Commentaire :" + textBox_AjCommentaireBien.Text;
+            Console.WriteLine(email.Body);
             SmtpClient smtp = new SmtpClient();
+           
             smtp.Host = "smtp.gmail.com";
             smtp.EnableSsl = true;
-            smtp.Credentials = new System.Net.NetworkCredential("ImmoJackyChan", "ImmoBilly123");
-
-           
-            
+            smtp.Credentials = new System.Net.NetworkCredential("ImmoJackyTeam", "ImmoBilly123");
+            smtp.Send(email);
 
 
-                #endregion
 
-                FicheVendeur fv = new FicheVendeur();
-			fv.Show(this);
-			this.Hide();
 
-		}
+            #endregion
+            MessageBox.Show("Saved");
+
+            FicheVendeur fv = new FicheVendeur();
+            fv.Show(this);
+            this.Hide();
+
+        }
 
         private void Annuler_NouveauBien(object sender, EventArgs e)
         {
@@ -95,35 +97,35 @@ namespace PTImmo_2018
             this.Hide();
         }
 
-       
 
-		private void Nouveau_bien_Load(object sender, EventArgs e)
-		{
-			
 
-			OleDbConnection dbConnection = new OleDbConnection(ApplicationState.ChaineBd);
-			dbConnection.Open();
+        private void Nouveau_bien_Load(object sender, EventArgs e)
+        {
 
-			string sqlS1 = "Select v.Num_Client, v.Nom_Client, v.Prénom_Client, v.Téléphone, v.E_mail, v.adresse, vi.nom_ville, vi.code_postal";
-			string sqlF1 = " from Vendeur v left join ville vi on vi.code_ville = v.code_ville  where v.num_client = '" + ApplicationState.id_vendeur +"' ";
-			string sql = sqlS1 + sqlF1;
 
-			OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
-			OleDbDataReader reader = cmd.ExecuteReader();
-			while (reader.Read())
-			{
-				textBox_AjCodeVendeur.Text = reader.GetValue(0).ToString();
-				textBox_AjNomVendeur.Text = reader.GetString(1);
-				textBox_AjPrenomVendeur.Text = reader.GetString(2);
-				textBox_AjTelephoneVendeur.Text = reader.GetInt32(3).ToString();
-				textBox_AjEmailVendeur.Text = reader.GetString(4);
-				textBox_AjRueVendeur.Text = reader.GetString(5);
-				textBox_AjVilleVendeur.Text = reader.GetString(6);
-				textBox_AjCPVendeur.Text = reader.GetInt32(7).ToString();
-			}
-			reader.Close();
-		}
+            OleDbConnection dbConnection = new OleDbConnection(ApplicationState.ChaineBd);
+            dbConnection.Open();
 
-      
+            string sqlS1 = "Select v.Num_Client, v.Nom_Client, v.Prénom_Client, v.Téléphone, v.E_mail, v.adresse, vi.nom_ville, vi.code_postal";
+            string sqlF1 = " from Vendeur v left join ville vi on vi.code_ville = v.code_ville  where v.num_client = '" + ApplicationState.id_vendeur + "' ";
+            string sql = sqlS1 + sqlF1;
+
+            OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
+            OleDbDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                textBox_AjCodeVendeur.Text = reader.GetValue(0).ToString();
+                textBox_AjNomVendeur.Text = reader.GetString(1);
+                textBox_AjPrenomVendeur.Text = reader.GetString(2);
+                textBox_AjTelephoneVendeur.Text = reader.GetInt32(3).ToString();
+                textBox_AjEmailVendeur.Text = reader.GetString(4);
+                textBox_AjRueVendeur.Text = reader.GetString(5);
+                textBox_AjVilleVendeur.Text = reader.GetString(6);
+                textBox_AjCPVendeur.Text = reader.GetInt32(7).ToString();
+            }
+            reader.Close();
+        }
+
+
     }
 }

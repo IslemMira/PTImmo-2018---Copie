@@ -58,23 +58,25 @@ namespace PTImmo_2018
             //GENERER FICHIER TEXTE A IMPRIMER(BON DE VISITE)
             string line1 = "BON DE VISITE";
             string blank1 = " ";
-            string line2 = "Monsieur " + textBox1.Text + " " + textBox2.Text;
+            string line2 = "Monsieur, Madame " + textBox1.Text.TrimEnd() + " " + textBox2.Text.TrimEnd();
             string line3 = "Rendez-vous le : " + dateTimePicker1.Value;
-            string line4 = "Adresse :" + textBox_VisRueBien.Text + " " + textBox_Ville.Text + " " + textBox_VisCPBien.Text;
+            string line4 = "Adresse : " + textBox_VisRueBien.Text.TrimEnd() + " " + textBox_Ville.Text.TrimEnd() + " " + textBox_VisCPBien.Text.TrimEnd();
+            string line4b = "Designation du bien : " + textBox4.Text.TrimEnd();
             string blank2 = " ";
-            string line5 = "Surface habitable : " + textBox_SurfHab.Text;
-            string line6 = "Surface parcelle : " + textBox_SurfParc.Text;
-            string line7 = "Nb pièces : " + textBox_NbPiece.Text;
-            string line8 = "Nb chambres : " + textBox_NbChambre.Text;
-            string line9 = "Nb Salle de bain : " + textBox_NbSdb.Text;
-            string line10 = "Garage : ";
+            string line5 = "Surface habitable : \t" + textBox_SurfHab.Text;
+            string line6 = "Surface parcelle : \t" + textBox_SurfParc.Text;
+            string line7 = "Nb pièces : \t" + textBox_NbPiece.Text;
+            string line8 = "Nb chambres : \t" + textBox_NbChambre.Text;
+            string line9 = "Nb Salle de bain : \t" + textBox_NbSdb.Text;
+            string line10 = "Garage : \t";
             if (checkBox_Garage.Checked == true) { line10 += "oui"; }  
             else { line10 = "non"; }
-            string line11 = "Cave : ";
+            string line11 = "Cave : \t";
             if (checkBox_Cave.Checked == true) { line11 += "oui"; }
-            else { line11 = "non"; }
+            else { line11 += "non"; }
+           
 
-            string[] texte = { line1, blank1 , line2 , line3 , line4 , blank2 , line5 , line6 , line7 , line8 , line9 , line10 , line11 };
+            string[] texte = { line1, blank1 , line2 , line3 , line4, line4b , blank2 , line5 , line6 , line7 , line8 , line9 , line10 , line11 };
             File.WriteAllLines(@"c:\temp\bonDeVisite.txt", texte);
 
             //IMPRESSION DU FICHIER TEXTE
