@@ -66,7 +66,7 @@ namespace PTImmo_2018
 
             }
             reader.Close();
-            email.To.Add(new MailAddress("gyzmogato@gmail.com"));
+            
             email.IsBodyHtml = false;
             email.Subject = "Arrivée d'un nouveau Bien";
             email.Body = "Description du Bien : \n Nom vendeur: " + textBox_AjNomVendeur.Text.Replace(" ","") + " " + textBox_AjPrenomVendeur.Text.Replace(" ","") + "\n Adresse du bien: " + textBox_AjRueBien.Text + "\n " + textBox_AjVilleBien.Text +" "+ textBox_AjCPBien.Text + "\n Prix : " + textBox_AjPrixVendeurBien.Text  + "\n Surface habitable : " + textBox_AjSurfaceHabitableBien.Text + "\n Surface parcelle : " + textBox_AjSurfaceParcelleBien.Text + "\n Nb Pièces: " + nbPiecesBien.Value.ToString() + "\n Nb Chambres : " + nbChambreBien.Value.ToString() + "\n Nb Sdb: " + nbSDBien.Value.ToString() + "\n Commentaire :" + textBox_AjCommentaireBien.Text;
