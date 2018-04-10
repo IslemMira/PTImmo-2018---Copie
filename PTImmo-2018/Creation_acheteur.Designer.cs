@@ -246,6 +246,7 @@
             this.button_annuler.Text = "ANNULER";
             this.button_annuler.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_annuler.UseVisualStyleBackColor = true;
+            this.button_annuler.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_annuler_MouseClick);
             // 
             // Creation_acheteur
             // 

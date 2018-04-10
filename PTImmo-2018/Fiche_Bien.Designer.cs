@@ -562,7 +562,7 @@
             // 
             // Button_Fermer
             // 
-            this.Button_Fermer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Fermer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_Fermer.Image = global::PTImmo_2018.Properties.Resources.icons8_file_delete_48;
             this.Button_Fermer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Button_Fermer.Location = new System.Drawing.Point(709, 266);
@@ -570,7 +570,7 @@
             this.Button_Fermer.Name = "Button_Fermer";
             this.Button_Fermer.Size = new System.Drawing.Size(165, 57);
             this.Button_Fermer.TabIndex = 144;
-            this.Button_Fermer.Text = "Fermer";
+            this.Button_Fermer.Text = "   Fermer";
             this.Button_Fermer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Button_Fermer.UseVisualStyleBackColor = true;
             this.Button_Fermer.Click += new System.EventHandler(this.Button_Fermer_Click);

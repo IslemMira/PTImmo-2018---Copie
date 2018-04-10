@@ -65,5 +65,12 @@ namespace PTImmo_2018
             comboBox_commercial.DataSource = dt;
             reader.Close();
         }
+
+        private void button_annuler_MouseClick(object sender, MouseEventArgs e)
+        {
+            RechercheAcheteur ra = new RechercheAcheteur();
+            ra.Show(this);
+            this.Hide();
+        }
     }
 }

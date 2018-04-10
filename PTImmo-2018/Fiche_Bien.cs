@@ -32,7 +32,7 @@ namespace PTImmo_2018
             ApplicationState.id_vendeur = textBox2.Text;
 			FicheVendeur fv = new FicheVendeur();
 			fv.Show(this);
-			this.Hide();
+			
 		}
 
 		#region Button Modifier Bien
