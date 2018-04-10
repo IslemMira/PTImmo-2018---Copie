@@ -78,6 +78,9 @@
             this.Button_Fermer = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.VisNbChambresBien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VisNbPiecesBien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VisNbSDBBien)).BeginInit();
@@ -213,7 +216,7 @@
             this.checkBox_VisRetireBien.BackColor = System.Drawing.Color.Transparent;
             this.checkBox_VisRetireBien.Enabled = false;
             this.checkBox_VisRetireBien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_VisRetireBien.Location = new System.Drawing.Point(576, 196);
+            this.checkBox_VisRetireBien.Location = new System.Drawing.Point(591, 180);
             this.checkBox_VisRetireBien.Name = "checkBox_VisRetireBien";
             this.checkBox_VisRetireBien.Size = new System.Drawing.Size(59, 19);
             this.checkBox_VisRetireBien.TabIndex = 106;
@@ -226,7 +229,7 @@
             this.checkBox_VisVenduBien.BackColor = System.Drawing.Color.Transparent;
             this.checkBox_VisVenduBien.Enabled = false;
             this.checkBox_VisVenduBien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_VisVenduBien.Location = new System.Drawing.Point(576, 164);
+            this.checkBox_VisVenduBien.Location = new System.Drawing.Point(591, 148);
             this.checkBox_VisVenduBien.Name = "checkBox_VisVenduBien";
             this.checkBox_VisVenduBien.Size = new System.Drawing.Size(61, 19);
             this.checkBox_VisVenduBien.TabIndex = 105;
@@ -239,7 +242,7 @@
             this.checkBox_VisSousSeingBien.BackColor = System.Drawing.Color.Transparent;
             this.checkBox_VisSousSeingBien.Enabled = false;
             this.checkBox_VisSousSeingBien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_VisSousSeingBien.Location = new System.Drawing.Point(437, 194);
+            this.checkBox_VisSousSeingBien.Location = new System.Drawing.Point(452, 178);
             this.checkBox_VisSousSeingBien.Name = "checkBox_VisSousSeingBien";
             this.checkBox_VisSousSeingBien.Size = new System.Drawing.Size(90, 19);
             this.checkBox_VisSousSeingBien.TabIndex = 104;
@@ -252,7 +255,7 @@
             this.checkBox_VisDispoBien.BackColor = System.Drawing.Color.Transparent;
             this.checkBox_VisDispoBien.Enabled = false;
             this.checkBox_VisDispoBien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_VisDispoBien.Location = new System.Drawing.Point(437, 163);
+            this.checkBox_VisDispoBien.Location = new System.Drawing.Point(452, 147);
             this.checkBox_VisDispoBien.Name = "checkBox_VisDispoBien";
             this.checkBox_VisDispoBien.Size = new System.Drawing.Size(85, 19);
             this.checkBox_VisDispoBien.TabIndex = 103;
@@ -273,7 +276,7 @@
             // 
             this.button_FicheVendeurConsultationBien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_FicheVendeurConsultationBien.Image = global::PTImmo_2018.Properties.Resources.user;
-            this.button_FicheVendeurConsultationBien.Location = new System.Drawing.Point(709, 107);
+            this.button_FicheVendeurConsultationBien.Location = new System.Drawing.Point(709, 129);
             this.button_FicheVendeurConsultationBien.Name = "button_FicheVendeurConsultationBien";
             this.button_FicheVendeurConsultationBien.Size = new System.Drawing.Size(165, 56);
             this.button_FicheVendeurConsultationBien.TabIndex = 111;
@@ -285,7 +288,7 @@
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(796, 24);
+            this.textBox1.Location = new System.Drawing.Point(796, 10);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(78, 20);
@@ -458,7 +461,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Image = global::PTImmo_2018.Properties.Resources.icons8_synchronize_32;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(434, 97);
+            this.label1.Location = new System.Drawing.Point(449, 81);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 48);
             this.label1.TabIndex = 124;
@@ -483,7 +486,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(693, 29);
+            this.label4.Location = new System.Drawing.Point(693, 15);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(66, 15);
             this.label4.TabIndex = 126;
@@ -548,7 +551,7 @@
             // 
             this.button1_Modifier_Bien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1_Modifier_Bien.Image = global::PTImmo_2018.Properties.Resources.icons8_edit_property_48;
-            this.button1_Modifier_Bien.Location = new System.Drawing.Point(709, 175);
+            this.button1_Modifier_Bien.Location = new System.Drawing.Point(709, 197);
             this.button1_Modifier_Bien.Name = "button1_Modifier_Bien";
             this.button1_Modifier_Bien.Size = new System.Drawing.Size(165, 56);
             this.button1_Modifier_Bien.TabIndex = 132;
@@ -562,8 +565,8 @@
             this.Button_Fermer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_Fermer.Image = global::PTImmo_2018.Properties.Resources.icons8_file_delete_48;
             this.Button_Fermer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_Fermer.Location = new System.Drawing.Point(709, 244);
-            this.Button_Fermer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_Fermer.Location = new System.Drawing.Point(709, 266);
+            this.Button_Fermer.Margin = new System.Windows.Forms.Padding(2);
             this.Button_Fermer.Name = "Button_Fermer";
             this.Button_Fermer.Size = new System.Drawing.Size(165, 57);
             this.Button_Fermer.TabIndex = 144;
@@ -575,7 +578,7 @@
             // textBox2
             // 
             this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(796, 50);
+            this.textBox2.Location = new System.Drawing.Point(796, 36);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(78, 20);
@@ -586,11 +589,41 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(693, 51);
+            this.label6.Location = new System.Drawing.Point(693, 37);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 15);
             this.label6.TabIndex = 146;
             this.label6.Text = "Code vendeur:";
+            // 
+            // button1
+            // 
+            this.button1.Image = global::PTImmo_2018.Properties.Resources.icons8_home_page_32;
+            this.button1.Location = new System.Drawing.Point(19, 29);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(48, 46);
+            this.button1.TabIndex = 147;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Enabled = false;
+            this.textBox3.Location = new System.Drawing.Point(796, 62);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(78, 20);
+            this.textBox3.TabIndex = 148;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(693, 63);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(62, 15);
+            this.label10.TabIndex = 149;
+            this.label10.Text = "Nb visites:";
             // 
             // Fiche_Bien
             // 
@@ -599,6 +632,9 @@
             this.BackgroundImage = global::PTImmo_2018.Properties.Resources.otherbackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(916, 769);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.Button_Fermer);
@@ -705,5 +741,8 @@
         private System.Windows.Forms.Button Button_Fermer;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label10;
     }
 }

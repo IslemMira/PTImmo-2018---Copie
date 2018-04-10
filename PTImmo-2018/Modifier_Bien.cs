@@ -14,6 +14,8 @@ namespace PTImmo_2018
 {
     public partial class Modifier_Bien : Form
     {
+        private int visite;
+
         public Modifier_Bien()
         {
             InitializeComponent();
@@ -52,20 +54,46 @@ namespace PTImmo_2018
 				textBox10.Text = reader.GetValue(14).ToString();		
 			}
 			reader.Close();
-           
-		}
+
+            string sql1 = "Select count (v.code_visite) nb_visite from bien b left join proposition p on p.code_bien = b.code_bien left join visite v on v.code_proposition = p.code_proposition where b.code_bien = '" + textBox1.Text + "' ";
+            OleDbCommand cmd1 = new OleDbCommand(sql1, dbConnection);
+            OleDbDataReader reader1 = cmd1.ExecuteReader();
+            while (reader1.Read())
+            {
+                textBox5.Text = reader1.GetValue(0).ToString();
+            }
+            reader1.Close();
+
+        }
 
 		
 
 		#region Button Supprimer 
 		private void button1_Click(object sender, EventArgs e)
 		{
+            
+            if (int.Parse(textBox5.Text) != 0 )
+            {
+                
+                MessageBox.Show("Vous ne pouvez pas supprimer ce bien");
+            }
+            else
+            {
+                string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
+            OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
+            dbConnection.Open();
+  
+            string sql1 = "update bien set DATE_SUPPRESSION=SYSDATETIME() where CODE_BIEN= '" + textBox1.Text + "'";
+            OleDbCommand cmd = new OleDbCommand(sql1, dbConnection);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("supprimé");
+           
+            }
+        }
+        #endregion
 
-		}
-		#endregion
 
 
-		
 
         private void Button_Valider_MouseClick(object sender, MouseEventArgs e)
         {

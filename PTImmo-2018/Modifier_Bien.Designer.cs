@@ -64,6 +64,8 @@
             this.Button_Valider = new System.Windows.Forms.Button();
             this.Button_Annuler = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -152,7 +154,6 @@
             // 
             // textBox11
             // 
-            this.textBox11.Enabled = false;
             this.textBox11.Location = new System.Drawing.Point(640, 453);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(185, 21);
@@ -437,6 +438,25 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(796, 51);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(82, 21);
+            this.textBox5.TabIndex = 144;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(713, 54);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 15);
+            this.label3.TabIndex = 145;
+            this.label3.Text = "Nb visites:";
+            // 
             // Modifier_Bien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -444,6 +464,8 @@
             this.BackgroundImage = global::PTImmo_2018.Properties.Resources.otherbackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(922, 687);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Button_Annuler);
             this.Controls.Add(this.Button_Valider);
@@ -529,5 +551,7 @@
 		private System.Windows.Forms.Button Button_Valider;
 		private System.Windows.Forms.Button Button_Annuler;
 		private System.Windows.Forms.Button button1;
-	}
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label3;
+    }
 }

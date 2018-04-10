@@ -148,11 +148,17 @@ namespace PTImmo_2018
         private void Visualiser_Click(object sender, EventArgs e)
         {
             ApplicationState.id_bien = id_bien_selectionne;
-            Console.WriteLine(ApplicationState.id_bien);
             Fiche_Bien fb = new Fiche_Bien();
             fb.Show(this);
             this.Hide();
 
+        }
+
+        private void button1_MouseClick_1(object sender, MouseEventArgs e)
+        {
+            FormAcceuil fa = new FormAcceuil();
+            fa.Show(this);
+            this.Hide();
         }
     }
 }
