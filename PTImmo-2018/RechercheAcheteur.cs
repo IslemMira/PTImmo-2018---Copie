@@ -108,7 +108,7 @@ namespace PTImmo_2018
                 string num_acheteur = reader.GetInt32(0).ToString();
                 string nom_acheteur = reader.GetString(1);
                 string prénom_acheteur = reader.GetString(2);
-                string telephone = reader.GetInt32(3).ToString();
+                string telephone ='0' + reader.GetInt32(3).ToString();
                 string email = reader.GetString(4);
                 string[] row = {num_acheteur, nom_acheteur, prénom_acheteur,telephone,email};
                 ListViewItem lvi = new ListViewItem(row);

@@ -36,7 +36,7 @@ namespace PTImmo_2018
                 textBox_Adresse.Text = reader.GetString(2);
                 textBox1.Text = reader.GetString(3);
                 textBox_CP.Text = reader.GetValue(4).ToString();
-                textBox_tel.Text = reader.GetValue(5).ToString();
+                textBox_tel.Text = '0' + reader.GetValue(5).ToString();
                 textBox50.Text = reader.GetString(6).Trim();
                comboBox_commercial.Text = reader.GetValue(7).ToString();
             }

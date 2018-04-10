@@ -18,24 +18,7 @@ namespace PTImmo_2018
         public Nouveau_bien()
         {
 
-            OleDbConnection dbConnection = new OleDbConnection(ApplicationState.ChaineBd);
-            dbConnection.Open();
-            InitializeComponent();
-            string sql = "select Code_Ville, Nom_Ville from Ville  ";
-            OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
-            OleDbDataReader reader = cmd.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Columns.Add("Code_Ville", typeof(string));
-            dt.Columns.Add("Nom_Ville", typeof(string));
-            //dt.Columns.Add("Prenom", typeof(string));
-
-            dt.Load(reader);
-
-            comboBox1.ValueMember = "Code_Ville";
-            comboBox1.DisplayMember = "Nom_Ville";
-            comboBox1.DataSource = dt;
-            reader.Close();
-
+            
         }
 
         private void Button_Valider_Click(object sender, EventArgs e)

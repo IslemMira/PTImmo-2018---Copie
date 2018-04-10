@@ -191,5 +191,12 @@ namespace PTImmo_2018
         {
 
         }
+
+        private void button1_MouseClick(object sender, MouseEventArgs e)
+        {
+            FormAcceuil fa = new FormAcceuil();
+            fa.Show(this);
+            this.Hide();
+        }
     }
 }

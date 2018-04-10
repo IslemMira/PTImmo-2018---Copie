@@ -47,6 +47,8 @@ namespace PTImmo_2018
 
         private void Fiche_Bien_Load_1(object sender, EventArgs e)
         {
+            listView_VisitesBien.Items.Clear();
+
             string ChaineBd = "Provider=SQLOLEDB;Data Source=INFO-joyeux;Initial Catalog=IMMOBILLY_JACKYTEAM;Persist Security Info=True; Integrated Security=sspi;";
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
@@ -89,6 +91,17 @@ namespace PTImmo_2018
                 textBox3.Text = reader1.GetValue(0).ToString();
             }
             reader1.Close();
+
+            string sql2 = "select a.NUM_ACHETEUR, a.NOM_ACHETEUR, a.PRÉNOM_ACHETEUR, c.NUM_COMMERCIAL, c.Nom, c.Prenom, v.Date from ACHETEUR a join commercial c on a.NUM_COMMERCIAL = c.NUM_COMMERCIAL join souhait s on a.num_acheteur = s.NUM_ACHETEUR join PROPOSITION p on p.CODE_SOUHAIT = s.CODE_SOUHAIT join Visite v on p.CODE_PROPOSITION = v.CODE_PROPOSITION join Bien b on p.CODE_BIEN = b.CODE_BIEN where b.code_bien = '" + textBox1.Text + "'";
+            OleDbCommand cmd2 = new OleDbCommand(sql2, dbConnection);
+            OleDbDataReader reader2 = cmd2.ExecuteReader();
+            while (reader2.Read())
+            {
+                string[] row = { reader2.GetInt32(0).ToString(), reader2.GetString(1), reader2.GetString(2), reader2.GetInt32(3).ToString(), reader2.GetString(4), reader2.GetString(5), reader2.GetValue(6).ToString() };
+                ListViewItem lv = new ListViewItem(row);
+                listView_VisitesBien.Items.Add(lv);
+            }
+            reader2.Close();
         }
 
         private void Button_Fermer_Click(object sender, EventArgs e)

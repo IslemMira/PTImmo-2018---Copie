@@ -70,7 +70,7 @@ namespace PTImmo_2018
                 textBox2.Text = reader.GetString(1);
                 textBox12.Text = reader.GetString(2);
                 textBox10.Text = reader.GetValue(3).ToString();
-                textBox3.Text = reader.GetValue(4).ToString();
+                textBox3.Text ='0' + reader.GetValue(4).ToString();
                 textBox4.Text = reader.GetString(5);
                 textBox5.Text = reader.GetString(6).Trim().ToUpper() + " " + reader.GetString(7).Trim();
                 textBox6.Text = reader.GetValue(8).ToString();
@@ -169,6 +169,13 @@ namespace PTImmo_2018
             PropositionBien pb = new PropositionBien();
             pb.Show(this);
             
+        }
+
+        private void button1_MouseClick(object sender, MouseEventArgs e)
+        {
+            FormAcceuil fa = new FormAcceuil();
+            fa.Show(this);
+            this.Hide();
         }
     }
 }

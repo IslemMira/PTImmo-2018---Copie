@@ -46,9 +46,9 @@ namespace PTImmo_2018
                     textBox1_numCom.Text = reader1.GetInt32(0).ToString();
                     textBox1_Nom.Text = reader1.GetString(1);
                     textBox1_Prenom.Text = reader1.GetString(2);
-                    textBox1_FixePro.Text = reader1.GetValue(3).ToString();
-                    textBox1_MobilePro.Text = reader1.GetValue(4).ToString();
-                    textBox1_Tel_Prive.Text = reader1.GetValue(5).ToString();
+                    textBox1_FixePro.Text ='0' + reader1.GetValue(3).ToString();
+                    textBox1_MobilePro.Text ='0' + reader1.GetValue(4).ToString();
+                    textBox1_Tel_Prive.Text ='0' + reader1.GetValue(5).ToString();
                     textBox1_Email.Text = reader1.GetString(6);
                     if (reader1.GetString(7) == "ACTIF") comboBox1.Text = "ACTIF";
                     if (reader1.GetString(7) == "ANCIEN EMPLOYE") comboBox1.Text = "ANCIEN EMPLOYE";

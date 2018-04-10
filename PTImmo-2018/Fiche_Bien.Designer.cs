@@ -325,12 +325,12 @@
             // NumAcheteur
             // 
             this.NumAcheteur.Text = "Id Acheteur";
-            this.NumAcheteur.Width = 76;
+            this.NumAcheteur.Width = 67;
             // 
             // Nom_acheteur
             // 
             this.Nom_acheteur.Text = "Nom acheteur";
-            this.Nom_acheteur.Width = 133;
+            this.Nom_acheteur.Width = 112;
             // 
             // PrenomAcheteur
             // 
@@ -340,7 +340,7 @@
             // NumCom
             // 
             this.NumCom.Text = "Id Commercial";
-            this.NumCom.Width = 88;
+            this.NumCom.Width = 74;
             // 
             // NomCom
             // 
