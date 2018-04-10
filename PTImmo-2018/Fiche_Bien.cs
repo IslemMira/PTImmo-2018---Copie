@@ -79,6 +79,16 @@ namespace PTImmo_2018
                 
             }
             reader.Close();
+
+          
+            string sql1 = "Select count (v.code_visite) nb_visite from bien b left join proposition p on p.code_bien = b.code_bien left join visite v on v.code_proposition = p.code_proposition where b.code_bien = '" + textBox1.Text + "' ";
+            OleDbCommand cmd1 = new OleDbCommand(sql1, dbConnection);
+            OleDbDataReader reader1 = cmd1.ExecuteReader();
+            while (reader1.Read())
+            {
+                textBox3.Text = reader1.GetValue(0).ToString();
+            }
+            reader1.Close();
         }
 
         private void Button_Fermer_Click(object sender, EventArgs e)
@@ -87,7 +97,13 @@ namespace PTImmo_2018
             ldb.Show(this);
             this.Hide();
         }
-               
+
+        private void button1_MouseClick(object sender, MouseEventArgs e)
+        {
+            FormAcceuil fa = new FormAcceuil();
+            fa.Show(this);
+            this.Hide();
+        }
     }
 }
 

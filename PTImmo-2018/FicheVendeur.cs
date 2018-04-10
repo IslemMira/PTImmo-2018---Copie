@@ -37,7 +37,7 @@ namespace PTImmo_2018
 				textBox_AjCodeVendeur.Text = reader.GetValue(0).ToString();
 				textBox1_Nom.Text = reader.GetString(1);
 				textBox2_Prenom.Text = reader.GetString(2);
-				textBox3_Telephone.Text = reader.GetInt32(3).ToString();
+				textBox3_Telephone.Text ='0' + reader.GetInt32(3).ToString();
 				textBox4_E_Mail.Text = reader.GetString(4);
 				textBox12_Adresse.Text = reader.GetString(5);
 				textBox11_Ville.Text = reader.GetString(6);
