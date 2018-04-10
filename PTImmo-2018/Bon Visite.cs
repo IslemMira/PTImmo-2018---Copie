@@ -59,6 +59,7 @@ namespace PTImmo_2018
             string line1 = "BON DE VISITE";
             string blank1 = " ";
             string line2 = "Monsieur, Madame " + textBox1.Text.TrimEnd() + " " + textBox2.Text.TrimEnd();
+            string line2b = "Commercial : " + textBox3.Text.TrimEnd();
             string line3 = "Rendez-vous le : " + dateTimePicker1.Value;
             string line4 = "Adresse : " + textBox_VisRueBien.Text.TrimEnd() + " " + textBox_Ville.Text.TrimEnd() + " " + textBox_VisCPBien.Text.TrimEnd();
             string line4b = "Designation du bien : " + textBox4.Text.TrimEnd();
@@ -74,53 +75,55 @@ namespace PTImmo_2018
             string line11 = "Cave : \t";
             if (checkBox_Cave.Checked == true) { line11 += "oui"; }
             else { line11 += "non"; }
+            string blank3 = " ";
+            string line12 = "Signature du client :";
            
 
-            string[] texte = { line1, blank1 , line2 , line3 , line4, line4b , blank2 , line5 , line6 , line7 , line8 , line9 , line10 , line11 };
+            string[] texte = { line1, blank1 , line2 , line2b, line3 , line4, line4b , blank2 , line5 , line6 , line7 , line8 , line9 , line10 , line11 , blank3, line12};
             File.WriteAllLines(@"c:\temp\bonDeVisite.txt", texte);
 
             //IMPRESSION DU FICHIER TEXTE
             StreamReader Printfile;
             Font printFont = new Font("Times New Roman", 15.0f);
-            using (Printfile = new StreamReader(@"c:\temp\bonDeVisite.txt"))
-    {
-        try
+            using (Printfile = new StreamReader(@"c:\temp\BonDeVisite.txt"))
+            {
+                try
+                {
+                    PrintDocument docToPrint = new PrintDocument();
+                    docToPrint.DocumentName = "BonDeVisite";
+                    docToPrint.PrintPage += (s, ev) =>
                     {
-                        PrintDocument docToPrint = new PrintDocument();
-                        docToPrint.DocumentName = "BonDeVisite"; 
-                        docToPrint.PrintPage += (s, ev) =>
+                        float linesPerPage = 0;
+                        float yPos = 0;
+                        int count = 0;
+                        float leftMargin = ev.MarginBounds.Left;
+                        float topMargin = ev.MarginBounds.Top;
+                        string line = null;
+
+
+                        linesPerPage = ev.MarginBounds.Height / printFont.GetHeight(ev.Graphics);
+
+
+                        while (count < linesPerPage && ((line = Printfile.ReadLine()) != null))
                         {
-                            float linesPerPage = 0;
-                            float yPos = 0;
-                            int count = 0;
-                            float leftMargin = ev.MarginBounds.Left;
-                            float topMargin = ev.MarginBounds.Top;
-                            string line = null;
+                            yPos = topMargin + (count * printFont.GetHeight(ev.Graphics));
+                            ev.Graphics.DrawString(line, printFont, Brushes.Black, leftMargin, yPos, new StringFormat());
+                            count++;
+                        }
 
-                           
-                            linesPerPage = ev.MarginBounds.Height / printFont.GetHeight(ev.Graphics);
 
-                            
-                            while (count < linesPerPage && ((line = Printfile.ReadLine()) != null))
-                            {
-                                yPos = topMargin + (count * printFont.GetHeight(ev.Graphics));
-                                ev.Graphics.DrawString(line, printFont, Brushes.Black, leftMargin, yPos, new StringFormat());
-                                count++;
-                            }
-
-                           
-                            if (line != null)
-                                ev.HasMorePages = true;
-                            else
-                                ev.HasMorePages = false;
-                        };
-                        docToPrint.Print();
-                    }
-                    catch (System.Exception f)
-                    {
-                        MessageBox.Show(f.Message);
-                    }
-        }
+                        if (line != null)
+                            ev.HasMorePages = true;
+                        else
+                            ev.HasMorePages = false;
+                    };
+                    docToPrint.Print();
+                }
+                catch (System.Exception f)
+                {
+                    MessageBox.Show(f.Message);
+                }
+            }
     }
     }
 }
