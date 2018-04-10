@@ -45,7 +45,7 @@ namespace PTImmo_2018
             dbConnection.Open();
 
             string sql1 = "INSERT Into Bien (SURFACE_HABITABLE, SURFACE_PARCELLE, NB_PIéCES, NB_CHAMBRES, NB_SALLE_DE_BAIN, GARAGE, CAVE, PRIX_VENDEUR, ADRESSE, DATE_MISE_EN_VENTE, COMMENTAIRE, STATUT, CODE_VILLE, NUM_CLIENT)";
-            string sql2 = "VALUES ('" + textBox_AjSurfaceHabitableBien.Text + "','" + textBox_AjSurfaceParcelleBien.Text + "','" + nbPiecesBien.Text + "','" + nbChambreBien.Text + "','" + nbSDBien.Text + "', '" + checkBox_GarageOuiBien.Checked + "', '" + checkBoxCaveOuiBien.Checked + "', '" + textBox_AjPrixVendeurBien.Text + "','" + textBox_AjRueBien.Text.Replace("'","''") + "','" + dateTimePicker1.Value + "', '" + textBox_AjCommentaireBien.Text + "', 'D',(SELECT v.code_ville from VILLE v where v.NOM_VILLE LIKE '" + textBox_AjVilleBien.Text + "' AND v.code_postal like '" + textBox_AjCPBien.Text + "'),'" + textBox_AjCodeVendeur.Text + "' ) ";
+            string sql2 = "VALUES ('" + textBox_AjSurfaceHabitableBien.Text + "','" + textBox_AjSurfaceParcelleBien.Text + "','" + nbPiecesBien.Text + "','" + nbChambreBien.Text + "','" + nbSDBien.Text + "', '" + checkBox_GarageOuiBien.Checked + "', '" + checkBoxCaveOuiBien.Checked + "', '" + textBox_AjPrixVendeurBien.Text + "','" + textBox_AjRueBien.Text.Replace("'","''") + "','" + dateTimePicker1.Value + "', '" + textBox_AjCommentaireBien.Text.Replace("'", "''") + "', 'D',(SELECT v.code_ville from VILLE v where v.NOM_VILLE LIKE '" + textBox_AjVilleBien.Text + "' AND v.code_postal like '" + textBox_AjCPBien.Text + "'),'" + textBox_AjCodeVendeur.Text + "' ) ";
             string sql = sql1 + sql2;
 
 

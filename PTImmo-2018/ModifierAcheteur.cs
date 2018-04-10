@@ -52,7 +52,7 @@ namespace PTImmo_2018
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
 
-            string sql = "UPDATE ACHETEUR set Nom_Acheteur = '" + textBox_Nom.Text + "', Prénom_Acheteur = '" + textBox_Prénom.Text + "', Adresse = '" + textBox_Adresse.Text + "',  Téléphone = '" + textBox_tel.Text + "' where Num_Acheteur = '" + ApplicationState.id_acheteur + "' ";
+            string sql = "UPDATE ACHETEUR set Nom_Acheteur = '" + textBox_Nom.Text.Replace("'", "''") + "', Prénom_Acheteur = '" + textBox_Prénom.Text.Replace("'", "''") + "', Adresse = '" + textBox_Adresse.Text.Replace("'", "''") + "',  Téléphone = '" + textBox_tel.Text + "' where Num_Acheteur = '" + ApplicationState.id_acheteur + "' ";
             OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Saved");

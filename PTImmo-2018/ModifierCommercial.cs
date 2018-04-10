@@ -64,7 +64,7 @@ namespace PTImmo_2018
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
 
-            string sql = "Update Commercial  set NOM = '" + textBox1_Nom.Text + "', PRENOM = '" + textBox1_Prenom.Text + "',  TELEPHONE_FIXE_PRO = '" + textBox1_FixePro.Text + "',  TELEPHONE_PORTABLE_PRO = '" + textBox1_MobilePro.Text + "' , TELEPHONE_PRIVE = '" + textBox1_Tel_Prive.Text + "', EMAIL = '" + textBox1_Email.Text + "', STATUT ='" + comboBox1.Text + "'   where NUM_COMMERCIAL = '" + textBox1_numCom.Text + "' ";
+            string sql = "Update Commercial  set NOM = '" + textBox1_Nom.Text.Replace("'", "''") + "', PRENOM = '" + textBox1_Prenom.Text.Replace("'", "''") + "',  TELEPHONE_FIXE_PRO = '" + textBox1_FixePro.Text + "',  TELEPHONE_PORTABLE_PRO = '" + textBox1_MobilePro.Text + "' , TELEPHONE_PRIVE = '" + textBox1_Tel_Prive.Text + "', EMAIL = '" + textBox1_Email.Text + "', STATUT ='" + comboBox1.Text + "'   where NUM_COMMERCIAL = '" + textBox1_numCom.Text + "' ";
             OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
             cmd.ExecuteNonQuery();
 

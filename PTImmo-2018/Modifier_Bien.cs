@@ -123,7 +123,7 @@ namespace PTImmo_2018
             {
                 cave = "true";
             }
-            string sql = "UPDATE Bien SET Surface_habitable ='" + textBox2.Text + "', Surface_parcelle ='" + textBox3.Text + "' ,Nb_piéces ='" + numericUpDown1.Value + "', Nb_chambres ='" + numericUpDown2.Value + "' , Nb_Salle_de_bain ='" + numericUpDown3.Value + "' , Garage ='" + garage + "' , Cave ='" + cave + "' , Prix_vendeur ='" + textBox4.Text + "' ,Adresse ='" + textBox12.Text + "', Date_Mise_en_Vente = '" + dateTimePicker1.Value + "' ,Commentaire = '" + textBox9.Text + "',Statut = '" + statuts + "'  , code_ville = (select code_ville from ville where upper(nom_ville) = '" + textBox11.Text + "' and Code_Postal = '" + textBox10.Text + "') WHERE Code_bien = '" + textBox1.Text + "' ";
+            string sql = "UPDATE Bien SET Surface_habitable ='" + textBox2.Text + "', Surface_parcelle ='" + textBox3.Text + "' ,Nb_piéces ='" + numericUpDown1.Value + "', Nb_chambres ='" + numericUpDown2.Value + "' , Nb_Salle_de_bain ='" + numericUpDown3.Value + "' , Garage ='" + garage + "' , Cave ='" + cave + "' , Prix_vendeur ='" + textBox4.Text + "' ,Adresse ='" + textBox12.Text + "', Date_Mise_en_Vente = '" + dateTimePicker1.Value + "' ,Commentaire = '" + textBox9.Text.Replace("'", "''") + "',Statut = '" + statuts + "'  , code_ville = (select code_ville from ville where upper(nom_ville) = '" + textBox11.Text + "' and Code_Postal = '" + textBox10.Text + "') WHERE Code_bien = '" + textBox1.Text + "' ";
 
 
             OleDbCommand cmd = new OleDbCommand(sql, dbConnection);

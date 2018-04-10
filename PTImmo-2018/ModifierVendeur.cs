@@ -61,7 +61,7 @@ namespace PTImmo_2018
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
 
-            string sql = "UPDATE VENDEUR SET Nom_Client = '" + textBox1_Nom.Text + "', Prénom_Client = '" + textBox2_Prenom.Text + "', Téléphone =  '" + textBox3_Telephone.Text + "', E_mail = '" + textBox4_E_Mail.Text + "', Adresse = '" + textBox12_Adresse.Text + "', code_ville = (select code_ville from ville where upper(nom_ville) = '" + textBox11_Ville.Text + "' and Code_Postal = '" + textBox1.Text + "') where Num_Client = '" + ApplicationState.id_vendeur + "'  ";
+            string sql = "UPDATE VENDEUR SET Nom_Client = '" + textBox1_Nom.Text.Replace("'", "''") + "', Prénom_Client = '" + textBox2_Prenom.Text.Replace("'", "''") + "', Téléphone =  '" + textBox3_Telephone.Text + "', E_mail = '" + textBox4_E_Mail.Text + "', Adresse = '" + textBox12_Adresse.Text.Replace("'", "''") + "', code_ville = (select code_ville from ville where upper(nom_ville) = '" + textBox11_Ville.Text.Replace("'", "''") + "' and Code_Postal = '" + textBox1.Text + "') where Num_Client = '" + ApplicationState.id_vendeur + "'  ";
             OleDbCommand cmd = new OleDbCommand(sql, dbConnection);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Saved");
