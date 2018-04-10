@@ -30,7 +30,7 @@ namespace PTImmo_2018
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
             string sql1 = "Insert into Commercial (Nom, Prenom, Telephone_Fixe_Pro, Telephone_Portable_Pro, Telephone_Prive, Email, Statut) ";
-            string sql2 = "values('" + textBox1_Nom.Text + "','" + textBox1_Prenom.Text + "','" + textBox1_FixePro.Text + "','" + textBox1_MobilePro.Text + "','" + textBox1_Tel_Prive.Text + "','" + textBox1_Email.Text + "','ACTIF') ";
+            string sql2 = "values('" + textBox1_Nom.Text.Replace("'", "''") + "','" + textBox1_Prenom.Text.Replace("'", "''") + "','" + textBox1_FixePro.Text + "','" + textBox1_MobilePro.Text + "','" + textBox1_Tel_Prive.Text + "','" + textBox1_Email.Text + "','ACTIF') ";
             
             string sql = sql1 + sql2;
 

@@ -32,7 +32,7 @@ namespace PTImmo_2018
             OleDbConnection dbConnection = new OleDbConnection(ChaineBd);
             dbConnection.Open();
             string sql1 = "INSERT into Acheteur(Nom_Acheteur, PRÉNOM_ACHETEUR, Adresse, TÉLÉPHONE, E_MAIL, CODE_VILLE, NUM_COMMERCIAL)";
-            string sql2 = "VALUES('" + textBox_Nom.Text + "','" + textBox_Prénom.Text + "','" + textBox_Adresse.Text + "','" +textBox_tel.Text + "','" + textBox_email.Text + "' , (SELECT v.code_ville from VILLE v where v.NOM_VILLE like  '" + textBox1.Text + "' and v.CODE_POSTAL like '" +textBox_CP.Text + "'),(select c.NUM_COMMERCIAL from COMMERCIAL c where NOM LIKE '" + comboBox_commercial.Text + "' ) )";
+            string sql2 = "VALUES('" + textBox_Nom.Text.Replace("'", "''") + "','" + textBox_Prénom.Text.Replace("'", "''") + "','" + textBox_Adresse.Text.Replace("'", "''") + "','" +textBox_tel.Text + "','" + textBox_email.Text + "' , (SELECT v.code_ville from VILLE v where v.NOM_VILLE like  '" + textBox1.Text + "' and v.CODE_POSTAL like '" +textBox_CP.Text + "'),(select c.NUM_COMMERCIAL from COMMERCIAL c where NOM LIKE '" + comboBox_commercial.Text.Replace("'", "''") + "' ) )";
 
             string sql = sql1 + sql2;
 
