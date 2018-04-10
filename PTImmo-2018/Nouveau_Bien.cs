@@ -18,7 +18,7 @@ namespace PTImmo_2018
         public Nouveau_bien()
         {
 
-            
+            InitializeComponent();
         }
 
         private void Button_Valider_Click(object sender, EventArgs e)
